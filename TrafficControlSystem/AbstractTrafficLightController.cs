@@ -2,7 +2,7 @@ using System;
 
 namespace TrafficControlSystem
 {
-    public class AbstractTrafficLightController
+    public abstract class AbstractTrafficLightController
     {
     //    private View view;
     //    private Model model;
