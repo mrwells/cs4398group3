@@ -6,7 +6,6 @@ namespace TrafficControlSystem
     {
     //    private View view;
     //    private Model model;
-    ;
     //    public View getView()
     //    {
     //        return this.view;
