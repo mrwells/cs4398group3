@@ -11,7 +11,7 @@ namespace TrafficControlSystem
         static void Main(string[] args)
         {
 
-            //TrafficControlSystem controller = new TrafficControlSystem(new LaneModel, new TrafficLightDisplay);
+            TrafficControlSystem controller = new TrafficControlSystem(new LaneModel(), new TrafficLightDisplay());
         }
     }
 }
