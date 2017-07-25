@@ -1,0 +1,187 @@
+{
+	"roadways" : [
+		{   
+			"id" :"universityblvd",
+			"name" : "University Blvd",
+			"lanes" : [
+				{
+					"id": "1",
+					"description" : "Inner lane",
+					"direction" : "East"				
+				},
+				{
+					"id": "2",
+					"description" : "Outer lane",
+					"direction" : "East"				
+				},
+				{
+					"id": "3",
+					"description" : "Inner lane",
+					"direction" : "West"				
+				},
+				{
+					"id": "4",
+					"description" : "Outer lane",
+					"direction" : "West"				
+				}
+			]
+		},
+		{		
+			"id" :"sunriserd",
+			"name" : "Sunrise Rd",
+			"lanes" : [
+				{	"id": "1",
+					"description" : "lane1",
+					"direction" : "North"				
+				},
+				{	"id": "2",
+					"description" : "lane2",
+					"direction" : "South"				
+				}
+			]
+		}		
+	],
+	"intersections" : [
+		{	
+			"id": "university_sunrise",
+			"description" : "University Blvd / Sunrise Rd",
+			"signalgroups" : [
+				{
+					"id" : "universityblvd_turnlanes",
+					"roadwayid" : "universityblvd",			
+					"signals" : [					
+						{
+							"id": "university_lane1",
+							"lane" : "1",
+							"lights" : [ "green arrow", "yellow arrow", "red arrow" ]
+						},
+						{
+							"id": "university_lane3",
+							"lane" : "3",
+							"lights" : [ "green arrow", "yellow arrow", "red arrow" ]
+						}
+					]
+				},
+				{
+					"id": "universityblvd_east",
+					"roadwayid" : "universityblvd",			
+					"signals" : [						
+						{
+							"id": "university_lane1",
+							"lane" : "1",
+							"lights" : [ "green", "yellow", "red" ]
+						},						
+						{
+							"id": "university_lane2",
+							"lane" : "2",
+							"lights" : [ "green", "yellow", "red" ]
+						}
+					]
+				},
+				{
+					"id": "universityblvd_west",
+					"roadwayid" : "universityblvd",			
+					"signals" : [						
+						{
+							"id": "university_lane3",
+							"lane" : "3",
+							"lights" : [ "green", "yellow", "red" ]
+						},						
+						{
+							"id": "university_lane4",
+							"lane" : "4",
+							"lights" : [ "green", "yellow", "red" ]
+						}
+					]
+				},
+				{
+					"id": "sunriserd_north",
+					"roadwayid" : "sunriserd",			
+					"signals" : [						
+						{
+							"id": "university_lane1",
+							"lane" : "1",
+							"lights" : [ "green", "yellow", "red" ]
+						}
+					]
+				},
+				{
+					"id": "sunriserd_south",
+					"roadwayid" : "sunriserd",			
+					"signals" : [						
+						{
+							"id": "university_lane2",
+							"lane" : "2",
+							"lights" : [ "green", "yellow", "red" ]
+						}
+					]
+				}
+			],
+			"timinggroups" : [
+				{
+					"id": "universityblvd_turnlanes",
+					"signalgroupids" : [ "universityblvd_turnlanes" ],
+					"signaltiming" : [
+						{
+							"order": "1",
+							"light": "green arrow", 
+							"duration" : "30"
+						},
+						{
+							"order": "2",
+							"light": "yellow arrow",
+							"duration" : "5"
+						},
+						{
+							"order": "3",
+							"light": "red arrow",
+							"duration" : "0"
+						}
+					]
+				},
+				{
+					"id": "universityblvd_east_west",
+					"signalgroupids" : [ "universityblvd_east", "universityblvd_west" ],
+					"signaltiming" : [
+						{
+							"order": "1",
+							"light": "green", 
+							"duration" : "10"
+						},
+						{
+							"order": "2",
+							"light": "yellow",
+							"duration" : "5"
+						},
+						{
+							"order": "3",
+							"light": "red",
+							"duration" : "0"
+						}
+					]
+				},
+				{
+					"id": "sunriserd_north_south",
+					"signalgroupids" : [ "sunriserd_north", "sunriserd_south" ],
+					"signaltiming" : [
+						{
+							"order": "1",
+							"light": "green", 
+							"duration" : "10"
+						},
+						{
+							"order": "2",
+							"light": "yellow",
+							"duration" : "5"
+						},
+						{
+							"order": "3",
+							"light": "red",
+							"duration" : "0"
+						}
+					]
+				}
+			]
+		}
+	]
+}
