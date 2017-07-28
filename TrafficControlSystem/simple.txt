@@ -1,0 +1,130 @@
+{
+	"roadways" : [
+		{   
+			"id" :"universityblvd",
+			"name" : "University Blvd",
+			"lanes" : [
+				{
+					"id": "1",
+					"description" : "East lane",
+					"direction" : "East"				
+				},
+				{
+					"id": "2",
+					"description" : "West lane",
+					"direction" : "West"				
+				},
+			]
+		},
+		{		
+			"id" :"sunriserd",
+			"name" : "Sunrise Rd",
+			"lanes" : [
+				{	"id": "1",
+					"description" : "lane1",
+					"direction" : "North"				
+				},
+				{	"id": "2",
+					"description" : "lane2",
+					"direction" : "South"				
+				}
+			]
+		}		
+	],
+	"intersections" : [
+		{	
+			"id": "university_sunrise",
+			"description" : "University Blvd / Sunrise Rd",
+			"signalgroups" : [
+				{
+					"id": "universityblvd_east",
+					"roadwayid" : "universityblvd",			
+					"signals" : [						
+						{
+							"id": "university_lane1",
+							"lane" : "1",
+							"lights" : [ "green", "yellow", "red" ]
+						},						
+					]
+				},
+				{
+					"id": "universityblvd_west",
+					"roadwayid" : "universityblvd",			
+					"signals" : [						
+						{
+							"id": "university_lane2",
+							"lane" : "2",
+							"lights" : [ "green", "yellow", "red" ]
+						},						
+					]
+				},
+				{
+					"id": "sunriserd_north",
+					"roadwayid" : "sunriserd",			
+					"signals" : [						
+						{
+							"id": "university_lane1",
+							"lane" : "1",
+							"lights" : [ "green", "yellow", "red" ]
+						}
+					]
+				},
+				{
+					"id": "sunriserd_south",
+					"roadwayid" : "sunriserd",			
+					"signals" : [						
+						{
+							"id": "university_lane2",
+							"lane" : "2",
+							"lights" : [ "green", "yellow", "red" ]
+						}
+					]
+				}
+			],
+			"timinggroups" : [
+				{
+					"id": "universityblvd_east_west",
+					"signalgroupids" : [ "universityblvd_east", "universityblvd_west" ],
+					"signaltiming" : [
+						{
+							"order": "1",
+							"light": "green", 
+							"duration" : "10"
+						},
+						{
+							"order": "2",
+							"light": "yellow",
+							"duration" : "5"
+						},
+						{
+							"order": "3",
+							"light": "red",
+							"duration" : "10"
+						}
+					]
+				},
+				{
+					"id": "sunriserd_north_south",
+					"signalgroupids" : [ "sunriserd_north", "sunriserd_south" ],
+					"signaltiming" : [
+						{
+							"order": "1",
+							"light": "green", 
+							"duration" : "10"
+						},
+						{
+							"order": "2",
+							"light": "yellow",
+							"duration" : "5"
+						},
+						{
+							"order": "3",
+							"light": "red",
+							"duration" : "10"
+						}
+					]
+				}
+			]
+		}
+	]
+}

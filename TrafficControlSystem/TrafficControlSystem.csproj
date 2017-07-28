@@ -60,7 +60,7 @@
     <Compile Include="ModelEvent.cs" />
     <Compile Include="ModelListener.cs" />
     <Compile Include="Configuration.cs" />
-    <Compile Include="Models\Intersection.cs" />
+    <Compile Include="Intersection.cs" />
     <Compile Include="Models\Lane.cs" />
     <Compile Include="Models\Roadway.cs" />
     <Compile Include="Models\Signal.cs" />
@@ -80,6 +80,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ExampleConfigurations\universityblvd_sunriserd.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="simple.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="universityblvd_sunriserd.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

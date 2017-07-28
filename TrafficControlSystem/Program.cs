@@ -23,6 +23,8 @@ namespace TrafficControlSystem
             var configuration = Configuration.Load(configurationFile);
 
             Console.WriteLine(configuration);
+
+            Console.ReadLine();
             
 
 
