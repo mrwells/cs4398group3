@@ -56,6 +56,7 @@
     <Compile Include="Event.cs" />
     <Compile Include="LaneModel.cs" />
     <Compile Include="LaneState.cs" />
+    <Compile Include="LightGroup.cs" />
     <Compile Include="MaintenanceState.cs" />
     <Compile Include="ModelEvent.cs" />
     <Compile Include="ModelListener.cs" />
