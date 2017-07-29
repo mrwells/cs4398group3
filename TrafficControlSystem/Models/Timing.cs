@@ -4,9 +4,9 @@ using Newtonsoft.Json;
 namespace TrafficControlSystem.Models
 {
     public struct Timing
-    {
+    {        
         [JsonProperty("light")]
-        public string Light;
+        public LightColor Light;
 
         [JsonProperty("order")]
         public int Order;

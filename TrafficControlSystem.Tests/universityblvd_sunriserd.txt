@@ -52,13 +52,13 @@
 					"signals" : [					
 						{
 							"id": "university_lane1",
-							"lane" : "1",
-							"lights" : [ "green arrow", "yellow arrow", "red arrow" ]
+							"laneid" : "1",
+							"lights" : [ "GreenArrow", "YellowArrow", "RedArrow" ]
 						},
 						{
 							"id": "university_lane3",
-							"lane" : "3",
-							"lights" : [ "green arrow", "yellow arrow", "red arrow" ]
+							"laneid" : "3",
+							"lights" : [ "GreenArrow", "YellowArrow", "RedArrow" ]
 						}
 					]
 				},
@@ -68,13 +68,13 @@
 					"signals" : [						
 						{
 							"id": "university_lane1",
-							"lane" : "1",
-							"lights" : [ "green", "yellow", "red" ]
+							"laneid" : "1",
+							"lights" : [ "Green", "Yellow", "Red" ]
 						},						
 						{
 							"id": "university_lane2",
-							"lane" : "2",
-							"lights" : [ "green", "yellow", "red" ]
+							"laneid" : "2",
+							"lights" : [ "Green", "Yellow", "Red" ]
 						}
 					]
 				},
@@ -84,13 +84,13 @@
 					"signals" : [						
 						{
 							"id": "university_lane3",
-							"lane" : "3",
-							"lights" : [ "green", "yellow", "red" ]
+							"laneid" : "3",
+							"lights" : [ "Green", "Yellow", "Red" ]
 						},						
 						{
 							"id": "university_lane4",
-							"lane" : "4",
-							"lights" : [ "green", "yellow", "red" ]
+							"laneid" : "4",
+							"lights" : [ "Green", "Yellow", "Red" ]
 						}
 					]
 				},
@@ -99,9 +99,9 @@
 					"roadwayid" : "sunriserd",			
 					"signals" : [						
 						{
-							"id": "university_lane1",
-							"lane" : "1",
-							"lights" : [ "green", "yellow", "red" ]
+							"id": "sunriserd_lane1",
+							"laneid" : "1",
+							"lights" : [ "Green", "Yellow", "Red" ]
 						}
 					]
 				},
@@ -110,9 +110,9 @@
 					"roadwayid" : "sunriserd",			
 					"signals" : [						
 						{
-							"id": "university_lane2",
-							"lane" : "2",
-							"lights" : [ "green", "yellow", "red" ]
+							"id": "sunriserd_lane2",
+							"laneid" : "2",
+							"lights" : [ "Green", "Yellow", "Red" ]
 						}
 					]
 				}
@@ -124,18 +124,18 @@
 					"signaltiming" : [
 						{
 							"order": "1",
-							"light": "green arrow", 
+							"light": "GreenArrow", 
 							"duration" : "30"
 						},
 						{
 							"order": "2",
-							"light": "yellow arrow",
+							"light": "YellowArrow",
 							"duration" : "5"
 						},
 						{
 							"order": "3",
-							"light": "red arrow",
-							"duration" : "0"
+							"light": "RedArrow",
+							"duration" : "3"
 						}
 					]
 				},
@@ -145,18 +145,18 @@
 					"signaltiming" : [
 						{
 							"order": "1",
-							"light": "green", 
+							"light": "Green", 
 							"duration" : "10"
 						},
 						{
 							"order": "2",
-							"light": "yellow",
+							"light": "Yellow",
 							"duration" : "5"
 						},
 						{
 							"order": "3",
-							"light": "red",
-							"duration" : "0"
+							"light": "Red",
+							"duration" : "3"
 						}
 					]
 				},
@@ -166,18 +166,18 @@
 					"signaltiming" : [
 						{
 							"order": "1",
-							"light": "green", 
+							"light": "Green", 
 							"duration" : "10"
 						},
 						{
 							"order": "2",
-							"light": "yellow",
+							"light": "Yellow",
 							"duration" : "5"
 						},
 						{
 							"order": "3",
-							"light": "red",
-							"duration" : "0"
+							"light": "Red",
+							"duration" : "3"
 						}
 					]
 				}

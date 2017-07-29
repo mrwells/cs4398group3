@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
-
 using Newtonsoft.Json;
+
+using TrafficControlSystem.Models;
 
 namespace TrafficControlSystem.Models
 {
@@ -9,15 +10,20 @@ namespace TrafficControlSystem.Models
         [JsonProperty("id")]
         public string Id { get; set; }
 
-        [JsonProperty("lane")]
+        [JsonProperty("laneid")]
+        public string LaneId { get; set; }
+        
         public Lane Lane { get; set; }
 
         [JsonProperty("lights")]
-        public List<string> Lights { get; set; }
+        public List<LightColor> Lights { get; set; }
+
+        public LightColor CurrentLight { get; set; }
 
         public Signal()
         {
-            Lights = new List<string>();
+            Lights = new List<LightColor>();
+            CurrentLight = LightColor.Red;
         }
     }
 }
