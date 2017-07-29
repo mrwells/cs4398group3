@@ -23,9 +23,13 @@ namespace TrafficControlSystem
             var configuration = Configuration.Load(configurationFile);
 
             Console.WriteLine(configuration);
-            
 
+            System.Threading.Thread.Sleep(2000);
 
+            var simulator = new IntersectionController(configuration.Intersections[0]);
+
+            //Run for 15 minutes
+            simulator.Run(new TimeSpan(0, 15, 0));
         }
     }
 }

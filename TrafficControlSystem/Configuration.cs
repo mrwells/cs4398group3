@@ -34,14 +34,21 @@ namespace TrafficControlSystem
 
             configuration.Intersections.ForEach(intersection =>
             {
-                intersection.SignalGroups.ForEach(signalgroup =>
-                {
-                    signalgroup.Roadway = configuration.Roadways.Single(roadway => roadway.Id == signalgroup.RoadwayId);
-                });
-
+                //associate timing groups to their related signal groups
                 intersection.TimingGroups.ForEach(timinggroup =>
                 {
                     timinggroup.SignalGroups = configuration.Intersections.SelectMany(i => i.SignalGroups.Where(signalgroup => timinggroup.SignalGroupIds.Contains(signalgroup.Id))).ToList();
+                });
+
+                //associate signal groups to their related roadway and lanes
+                intersection.SignalGroups.ForEach(signalgroup =>
+                {
+                    signalgroup.Roadway = configuration.Roadways.Single(roadway => roadway.Id == signalgroup.RoadwayId);
+
+                    signalgroup.Signals.ForEach(signal =>
+                    {                        
+                        signal.Lane = signalgroup.Roadway.Lanes.Single(lane => lane.Id == signal.LaneId);
+                    });
                 });
             });
 
