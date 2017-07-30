@@ -10,10 +10,9 @@ namespace TrafficControlSystem
     {
         static void Main(string[] args)
         {
-<<<<<<< HEAD
+
 
             TrafficControlSystem controller = new TrafficControlSystem(new LaneModel(), new TrafficLightDisplay());
-=======
             Console.WriteLine("\nTraffic Control System\n");
 
             if (args.Length != 1)
@@ -30,7 +29,6 @@ namespace TrafficControlSystem
             
 
 
->>>>>>> master
-        }
+       }
     }
 }
