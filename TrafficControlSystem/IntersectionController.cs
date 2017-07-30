@@ -18,6 +18,10 @@ namespace TrafficControlSystem
             this.intersection = intersection;
         }
 
+        /// <summary>
+        /// Entry point for the simulation.  Executes the intersection configuration provided in the constructor
+        /// </summary>
+        /// <param name="duration">Length of time to run simulation</param>
         public void Run(TimeSpan duration)
         {
             startTime = DateTime.Now;
@@ -34,6 +38,10 @@ namespace TrafficControlSystem
             }
         }
 
+        /// <summary>
+        /// Execute the timing cycle for a group of lights
+        /// </summary>
+        /// <param name="timingGroup">The timing group to act on</param>
         private void HandleTimingGroup(TimingGroup timingGroup)
         {
             int currentTimingIndex = timingGroup.Timings.Min(t => t.Order);
@@ -51,6 +59,11 @@ namespace TrafficControlSystem
             //SetAllToRed();
         }
 
+        /// <summary>
+        /// Change the current light color for groups of signals
+        /// </summary>
+        /// <param name="signalGroups">The signals to act on</param>
+        /// <param name="newLightColor">The color to change to</param>
         private void SetSignalGroupsColor(List<SignalGroup> signalGroups, LightColor newLightColor)
         {
             signalGroups.ForEach(signalGroup =>
@@ -59,6 +72,11 @@ namespace TrafficControlSystem
             });
         }
 
+        /// <summary>
+        /// Change the current light color for a group of signals
+        /// </summary>
+        /// <param name="signalGroups">The signals to act on</param>
+        /// <param name="newLightColor">The color to change to</param>
         private void SetSignalGroupColor(SignalGroup signalGroup, LightColor newLightColor)
         {
             signalGroup.Signals.ForEach(signal =>
@@ -67,12 +85,12 @@ namespace TrafficControlSystem
             });
         }
 
+        /// <summary>
+        /// Reset all lights to red
+        /// </summary>
         private void SetAllToRed()
         {
-            intersection.SignalGroups.ForEach(signalGroup =>
-            {
-                SetSignalGroupColor(signalGroup, LightColor.Red);
-            });
+            SetSignalGroupsColor(intersection.SignalGroups, LightColor.Red);
         }
     }
 }

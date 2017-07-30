@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 using Newtonsoft.Json;
 using TrafficControlSystem.Models;
@@ -25,6 +24,11 @@ namespace TrafficControlSystem
             Intersections = new List<Intersection>();
         }
 
+        /// <summary>
+        /// Load configuration from file
+        /// </summary>
+        /// <param name="configurationFileName">Filename of configuration to load</param>
+        /// <returns></returns>
         public static Configuration Load(string configurationFileName)
         {
             var rawConfiguration = System.IO.File.ReadAllText(configurationFileName);
@@ -55,6 +59,10 @@ namespace TrafficControlSystem
             return configuration;
         }
 
+        /// <summary>
+        /// Output basic configuration information for display
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             var output = new StringBuilder();

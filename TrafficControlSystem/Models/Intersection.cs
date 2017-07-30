@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 using Newtonsoft.Json;
 
@@ -26,6 +25,9 @@ namespace TrafficControlSystem.Models
             TimingGroups = new List<TimingGroup>();
         }
 
+        /// <summary>
+        /// Display current state on console
+        /// </summary>
         public void OutputCurrentState()
         {
             Console.Clear();
