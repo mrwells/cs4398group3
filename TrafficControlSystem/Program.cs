@@ -30,7 +30,7 @@ namespace TrafficControlSystem
             System.Threading.Thread.Sleep(2000);
 
 //<<<<<<< HEAD
-       }
+       
 //=======
             var simulator = new IntersectionController(configuration.Intersections[0]);
 
@@ -39,4 +39,4 @@ namespace TrafficControlSystem
         }
 //>>>>>>> master
     }
-//}
+}
