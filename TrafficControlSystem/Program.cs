@@ -12,7 +12,7 @@ namespace TrafficControlSystem
         {
 
 
-            TrafficControlSystem controller = new TrafficControlSystem(new LaneModel(), new TrafficLightDisplay());
+            //TrafficControlSystem controller = new TrafficControlSystem(new LaneModel(), new TrafficLightDisplay());
             Console.WriteLine("\nTraffic Control System\n");
 
             if (args.Length != 1)
