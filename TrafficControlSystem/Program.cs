@@ -24,8 +24,8 @@ namespace TrafficControlSystem
 
             var configurationFile = args[0];
             var configuration = Configuration.Load(configurationFile);
-
-            Console.WriteLine(configuration);
+             
+            //Console.WriteLine(configuration);
 
             System.Threading.Thread.Sleep(2000);
 
@@ -36,6 +36,7 @@ namespace TrafficControlSystem
 
             //Run for 15 minutes
             simulator.Run(new TimeSpan(0, 15, 0));
+           
         }
 //>>>>>>> master
     }
