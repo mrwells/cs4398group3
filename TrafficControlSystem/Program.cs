@@ -30,13 +30,13 @@ namespace TrafficControlSystem
             System.Threading.Thread.Sleep(2000);
 
 //<<<<<<< HEAD
-       
+       }
 //=======
             var simulator = new IntersectionController(configuration.Intersections[0]);
 
             //Run for 15 minutes
             simulator.Run(new TimeSpan(0, 15, 0));
         }
-     }
 //>>>>>>> master
-}
+    }
+//}
