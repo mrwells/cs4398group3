@@ -27,7 +27,7 @@ namespace TrafficControlSystem
         private DateTime startTime;
         
         Thread uiThread;
-        UISyncObject syncObject = new UISyncObject();
+        UISyncObject syncObject;
 
         public IntersectionController(Intersection intersection)
         {
@@ -40,16 +40,17 @@ namespace TrafficControlSystem
             Console.WriteLine($"Running simulation for {intersection.Description}");
 
             syncObject = new UISyncObject();
-
-
+            
             uiThread = new Thread(new ParameterizedThreadStart((s) =>
             {
-                Form1 mygui = new Form1((UISyncObject)syncObject);
+                Form1 mygui = new Form1((UISyncObject)s);
                 Application.Run(mygui);
             }));
 
             uiThread.Start(syncObject);
-            
+
+            System.Threading.Thread.Sleep(500);
+
             int currentTimingGroupIndex = 0;
 
             while (DateTime.Now < startTime.Add(duration))
@@ -84,6 +85,7 @@ namespace TrafficControlSystem
             {
                 SetSignalGroupColor(signalGroup, newLightColor);
             });
+            syncObject.TimeToUpdate(intersection);
         }
 
         private void SetSignalGroupColor(SignalGroup signalGroup, LightColor newLightColor)
@@ -92,7 +94,6 @@ namespace TrafficControlSystem
             {
                 signal.CurrentLight = newLightColor;
             });
-            syncObject.TimeToUpdate(intersection);
         }
 
         private void SetAllToRed()
