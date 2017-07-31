@@ -102,6 +102,10 @@
     <None Include="Resources\HTnZ8juC.jpeg" />
     <None Include="Resources\ShowImage.jpg" />
     <None Include="Resources\172398101.jpg" />
+    <None Include="Resources\left_flashing_yellow.jpg" />
+    <None Include="Resources\left_green.png" />
+    <None Include="Resources\left_red.jpg" />
+    <None Include="Resources\left_yellow.jpg" />
     <Content Include="universityblvd_sunriserd.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
