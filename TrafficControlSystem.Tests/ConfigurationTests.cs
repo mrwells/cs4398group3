@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using TrafficControlSystem;
 using TrafficControlSystem.Models;
 
@@ -18,7 +17,7 @@ namespace TrafficControlSystem.Tests
             Assert.AreEqual(1, configuration.Intersections.Count);
             Assert.AreEqual(2, configuration.Roadways.Count);
         }
-
+        
         [TestMethod]
         public void SetAllToRed()
         {
@@ -149,7 +148,7 @@ namespace TrafficControlSystem.Tests
             button.activate();
             Assert.IsTrue(button.getButtonState());
         }
-
+        
         [TestMethod]
         public void TestSensor()
         {
@@ -165,7 +164,7 @@ namespace TrafficControlSystem.Tests
         {
             var configuration = Configuration.Load("universityblvd_sunriserd.txt");
             int time = configuration.Intersections[0].TimingGroups[0].Timings[0].Duration;
-            Assert.AreEqual(10, time);
+            Assert.Equals(10, time);
         }
     }
 }
