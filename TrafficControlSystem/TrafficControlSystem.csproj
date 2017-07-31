@@ -47,27 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractLaneModel.cs" />
     <Compile Include="AbstractTrafficLightController.cs" />
-    <Compile Include="Button.cs" />
-    <Compile Include="Buzzer.cs" />
-    <Compile Include="ConfigurationModel.cs" />
-    <Compile Include="ControllerState.cs" />
-    <Compile Include="EmergencyState.cs" />
-    <Compile Include="ErrorState.cs" />
-    <Compile Include="Event.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="LaneModel.cs" />
-    <Compile Include="LaneState.cs" />
     <Compile Include="LightGroup.cs" />
-    <Compile Include="MaintenanceState.cs" />
-    <Compile Include="ModelEvent.cs" />
-    <Compile Include="ModelListener.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="Intersection.cs" />
     <Compile Include="Models\Lane.cs" />
@@ -84,11 +71,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Sensor.cs" />
     <Compile Include="IntersectionController.cs" />
-    <Compile Include="TrafficLightController.cs" />
-    <Compile Include="TrafficLightDisplay.cs" />
-    <Compile Include="TrafficLightObserver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
