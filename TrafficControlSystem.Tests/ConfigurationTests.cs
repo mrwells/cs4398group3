@@ -137,7 +137,6 @@ namespace TrafficControlSystem.Tests
         public void TestLightCreation()
         {
             var configuration = Configuration.Load("universityblvd_sunriserd.txt");
-
             Assert.AreEqual(2, configuration.Intersections[0].SignalGroups[0].Signals.Count);
         }
 
@@ -159,6 +158,11 @@ namespace TrafficControlSystem.Tests
 
             sensor.activate();
             Assert.IsTrue(sensor.getSensorState());
+        }
+        public void TestGreenDuration()
+        {
+            var configuration = Configuration.Load("universityblvd_sunriserd.txt");
+            Assert.AreEqual(10, configuration.Intersections[0].TimingGroups[0].Timings[0].Duration);
         }
     }
 }
