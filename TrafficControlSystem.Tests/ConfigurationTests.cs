@@ -164,7 +164,7 @@ namespace TrafficControlSystem.Tests
         {
             var configuration = Configuration.Load("universityblvd_sunriserd.txt");
             int time = configuration.Intersections[0].TimingGroups[0].Timings[0].Duration;
-            Assert.Equals(10, time);
+            Assert.AreEqual(30, time);
         }
     }
 }
