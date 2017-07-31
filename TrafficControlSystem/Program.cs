@@ -16,6 +16,7 @@ namespace TrafficControlSystem
             {
                 Console.WriteLine("The configuration file name must be provided.");
                 Console.WriteLine("   ex:  'program.exe config.txt'");
+                Console.ReadLine();
                 return;
             }
 
@@ -30,6 +31,8 @@ namespace TrafficControlSystem
 
             //Run for 15 minutes
             simulator.Run(new TimeSpan(0, 15, 0));
+
+            Console.ReadLine();
         }
     }
 }
