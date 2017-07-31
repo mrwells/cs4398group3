@@ -163,8 +163,35 @@ namespace TrafficControlSystem.Tests
         public void TestGreenDuration()
         {
             var configuration = Configuration.Load("universityblvd_sunriserd.txt");
+
+            //"universityblvd_turnlanes"
+
             int time = configuration.Intersections[0].TimingGroups[0].Timings[0].Duration;
             Assert.AreEqual(30, time);
+
+            time = configuration.Intersections[0].TimingGroups[0].Timings[1].Duration;
+            Assert.AreEqual(5, time);
+
+            time = configuration.Intersections[0].TimingGroups[0].Timings[2].Duration;
+            Assert.AreEqual(3, time);
+
+            //"sunriserd_north_south"
+
+            time = configuration.Intersections[0].TimingGroups[2].Timings[0].Duration;
+            Assert.AreEqual(10, time);
+
+            time = configuration.Intersections[0].TimingGroups[2].Timings[1].Duration;
+            Assert.AreEqual(5, time);
+
+            time = configuration.Intersections[0].TimingGroups[2].Timings[2].Duration;
+            Assert.AreEqual(3, time);
+
+        }
+
+        [TestMethod]
+        public void TestState()
+        {
+
         }
     }
 }
