@@ -159,10 +159,13 @@ namespace TrafficControlSystem.Tests
             sensor.activate();
             Assert.IsTrue(sensor.getSensorState());
         }
+        
+        [TestMethod]
         public void TestGreenDuration()
         {
             var configuration = Configuration.Load("universityblvd_sunriserd.txt");
-            Assert.AreEqual(10, configuration.Intersections[0].TimingGroups[0].Timings[0].Duration);
+            int time = configuration.Intersections[0].TimingGroups[0].Timings[0].Duration;
+            Assert.AreEqual(10, time);
         }
     }
 }
