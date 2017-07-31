@@ -4,10 +4,25 @@ namespace TrafficControlSystem
 {
     public class Button
     {
-        public void Activate()
+        private Boolean pushed;
+
+        public Button()
         {
-            // TODO - implement Button.Activate
-            throw new NotImplementedException();
+            pushed = false;
+        }
+
+        public Boolean getButtonState()
+        {
+            return pushed;
+        }
+        public void activate()
+        {
+            pushed = true;
+        }
+
+        public void deactivate()
+        {
+            pushed = false;
         }
     }
 }
