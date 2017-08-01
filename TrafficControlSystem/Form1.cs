@@ -42,7 +42,7 @@ namespace TrafficControlSystem
 
         private void btn_walk2_Click(object sender, EventArgs e)
         {
-
+        
         }
 
         private void btn_walk3_Click(object sender, EventArgs e)
@@ -150,9 +150,9 @@ namespace TrafficControlSystem
                         picbox_rarrow_bot.Visible = false;
                         picbox_yarrow_bot.Visible = false;
                         picbox_garrow_bot.Visible = true;
-                        //label34.Visible = false;
-                        //label35.Visible = false;
-                        //label36.Visible = true;
+                        picbox_rarrow_top.Visible = false;
+                        picbox_yarrow_top.Visible = false;
+                        picbox_garrow_top.Visible = true;
                         Refresh();
                     }
                     if (newLightColor == LightColor.YellowArrow)
@@ -160,9 +160,9 @@ namespace TrafficControlSystem
                         picbox_rarrow_bot.Visible = false;
                         picbox_yarrow_bot.Visible = true;
                         picbox_garrow_bot.Visible = false;
-                        //label34.Visible = false;
-                        //label35.Visible = true;
-                        //label36.Visible = false;
+                        picbox_rarrow_top.Visible = false;
+                        picbox_yarrow_top.Visible = true;
+                        picbox_garrow_top.Visible = false;
                         Refresh();
                     }
                     if (newLightColor == LightColor.RedArrow)
@@ -170,9 +170,9 @@ namespace TrafficControlSystem
                         picbox_rarrow_bot.Visible = true;
                         picbox_yarrow_bot.Visible = false;
                         picbox_garrow_bot.Visible = false;
-                        //label34.Visible = true;
-                        //label35.Visible = false;
-                        //label36.Visible = false;
+                        picbox_rarrow_top.Visible = true;
+                        picbox_yarrow_top.Visible = false;
+                        picbox_garrow_top.Visible = false;
                         Refresh();
                     }
                 }
