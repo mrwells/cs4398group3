@@ -1,13 +1,26 @@
 {
+	"id" : "the First ID",
 	"roadways" : 
-		{   
-			"id" :"universityblvd",
-			"name" : "University Blvd",
-			"lanes" : 
+		{
+			"northid" :"universityblvd",
+			"northname" : "University Blvd",
+			"northlanes" : [
 				{
 					"id": "1",
 					"description" : "Inner lane",
 					"direction" : "East"				
 				}
+				],
+			"westid" :"sunriserd",
+			"westtname" : "Sunrise Rd",
+			"westlanes" : [
+				{
+					"id": "1",
+					"description" : "Inner lane",
+					"direction" : "East"				
+				}
+				]
 		}
+
+				
 }

@@ -48,14 +48,14 @@ namespace TrafficControlSystem.Models
 		
 		}
 
-		public static string getDataRoadway(string key)
+		public static string getDataRoadway(string key, int index = 0)
 		{
 			string response = "Hi";
-			if (key == "id") {
-				response = "the ID";
-				Debug.Log (theConfigData.roadways.id);
-				//response = theConfigData.roadways.id.ToString();
-			} else if (key == "") {
+			if (key == "northid") {
+				response = theConfigData.roadways.northid;
+				Debug.Log (theConfigData.roadways.northid);
+			} else if (key == "northname") {
+				response = theConfigData.roadways.northname;
 			}
 			return response;
 		}

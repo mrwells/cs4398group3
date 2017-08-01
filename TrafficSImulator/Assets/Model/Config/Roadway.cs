@@ -7,10 +7,13 @@ namespace TrafficControlSystem.Models
 	[System.Serializable]
     public class Roadway
     {
-		//public string id;
-        public string id { get; set; }
-        public string name { get; set; }
-        public List<Lane> lanes { get; set; }
+		public string northid;
+		public string northname;
+		public Lane[] northlanes;
+
+		public string westid;
+		public string westname;
+		public Lane[] westlanes;
 
 
         public Roadway()

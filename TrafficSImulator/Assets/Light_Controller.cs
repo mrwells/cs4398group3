@@ -16,6 +16,10 @@ public class Light_Controller : MonoBehaviour {
 	//Show how much time is left on the timer
 	public Text Timer;
 
+	//Show the road names
+	public Text northText;
+	public Text westText;
+
 	//Print Debut Text
 	public Text debugText;
 
@@ -57,15 +61,25 @@ public class Light_Controller : MonoBehaviour {
 		Timer = GetComponent<Text>();
 		Timer = GameObject.Find ("Timer").GetComponent<Text>();
 
-		debugText = GetComponent<Text>();
-		debugText = GameObject.Find ("DebugText").GetComponent<Text>();
+		//Find the text field for the North Road Name
+		northText = GetComponent<Text>();
+		northText = GameObject.Find ("NorthRoadName").GetComponent<Text>();
 
+		//Find the text field for the West Road Name
+		westText = GetComponent<Text>();
+		westText = GameObject.Find ("WestRoadName").GetComponent<Text>();
+
+		northText.GetComponent<Text>().text = ConfigManager.getDataRoadway("northname");
+		westText.GetComponent<Text>().text = ConfigManager.getDataRoadway("westname");
+
+
+
+
+		//show the debug 
 		string debutstring = "";
-		debutstring += ConfigManager.getDataRoadway ("id").ToString();
-
+		debutstring += ConfigManager.getDataRoadway ("northname").ToString();
 		Debug.Log ("" + debutstring);
 
-		debugText.GetComponent<Text>().text = debutstring;
 
 		
 	}
