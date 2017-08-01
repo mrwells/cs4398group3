@@ -140,7 +140,7 @@ obj/
 !Library/unity default resources
 !Library/unity editor resources
 
-
+*.dwlt
 
 /Project/Project.userprefs
 /Project/Assembly-CSharp.csproj
@@ -384,3 +384,4 @@ Ankh.*
 .nuget
 #### /TODO review ####
 
+*.dwlt
