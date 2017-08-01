@@ -47,6 +47,31 @@ public class ChangeColor : MonoBehaviour {
 		startRed ();
 
 
+		//check for active lights
+		Light_Controller lights = new Light_Controller();
+		lights.setActiveLights();
+
+		if(!lights.northleft)
+		{
+			northLeft.SetActive(false);
+			southLeft.SetActive(false);
+		}
+		if(!lights.northright)
+		{
+			northRight.SetActive(false);
+			southRight.SetActive(false);
+		}
+		if(!lights.westleft)
+		{
+			westLeft.SetActive(false);
+			eastLeft.SetActive(false);
+		}if(!lights.westright)
+		{
+			westRight.SetActive(false);
+			eastRight.SetActive(false);
+		}
+
+
 	}
 	
 	// Update is called once per frame
