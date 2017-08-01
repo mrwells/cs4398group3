@@ -8,6 +8,8 @@ namespace TrafficControlSystem.Models
     public class Intersection
     {
         [JsonProperty("id")]
+        ///<param name="Id">
+        ///</param>
         public string Id { get; set; }
 
         [JsonProperty("description")]
@@ -18,7 +20,7 @@ namespace TrafficControlSystem.Models
 
         [JsonProperty("timinggroups")]
         public List<TimingGroup> TimingGroups { get; set; }
-
+        
         public Intersection()
         {
             SignalGroups = new List<SignalGroup>();
@@ -26,7 +28,7 @@ namespace TrafficControlSystem.Models
         }
 
         /// <summary>
-        /// Display current state on console
+        /// Display current state of console.
         /// </summary>
         public void OutputCurrentState()
         {
@@ -46,7 +48,11 @@ namespace TrafficControlSystem.Models
                 Console.WriteLine();
             }
         }
-
+        /// <summary>
+        /// SetConsoleColor changes the color of the output to the screen
+        /// based on the parameter passed.
+        /// </summary>
+        /// <param name="lightColor"></param>
         public void SetConsoleColor(LightColor lightColor)
         {
             switch (lightColor)
