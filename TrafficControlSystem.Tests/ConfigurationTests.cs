@@ -187,12 +187,6 @@ namespace TrafficControlSystem.Tests
             Assert.AreEqual(3, time);
 
         }
-
-        [TestMethod]
-        public void TestState()
-        {
-
-        }
     }
 }
 
