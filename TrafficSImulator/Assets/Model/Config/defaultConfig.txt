@@ -40,7 +40,6 @@
 				}
 			
 		}		
-	,
 	"intersections" : 
 		{	
 			"id": "university_sunrise",

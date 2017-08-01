@@ -26,8 +26,6 @@ namespace TrafficControlSystem.Models
 			//Read the file into one massive string
 			string dataAsJson = File.ReadAllText(filePath);
 
-			Debug.Log (dataAsJson.ToString());
-
 			//Parse the massive string into an object
 			ConfigData theData = JsonUtility.FromJson<ConfigData>(dataAsJson);
 			//TestConfigur theData = JsonUtility.FromJson<TestConfigur>(dataAsJson);

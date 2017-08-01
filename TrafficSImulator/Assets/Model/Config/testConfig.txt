@@ -1,18 +1,13 @@
 {
-	"id" :"universityblvd",
-	"name" : "University Blvd",
 	"roadways" : 
 		{   
-			"id" :"neasldkjfladsk",
-			"name" : "NEsted",
+			"id" :"universityblvd",
+			"name" : "University Blvd",
 			"lanes" : 
 				{
 					"id": "1",
 					"description" : "Inner lane",
 					"direction" : "East"				
 				}
-
-			}
-		
-				
+		}
 }

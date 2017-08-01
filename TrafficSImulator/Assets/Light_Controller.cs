@@ -38,7 +38,7 @@ public class Light_Controller : MonoBehaviour {
 	void Start () {
 
 		//Read the Config file
-		ConfigManager.readConfigFile(""); 
+		ConfigManager.readConfigFile("testConfig.txt"); 
 
 		//Find the objects for each of the lights
 		//northLigth = GameObject.Find ("North Light");

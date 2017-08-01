@@ -10,3 +10,25 @@ public class TestConfigur  {
 	public string name;
 	public Roadway roadways;
 }
+
+
+/*
+ * {
+	"id" :"universityblvd",
+	"name" : "University Blvd",
+	"roadways" : 
+		{   
+			"id" :"neasldkjfladsk",
+			"name" : "NEsted",
+			"lanes" : 
+				{
+					"id": "1",
+					"description" : "Inner lane",
+					"direction" : "East"				
+				}
+
+			}
+		
+				
+}
+*/
