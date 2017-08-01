@@ -127,7 +127,7 @@
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(957, 441);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 25);
+            this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Red";
             // 
@@ -138,7 +138,7 @@
             this.label2.ForeColor = System.Drawing.Color.Yellow;
             this.label2.Location = new System.Drawing.Point(1022, 441);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 25);
+            this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Red";
             this.label2.Visible = false;
@@ -150,7 +150,7 @@
             this.label3.ForeColor = System.Drawing.Color.Lime;
             this.label3.Location = new System.Drawing.Point(1088, 441);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 25);
+            this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Red";
             this.label3.Visible = false;
@@ -162,7 +162,7 @@
             this.label4.ForeColor = System.Drawing.Color.Lime;
             this.label4.Location = new System.Drawing.Point(1088, 362);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 25);
+            this.label4.Size = new System.Drawing.Size(27, 13);
             this.label4.TabIndex = 33;
             this.label4.Text = "Red";
             this.label4.Visible = false;
@@ -174,7 +174,7 @@
             this.label5.ForeColor = System.Drawing.Color.Yellow;
             this.label5.Location = new System.Drawing.Point(1022, 362);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 25);
+            this.label5.Size = new System.Drawing.Size(27, 13);
             this.label5.TabIndex = 32;
             this.label5.Text = "Red";
             this.label5.Visible = false;
@@ -186,7 +186,7 @@
             this.label6.ForeColor = System.Drawing.Color.Red;
             this.label6.Location = new System.Drawing.Point(957, 362);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 25);
+            this.label6.Size = new System.Drawing.Size(27, 13);
             this.label6.TabIndex = 31;
             this.label6.Text = "Red";
             // 
@@ -197,7 +197,7 @@
             this.label31.ForeColor = System.Drawing.Color.Lime;
             this.label31.Location = new System.Drawing.Point(242, 563);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(47, 25);
+            this.label31.Size = new System.Drawing.Size(27, 13);
             this.label31.TabIndex = 36;
             this.label31.Text = "Red";
             this.label31.Visible = false;
@@ -209,7 +209,7 @@
             this.label32.ForeColor = System.Drawing.Color.Yellow;
             this.label32.Location = new System.Drawing.Point(306, 563);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(47, 25);
+            this.label32.Size = new System.Drawing.Size(27, 13);
             this.label32.TabIndex = 35;
             this.label32.Text = "Red";
             this.label32.Visible = false;
@@ -221,7 +221,7 @@
             this.label33.ForeColor = System.Drawing.Color.Red;
             this.label33.Location = new System.Drawing.Point(370, 563);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(47, 25);
+            this.label33.Size = new System.Drawing.Size(27, 13);
             this.label33.TabIndex = 34;
             this.label33.Text = "Red";
             // 
@@ -232,7 +232,7 @@
             this.label7.ForeColor = System.Drawing.Color.Lime;
             this.label7.Location = new System.Drawing.Point(242, 644);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 25);
+            this.label7.Size = new System.Drawing.Size(27, 13);
             this.label7.TabIndex = 39;
             this.label7.Text = "Red";
             this.label7.Visible = false;
@@ -244,7 +244,7 @@
             this.label8.ForeColor = System.Drawing.Color.Yellow;
             this.label8.Location = new System.Drawing.Point(306, 644);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 25);
+            this.label8.Size = new System.Drawing.Size(27, 13);
             this.label8.TabIndex = 38;
             this.label8.Text = "Red";
             this.label8.Visible = false;
@@ -256,7 +256,7 @@
             this.label9.ForeColor = System.Drawing.Color.Red;
             this.label9.Location = new System.Drawing.Point(370, 644);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 25);
+            this.label9.Size = new System.Drawing.Size(27, 13);
             this.label9.TabIndex = 37;
             this.label9.Text = "Red";
             // 
@@ -267,7 +267,7 @@
             this.label13.ForeColor = System.Drawing.Color.Red;
             this.label13.Location = new System.Drawing.Point(658, 750);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 25);
+            this.label13.Size = new System.Drawing.Size(22, 13);
             this.label13.TabIndex = 45;
             this.label13.Text = "<---";
             // 
@@ -278,7 +278,7 @@
             this.label14.ForeColor = System.Drawing.Color.Yellow;
             this.label14.Location = new System.Drawing.Point(658, 792);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(45, 25);
+            this.label14.Size = new System.Drawing.Size(22, 13);
             this.label14.TabIndex = 44;
             this.label14.Text = "<---";
             this.label14.Visible = false;
@@ -290,7 +290,7 @@
             this.label15.ForeColor = System.Drawing.Color.Lime;
             this.label15.Location = new System.Drawing.Point(658, 835);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(45, 25);
+            this.label15.Size = new System.Drawing.Size(22, 13);
             this.label15.TabIndex = 43;
             this.label15.Text = "<---";
             this.label15.Visible = false;
@@ -302,7 +302,7 @@
             this.label16.ForeColor = System.Drawing.Color.Red;
             this.label16.Location = new System.Drawing.Point(737, 750);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(47, 25);
+            this.label16.Size = new System.Drawing.Size(27, 13);
             this.label16.TabIndex = 48;
             this.label16.Text = "Red";
             // 
@@ -313,7 +313,7 @@
             this.label17.ForeColor = System.Drawing.Color.Yellow;
             this.label17.Location = new System.Drawing.Point(737, 792);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(47, 25);
+            this.label17.Size = new System.Drawing.Size(27, 13);
             this.label17.TabIndex = 47;
             this.label17.Text = "Red";
             this.label17.Visible = false;
@@ -325,7 +325,7 @@
             this.label18.ForeColor = System.Drawing.Color.Lime;
             this.label18.Location = new System.Drawing.Point(737, 835);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(47, 25);
+            this.label18.Size = new System.Drawing.Size(27, 13);
             this.label18.TabIndex = 46;
             this.label18.Text = "Red";
             this.label18.Visible = false;
@@ -337,7 +337,7 @@
             this.label19.ForeColor = System.Drawing.Color.Red;
             this.label19.Location = new System.Drawing.Point(834, 750);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(47, 25);
+            this.label19.Size = new System.Drawing.Size(27, 13);
             this.label19.TabIndex = 51;
             this.label19.Text = "Red";
             // 
@@ -348,7 +348,7 @@
             this.label20.ForeColor = System.Drawing.Color.Yellow;
             this.label20.Location = new System.Drawing.Point(834, 792);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(47, 25);
+            this.label20.Size = new System.Drawing.Size(27, 13);
             this.label20.TabIndex = 50;
             this.label20.Text = "Red";
             this.label20.Visible = false;
@@ -360,7 +360,7 @@
             this.label21.ForeColor = System.Drawing.Color.Lime;
             this.label21.Location = new System.Drawing.Point(834, 835);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(47, 25);
+            this.label21.Size = new System.Drawing.Size(27, 13);
             this.label21.TabIndex = 49;
             this.label21.Text = "Red";
             this.label21.Visible = false;
@@ -372,7 +372,7 @@
             this.label25.ForeColor = System.Drawing.Color.Red;
             this.label25.Location = new System.Drawing.Point(493, 252);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(47, 25);
+            this.label25.Size = new System.Drawing.Size(27, 13);
             this.label25.TabIndex = 57;
             this.label25.Text = "Red";
             // 
@@ -383,7 +383,7 @@
             this.label26.ForeColor = System.Drawing.Color.Yellow;
             this.label26.Location = new System.Drawing.Point(493, 213);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(47, 25);
+            this.label26.Size = new System.Drawing.Size(27, 13);
             this.label26.TabIndex = 56;
             this.label26.Text = "Red";
             this.label26.Visible = false;
@@ -395,7 +395,7 @@
             this.label27.ForeColor = System.Drawing.Color.Lime;
             this.label27.Location = new System.Drawing.Point(493, 174);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(47, 25);
+            this.label27.Size = new System.Drawing.Size(27, 13);
             this.label27.TabIndex = 55;
             this.label27.Text = "Red";
             this.label27.Visible = false;
@@ -407,7 +407,7 @@
             this.label28.ForeColor = System.Drawing.Color.Red;
             this.label28.Location = new System.Drawing.Point(588, 252);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(47, 25);
+            this.label28.Size = new System.Drawing.Size(27, 13);
             this.label28.TabIndex = 60;
             this.label28.Text = "Red";
             // 
@@ -418,7 +418,7 @@
             this.label29.ForeColor = System.Drawing.Color.Yellow;
             this.label29.Location = new System.Drawing.Point(588, 213);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(47, 25);
+            this.label29.Size = new System.Drawing.Size(27, 13);
             this.label29.TabIndex = 59;
             this.label29.Text = "Red";
             this.label29.Visible = false;
@@ -430,7 +430,7 @@
             this.label30.ForeColor = System.Drawing.Color.Lime;
             this.label30.Location = new System.Drawing.Point(588, 174);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(47, 25);
+            this.label30.Size = new System.Drawing.Size(27, 13);
             this.label30.TabIndex = 58;
             this.label30.Text = "Red";
             this.label30.Visible = false;
@@ -442,7 +442,7 @@
             this.label34.ForeColor = System.Drawing.Color.Red;
             this.label34.Location = new System.Drawing.Point(667, 252);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(45, 25);
+            this.label34.Size = new System.Drawing.Size(22, 13);
             this.label34.TabIndex = 63;
             this.label34.Text = "--->";
             // 
@@ -453,7 +453,7 @@
             this.label35.ForeColor = System.Drawing.Color.Yellow;
             this.label35.Location = new System.Drawing.Point(667, 213);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(45, 25);
+            this.label35.Size = new System.Drawing.Size(22, 13);
             this.label35.TabIndex = 62;
             this.label35.Text = "--->";
             this.label35.Visible = false;
@@ -465,7 +465,7 @@
             this.label36.ForeColor = System.Drawing.Color.Lime;
             this.label36.Location = new System.Drawing.Point(667, 174);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(45, 25);
+            this.label36.Size = new System.Drawing.Size(22, 13);
             this.label36.TabIndex = 61;
             this.label36.Text = "--->";
             this.label36.Visible = false;
@@ -840,8 +840,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1302, 1066);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(1302, 741);
             this.Controls.Add(this.btn_walk7);
             this.Controls.Add(this.btn_walk5);
             this.Controls.Add(this.btn_preempt2);
