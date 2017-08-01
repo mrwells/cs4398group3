@@ -9,17 +9,35 @@
 					"id": "1",
 					"description" : "Inner lane",
 					"direction" : "East"				
+				},
+				{
+					"id": "2",
+					"description" : "Outer lane",
+					"direction" : "East"				
+				},
+				{
+					"id": "3",
+					"description" : "Inner lane",
+					"direction" : "West"				
+				},
+				{
+					"id": "4",
+					"description" : "Outer lane",
+					"direction" : "West"				
 				}
-				],
+			],
 			"westid" :"sunriserd",
 			"westname" : "Sunrise Rd",
 			"westlanes" : [
-				{
-					"id": "1",
-					"description" : "Inner lane",
-					"direction" : "East"				
+				{	"id": "1",
+					"description" : "lane1",
+					"direction" : "North"				
+				},
+				{	"id": "2",
+					"description" : "lane2",
+					"direction" : "South"				
 				}
-				]
+			]
 		}
 
 				

@@ -3,15 +3,11 @@
 
 namespace TrafficControlSystem.Models
 {
+	[System.Serializable]
     public class Lane
     {
-       // [JsonProperty("id")]
-        public string Id { get; set; }
-
-       // [JsonProperty("description")]
-        public string Description { get; set; }
-
-      //  [JsonProperty("direction")]
-        public string Direction { get; set; }
+		public string id;
+		public string description;
+		public string direction;
     }
 }

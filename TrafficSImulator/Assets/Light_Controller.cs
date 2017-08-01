@@ -44,6 +44,12 @@ public class Light_Controller : MonoBehaviour {
 		//Read the Config file
 		ConfigManager.readConfigFile("testConfig.txt"); 
 
+		//set up the text fields, and populate those which need populating
+		setText();
+
+
+
+
 		//Find the objects for each of the lights
 		//northLigth = GameObject.Find ("North Light");
 		//southLigth = GameObject.Find ("South Light");
@@ -57,28 +63,6 @@ public class Light_Controller : MonoBehaviour {
 		//eastLigth.gameObject.GetComponent<Renderer> ().material.color = Color.red;
 		//westLigth.gameObject.GetComponent<Renderer> ().material.color = Color.red;
 
-		//Find the text field where we will store our timer
-		Timer = GetComponent<Text>();
-		Timer = GameObject.Find ("Timer").GetComponent<Text>();
-
-		//Find the text field for the North Road Name
-		northText = GetComponent<Text>();
-		northText = GameObject.Find ("NorthRoadName").GetComponent<Text>();
-
-		//Find the text field for the West Road Name
-		westText = GetComponent<Text>();
-		westText = GameObject.Find ("WestRoadName").GetComponent<Text>();
-
-		northText.GetComponent<Text>().text = ConfigManager.getDataRoadway("northname");
-		westText.GetComponent<Text>().text = ConfigManager.getDataRoadway("westname");
-
-
-
-
-		//show the debug 
-		string debutstring = "";
-		debutstring += ConfigManager.getDataRoadway ("northname").ToString();
-		Debug.Log ("" + debutstring);
 
 
 		
@@ -100,6 +84,24 @@ public class Light_Controller : MonoBehaviour {
 		}
 
 		Timer.GetComponent<Text>().text = "Time Remaining: " + timer_countdown.ToString("F1");
+	}
+
+	private void setText()
+	{
+		//Find the text field where we will store our timer
+		Timer = GetComponent<Text>();
+		Timer = GameObject.Find ("Timer").GetComponent<Text>();
+
+		//Find the text field for the North Road Name
+		northText = GetComponent<Text>();
+		northText = GameObject.Find ("NorthRoadName").GetComponent<Text>();
+
+		//Find the text field for the West Road Name
+		westText = GetComponent<Text>();
+		westText = GameObject.Find ("WestRoadName").GetComponent<Text>();
+
+		northText.GetComponent<Text>().text = ConfigManager.getDataRoadway("northname");
+		westText.GetComponent<Text>().text = ConfigManager.getDataRoadway("westname");
 	}
 
 	/*

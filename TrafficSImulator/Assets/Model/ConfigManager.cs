@@ -55,15 +55,17 @@ namespace TrafficControlSystem.Models
 				response = theConfigData.roadways.northid;
 			} else if (key == "northname") {
 				response = theConfigData.roadways.northname;
-			} else if (key == "northlanes") {
+			} else if (key == "northlanes_id") {
+				response = theConfigData.roadways.northlanes[index].id;
 			}else if (key == "westid") {
 				response = theConfigData.roadways.westid;
 			}else if (key == "westname") {
 				response = theConfigData.roadways.westname;
-			}else if (key == "westlanes") {
+			}else if (key == "westlanes_id") {
+				response = theConfigData.roadways.westlanes[index].id;
 			}
 
-			Debug.Log (response);
+			//Debug.Log (response);
 			return response;
 		}
 
