@@ -5,8 +5,8 @@ using UnityEngine;
 namespace TrafficControlSystem.Models
 {
 	[System.Serializable]
-	public class ConfigData : MonoBehaviour {
-
+	public class ConfigData 
+	{
 		public Roadway roadways;
 		public Intersection intersections;
 

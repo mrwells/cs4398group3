@@ -5,7 +5,7 @@ using UnityEngine;
 namespace TrafficControlSystem.Models
 {
 [System.Serializable]
-public class Intersection : MonoBehaviour 
+public class Intersection 
 	{
 	public string id { get; set; }
 	public string description { get; set; }

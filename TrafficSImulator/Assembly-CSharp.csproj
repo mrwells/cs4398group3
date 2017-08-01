@@ -66,7 +66,11 @@
      <Compile Include="Assets\Model\Config\SignalGroup.cs" />
      <Compile Include="Assets\Model\Config\Timing.cs" />
      <Compile Include="Assets\Model\Config\TimingGroup.cs" />
+     <Compile Include="Assets\Model\ConfigManager.cs" />
+     <Compile Include="Assets\Model\TestConfigur.cs" />
      <None Include="Assets\Model\Config\universityblvd_sunriserd.txt" />
+     <None Include="Assets\Model\Config\testConfig.txt" />
+     <None Include="Assets\Model\Config\defaultConfig.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

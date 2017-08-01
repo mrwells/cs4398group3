@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TrafficControlSystem.Models;
 
 public class Light_Controller : MonoBehaviour {
 
@@ -14,6 +15,9 @@ public class Light_Controller : MonoBehaviour {
 
 	//Show how much time is left on the timer
 	public Text Timer;
+
+	//Print Debut Text
+	public Text debugText;
 
 	//The lenght of time to stay green or yellow
 	public float GreenTime = 3.0f;
@@ -32,11 +36,16 @@ public class Light_Controller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		//Read the Config file
+		ConfigManager.readConfigFile(""); 
+
 		//Find the objects for each of the lights
 		//northLigth = GameObject.Find ("North Light");
 		//southLigth = GameObject.Find ("South Light");
 		//eastLigth = GameObject.Find ("East Light");
 		//westLigth = GameObject.Find ("West Light");
+
 
 		//Set the lights to their starting colors
 		//northLigth.gameObject.GetComponent<Renderer> ().material.color = Color.green;
@@ -48,8 +57,15 @@ public class Light_Controller : MonoBehaviour {
 		Timer = GetComponent<Text>();
 		Timer = GameObject.Find ("Timer").GetComponent<Text>();
 
-		//colorChanger = ChangeColor.Instantiate ();
-		//colorChanger.setColor(1, Color.red);
+		debugText = GetComponent<Text>();
+		debugText = GameObject.Find ("DebugText").GetComponent<Text>();
+
+		string debutstring = "";
+		debutstring += ConfigManager.getDataRoadway ("id").ToString();
+
+		Debug.Log ("" + debutstring);
+
+		debugText.GetComponent<Text>().text = debutstring;
 
 		
 	}
