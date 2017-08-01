@@ -28,11 +28,16 @@ public class MainController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		//Read the Config file
+		//*************************
+		// THIS MUST BE DONE BEFORE ANYTHING ELSE
+		//*************************
+		ConfigManager.readConfigFile("testConfig.txt");
+
 		//set up the text fields, and populate those which need populating
 		setText();
 
-		//Read the Config file
-		ConfigManager.readConfigFile("testConfig.txt");
+
 
 
 
