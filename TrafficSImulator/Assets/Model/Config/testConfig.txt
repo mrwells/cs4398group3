@@ -12,7 +12,7 @@
 				}
 				],
 			"westid" :"sunriserd",
-			"westtname" : "Sunrise Rd",
+			"westname" : "Sunrise Rd",
 			"westlanes" : [
 				{
 					"id": "1",

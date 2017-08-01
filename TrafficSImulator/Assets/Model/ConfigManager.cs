@@ -53,10 +53,17 @@ namespace TrafficControlSystem.Models
 			string response = "Hi";
 			if (key == "northid") {
 				response = theConfigData.roadways.northid;
-				Debug.Log (theConfigData.roadways.northid);
 			} else if (key == "northname") {
 				response = theConfigData.roadways.northname;
+			} else if (key == "northlanes") {
+			}else if (key == "westid") {
+				response = theConfigData.roadways.westid;
+			}else if (key == "westname") {
+				response = theConfigData.roadways.westname;
+			}else if (key == "westlanes") {
 			}
+
+			Debug.Log (response);
 			return response;
 		}
 
