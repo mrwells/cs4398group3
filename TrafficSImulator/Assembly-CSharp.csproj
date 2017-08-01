@@ -51,12 +51,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ChangeColor.cs" />
+     <Compile Include="Assets\Controler\ChangeColor.cs" />
+     <Compile Include="Assets\Controler\Light_Controller.cs" />
      <Compile Include="Assets\Controler\MainController.cs" />
      <Compile Include="Assets\Controler\Old Files\Configuration.cs" />
      <Compile Include="Assets\Controler\Old Files\LightGroup.cs" />
      <Compile Include="Assets\Controler\Old Files\Program.cs" />
-     <Compile Include="Assets\Light_Controller.cs" />
      <Compile Include="Assets\Model\Config\ConfigData.cs" />
      <Compile Include="Assets\Model\Config\Intersection.cs" />
      <Compile Include="Assets\Model\Config\Lane.cs" />

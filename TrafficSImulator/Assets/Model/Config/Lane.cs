@@ -9,5 +9,6 @@ namespace TrafficControlSystem.Models
 		public string id;
 		public string description;
 		public string direction;
+		public string action;
     }
 }

@@ -56,13 +56,29 @@ namespace TrafficControlSystem.Models
 			} else if (key == "northname") {
 				response = theConfigData.roadways.northname;
 			} else if (key == "northlanes_id") {
-				response = theConfigData.roadways.northlanes[index].id;
-			}else if (key == "westid") {
+				response = theConfigData.roadways.northlanes [index].id;
+			} else if (key == "northlanes_description") {
+				response = theConfigData.roadways.northlanes [index].description;
+			}else if (key == "northlanes_direction") {
+				response = theConfigData.roadways.northlanes [index].direction;
+			}else if (key == "northlanes_action") {
+				response = theConfigData.roadways.northlanes [index].action;
+			}
+
+
+
+			else if (key == "westid") {
 				response = theConfigData.roadways.westid;
 			}else if (key == "westname") {
 				response = theConfigData.roadways.westname;
 			}else if (key == "westlanes_id") {
 				response = theConfigData.roadways.westlanes[index].id;
+			} else if (key == "westlanes_description") {
+				response = theConfigData.roadways.westlanes [index].description;
+			}else if (key == "westlanes_direction") {
+				response = theConfigData.roadways.westlanes [index].direction;
+			}else if (key == "westlanes_action") {
+				response = theConfigData.roadways.westlanes [index].action;
 			}
 
 			//Debug.Log (response);

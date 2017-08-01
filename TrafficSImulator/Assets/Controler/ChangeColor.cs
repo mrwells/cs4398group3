@@ -24,6 +24,8 @@ public class ChangeColor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		//find all of the object that will be our lights
 		northRight = GameObject.Find ("northRight");
 		northStraight = GameObject.Find ("northStraight");
 		northLeft = GameObject.Find ("northLeft");
@@ -40,6 +42,8 @@ public class ChangeColor : MonoBehaviour {
 		westStraight = GameObject.Find ("westStraight");
 		westLeft = GameObject.Find ("westLeft");
 
+
+		//set all of the lights to red, our starting state.
 		startRed ();
 
 
