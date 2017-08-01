@@ -85,7 +85,7 @@ namespace TrafficControlSystem.Models
 			return response;
 		}
 
-		public string getDataIntersection(string key)
+		public string getDataIntersection(string key, int index = 0)
 		{
 			if (key == "") {
 			} else if (key == "") {

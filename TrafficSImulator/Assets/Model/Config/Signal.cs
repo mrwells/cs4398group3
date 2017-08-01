@@ -8,9 +8,9 @@ namespace TrafficControlSystem.Models
 	[System.Serializable]
     public class Signal
     {
-        public string id { get; set; }
-        public string laneId { get; set; }
-        public List<LightColor> lights { get; set; }
+		public string id;
+		public string laneid;
+		public LightColor[] lights;
 
         public Signal()
         {

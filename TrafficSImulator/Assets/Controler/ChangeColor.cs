@@ -108,4 +108,9 @@ public class ChangeColor : MonoBehaviour {
 		setColor (westStraight, Color.red);
 		setColor (westLeft, Color.red);
 	}
+
+	public void setNewColor()
+	{
+
+	}
 }

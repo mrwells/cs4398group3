@@ -9,8 +9,8 @@ public class Intersection
 	{
 	public string id { get; set; }
 	public string description { get; set; }
-	public List<SignalGroup> SignalGroups { get; set; }
-	public List<TimingGroup> TimingGroups { get; set; }
+	public SignalGroup[] SignalGroups { get; set; }
+	public TimingGroup[] TimingGroups { get; set; }
 
 	public Intersection()
 	{
