@@ -6,6 +6,7 @@ using System.Text;
 
 namespace TrafficControlSystem.Models
 {
+	[System.Serializable]
     public enum LightColor
     {
         Green,
