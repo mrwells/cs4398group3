@@ -14,8 +14,8 @@ public class Intersection
 
 	public Intersection()
 	{
-		SignalGroups = new List<SignalGroup>();
-		TimingGroups = new List<TimingGroup>();
+		//SignalGroups = new List<SignalGroup>();
+		//TimingGroups = new List<TimingGroup>();
 	}
 
 	}
