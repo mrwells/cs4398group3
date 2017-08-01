@@ -20,8 +20,8 @@ namespace TrafficControlSystem.Models
 		//private static TestConfigur loadData(string configFileName)
 		private static ConfigData loadData(string configFileName)
 		{
-			string filePath = "C:\\Users\\owner\\Documents\\GitHub\\cs4398group3\\TrafficSImulator\\Assets\\Model\\Config\\" + configFileName;
-
+			//string filePath = "C:\\Users\\owner\\Documents\\GitHub\\cs4398group3\\TrafficSImulator\\Assets\\Model\\Config\\" + configFileName;
+			string filePath = Application.dataPath + "\\Model\\Config\\" + configFileName;
 
 			//Read the file into one massive string
 			string dataAsJson = File.ReadAllText(filePath);
