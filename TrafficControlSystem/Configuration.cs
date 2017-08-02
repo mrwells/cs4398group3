@@ -2,13 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 using Newtonsoft.Json;
 using TrafficControlSystem.Models;
 
 namespace TrafficControlSystem
 {
+    /// <summary>
+    /// Configuration Class
+    /// </summary>
+    /// <remarks>
+    /// Configuration Class has 3 attributes:
+    /// (List[Roadway]) Roadways - List of Roadways
+    /// (List[Intersection] Intersections - List of Intersections
+    /// (String) FileName - Name of Configuration File
+    /// </remarks>
     public class Configuration
     {
         [JsonProperty("roadways")]
@@ -19,12 +27,24 @@ namespace TrafficControlSystem
 
         public string FileName { get; set; }
 
+        /// <summary>
+        /// Constructor for Configuration
+        /// </summary>
+        /// <remarks>
+        /// Creates a List of Roadways and Intersections 
+        /// on instansiation.
+        /// </remarks>
         public Configuration()
         {
             Roadways = new List<Roadway>();
             Intersections = new List<Intersection>();
         }
 
+        /// <summary>
+        /// Load configuration from file
+        /// </summary>
+        /// <param name="configurationFileName">Filename of configuration to load</param>
+        /// <returns>configuration</returns>
         public static Configuration Load(string configurationFileName)
         {
             var rawConfiguration = System.IO.File.ReadAllText(configurationFileName);
@@ -55,6 +75,10 @@ namespace TrafficControlSystem
             return configuration;
         }
 
+        /// <summary>
+        /// Output basic configuration information for display
+        /// </summary>
+        /// <returns>output</returns>
         public override string ToString()
         {
             var output = new StringBuilder();

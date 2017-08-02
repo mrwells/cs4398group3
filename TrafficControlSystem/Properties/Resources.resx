@@ -121,13 +121,52 @@
   <data name="ShowImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ShowImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HTnZ8juC" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HTnZ8juC.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="intersection_only_one_turn_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\intersection_only_one_turn_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="172398101" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\172398101.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="green_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_arrow_alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_arrow_alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_arrow_alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_arrow_alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_arrow_alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_arrow_alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="green_circle_alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_circle_alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="red_circle_alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_circle_alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_circle_alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_circle_alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="upraised_hand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\upraised_hand.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="walking_man" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\walking_man.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blank_cw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blank_cw.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

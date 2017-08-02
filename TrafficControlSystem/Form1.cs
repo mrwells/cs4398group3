@@ -7,14 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrafficControlSystem.Models;
 
 namespace TrafficControlSystem
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        UISyncObject syncObject;
+
+        private delegate void UpdateForm(Intersection intersection);
+
+        private Intersection _intersection;
+
+        public Form1(UISyncObject syncObject)
         {
+            this.syncObject = syncObject;
+            this.syncObject.OnTimeToUpdate += SyncObject_TimeToUpdate;
+            this.FormClosing += Form1_FormClosing;
             InitializeComponent();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.syncObject.OnTimeToUpdate -= SyncObject_TimeToUpdate;
         }
         
         private void btn_preempt1_Click(object sender, EventArgs e)
@@ -24,54 +39,188 @@ namespace TrafficControlSystem
 
         private void btn_preempt2_Click(object sender, EventArgs e)
         {
-
+           
         }
 
-        private void btn_walk1_Click(object sender, EventArgs e)
+        private void SyncObject_TimeToUpdate(Intersection intersection)
         {
-
+            this.Invoke(new UpdateForm(Update), intersection);
+            _intersection = intersection;
         }
 
-        private void btn_walk2_Click(object sender, EventArgs e)
+         private void Update(Intersection intersection)
+         { 
+            foreach (var signalGroup in intersection.SignalGroups)
+            {
+                var newLightColor = signalGroup.Signals.First().CurrentLight;
+
+                if (signalGroup.Id.Contains("universityblvd"))
+                {
+                    if (newLightColor == LightColor.Green)
+                    {
+                        this.picbox_left_bot.Image = TrafficControlSystem.Properties.Resources.green_circle;
+                        this.picbox_right_bot.Image = TrafficControlSystem.Properties.Resources.green_circle;
+                        this.picbox_left_top.Image = TrafficControlSystem.Properties.Resources.green_circle;
+                        this.picbox_right_top.Image = TrafficControlSystem.Properties.Resources.green_circle;
+                        Refresh();
+                    }
+                    if (newLightColor == LightColor.Yellow)
+                    {
+                        this.picbox_left_bot.Image = TrafficControlSystem.Properties.Resources.yellow_circle;
+                        this.picbox_right_bot.Image = TrafficControlSystem.Properties.Resources.yellow_circle;
+                        this.picbox_left_top.Image = TrafficControlSystem.Properties.Resources.yellow_circle;
+                        this.picbox_right_top.Image = TrafficControlSystem.Properties.Resources.yellow_circle;
+                        Refresh();
+                    }
+                    if (newLightColor == LightColor.Red)
+                    {
+                        this.picbox_left_bot.Image = TrafficControlSystem.Properties.Resources.red_circle;
+                        this.picbox_right_bot.Image = TrafficControlSystem.Properties.Resources.red_circle;
+                        this.picbox_left_top.Image = TrafficControlSystem.Properties.Resources.red_circle;
+                        this.picbox_right_top.Image = TrafficControlSystem.Properties.Resources.red_circle;
+                        Refresh();
+                    }
+                }
+
+                if (signalGroup.Id == "universityblvd_turnlanes")
+                {
+                    if (newLightColor == LightColor.GreenArrow)
+                    {
+                        this.picbox_turn_top.Image = TrafficControlSystem.Properties.Resources.green_arrow_alt;
+                        this.picbox_turn_bot.Image = TrafficControlSystem.Properties.Resources.green_arrow;
+                        Refresh();
+                    }
+                    if (newLightColor == LightColor.YellowArrow)
+                    {
+                        this.picbox_turn_top.Image = TrafficControlSystem.Properties.Resources.yellow_arrow_alt;
+                        this.picbox_turn_bot.Image = TrafficControlSystem.Properties.Resources.yellow_arrow;
+                        Refresh();
+                    }
+                    if (newLightColor == LightColor.RedArrow)
+                    {
+                        this.picbox_turn_top.Image = TrafficControlSystem.Properties.Resources.red_arrow_alt;
+                        this.picbox_turn_bot.Image = TrafficControlSystem.Properties.Resources.red_arrow;
+                        Refresh();
+                    }
+                }
+
+                if (signalGroup.Id.Contains("sunrise"))
+                {
+                    if (newLightColor == LightColor.Green)
+                    {
+                        this.picbox_bot_right.Image = TrafficControlSystem.Properties.Resources.green_circle_alt;
+                        this.picbox_top_right.Image = TrafficControlSystem.Properties.Resources.green_circle_alt;
+                        this.picbox_bot_left.Image = TrafficControlSystem.Properties.Resources.green_circle_alt;
+                        this.picbox_top_left.Image = TrafficControlSystem.Properties.Resources.green_circle_alt;
+                        Refresh();
+                    }
+                    if (newLightColor == LightColor.Yellow)
+                    {
+                        this.picbox_bot_right.Image = TrafficControlSystem.Properties.Resources.yellow_circle_alt;
+                        this.picbox_top_right.Image = TrafficControlSystem.Properties.Resources.yellow_circle_alt;
+                        this.picbox_bot_left.Image = TrafficControlSystem.Properties.Resources.yellow_circle_alt;
+                        this.picbox_top_left.Image = TrafficControlSystem.Properties.Resources.yellow_circle_alt;
+                        Refresh();
+                    }
+                    if (newLightColor == LightColor.Red)
+                    {
+                        this.picbox_bot_right.Image = TrafficControlSystem.Properties.Resources.red_circle_alt;
+                        this.picbox_top_right.Image = TrafficControlSystem.Properties.Resources.red_circle_alt;
+                        this.picbox_bot_left.Image = TrafficControlSystem.Properties.Resources.red_circle_alt;
+                        this.picbox_top_left.Image = TrafficControlSystem.Properties.Resources.red_circle_alt;
+                        Refresh();
+                    }
+                }
+            }
+        }
+
+        //South right
+        private void picbox_crosswalk_1r_Click(object sender, EventArgs e)
         {
+            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[0].Roadway);
+            /*
+            picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.walking_man;
+            Refresh();
+            System.Threading.Thread.Sleep(5000);
+
+            int i = 25;
+            label1.Text = i.ToString();
+            label1.Visible = true;
+           
+            while (i > 0)
+            {
+                picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.upraised_hand;
+                Refresh();
+                System.Threading.Thread.Sleep(500);
+                picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.blank_cw;
+                Refresh();
+                System.Threading.Thread.Sleep(500);
+                --i;
+                label1.Text = i.ToString();
+            }
+
+            picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.upraised_hand;
+            label1.Visible = false;
+            Refresh();
+    */
+
+
+
 
         }
 
-        private void btn_walk3_Click(object sender, EventArgs e)
+        //South left
+        private void picbox_crosswalk_1l_Click(object sender, EventArgs e)
         {
-
+            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[0].Roadway);
         }
 
-        private void btn_walk4_Click(object sender, EventArgs e)
+        //west bottom
+        private void picbox_crosswalk_2b_Click(object sender, EventArgs e)
         {
-
+            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[3].Roadway);
         }
 
-        private void btn_walk5_Click(object sender, EventArgs e)
+        //west top
+        private void picbox_crosswalk_2t_Click(object sender, EventArgs e)
         {
+            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[3].Roadway);
 
         }
 
-        private void btn_walk6_Click(object sender, EventArgs e)
+        //North left
+        private void picbox_crosswalk_3l_Click(object sender, EventArgs e)
         {
-
+            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[0].Roadway);
         }
 
-        private void btn_walk7_Click(object sender, EventArgs e)
+        //North right
+        private void picbox_crosswalk_3r_Click(object sender, EventArgs e)
         {
-
+            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[0].Roadway);
         }
 
-        private void btn_walk8_Click(object sender, EventArgs e)
+
+        //East Top
+        private void picbox_crosswalk_4t_Click(object sender, EventArgs e)
         {
-
+            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[3].Roadway);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        //East Bottom
+        private void picbox_crosswalk_4b_Click(object sender, EventArgs e)
         {
-
+            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[3].Roadway);
         }
 
-       
+        private void btn_em_r_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_em_l_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
