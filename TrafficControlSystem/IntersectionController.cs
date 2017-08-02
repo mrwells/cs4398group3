@@ -31,7 +31,8 @@ namespace TrafficControlSystem
 
         public IntersectionController(Intersection intersection)
         {
-            this.intersection = intersection;            
+            this.intersection = intersection;
+            syncObject = new UISyncObject();            
         }
 
         /// <summary>
@@ -43,7 +44,6 @@ namespace TrafficControlSystem
             startTime = DateTime.Now;
             Console.WriteLine($"Running simulation for {intersection.Description}");
 
-            syncObject = new UISyncObject();
             
             uiThread = new Thread(new ParameterizedThreadStart((s) =>
             {
