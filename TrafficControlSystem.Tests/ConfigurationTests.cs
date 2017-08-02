@@ -8,6 +8,8 @@ namespace TrafficControlSystem.Tests
     [TestClass]
     public class ConfigurationTests
     {
+        public LightColor CurrentLight { get; private set; }
+
         [TestMethod]
         public void LoadConfiguration()
         {
@@ -186,18 +188,51 @@ namespace TrafficControlSystem.Tests
             time = configuration.Intersections[0].TimingGroups[2].Timings[2].Duration;
             Assert.AreEqual(3, time);
         }
+
         [TestMethod]
         public void TestCollision()
+        {   
+            Assert.IsFalse(RunLightTest());   
+        }
+
+        public Boolean RunLightTest()
         {
             var configuration = Configuration.Load("universityblvd_sunriserd.txt");
-
-            //Checking collision between "universityblvd_east_west_turnlanes" and "sunriserd_north_south"
             
-            Assert.AreEqual(configuration.Intersections[0].SignalGroups[1].Signals[0].CurrentLight, configuration.Intersections[0].SignalGroups[2].Signals[0].CurrentLight);
+            var simulator = new IntersectionController(configuration.Intersections[0]);
+
+            //Run for 5 seconds
+            simulator.Run(new TimeSpan(0, 0, 5));
+
+            //checking for concurrent green lights on "sunriserd_north_south" and "universityblvd_east_west_turnlanes" 
+            if ((configuration.Intersections[0].SignalGroups[2].Signals[0].CurrentLight == configuration.Intersections[0].SignalGroups[0].Signals[0].CurrentLight) && (configuration.Intersections[0].SignalGroups[0].Signals[0].CurrentLight == LightColor.Green))
+                return true;
+            //checking for concurrent green lights on "sunriserd_north_south" and "universityblvd_east_west" 
+            if ((configuration.Intersections[0].SignalGroups[2].Signals[0].CurrentLight == configuration.Intersections[0].SignalGroups[1].Signals[0].CurrentLight) && (configuration.Intersections[0].SignalGroups[2].Signals[0].CurrentLight == LightColor.Green))
+                return true;
+            //checking for concurrent yellow lights on "sunriserd_north_south" and "universityblvd_east_west" 
+            if ((configuration.Intersections[0].SignalGroups[2].Signals[0].CurrentLight == configuration.Intersections[0].SignalGroups[1].Signals[0].CurrentLight) && (configuration.Intersections[0].SignalGroups[2].Signals[0].CurrentLight == LightColor.Yellow))
+                return true;
+            return false;
+            
+            //Run for 2 minutes
+
+            simulator.Run(new TimeSpan(0, 2, 0));
+
+            //checking for concurrent green lights on "sunriserd_north_south" and "universityblvd_east_west_turnlanes" 
+            if ((configuration.Intersections[0].SignalGroups[2].Signals[0].CurrentLight == configuration.Intersections[0].SignalGroups[0].Signals[0].CurrentLight) && (configuration.Intersections[0].SignalGroups[0].Signals[0].CurrentLight == LightColor.Green))
+                return true;
+            //checking for concurrent green lights on "sunriserd_north_south" and "universityblvd_east_west" 
+            if ((configuration.Intersections[0].SignalGroups[2].Signals[0].CurrentLight == configuration.Intersections[0].SignalGroups[1].Signals[0].CurrentLight) && (configuration.Intersections[0].SignalGroups[2].Signals[0].CurrentLight == LightColor.Green))
+                return true;
+            //checking for concurrent yellow lights on "sunriserd_north_south" and "universityblvd_east_west" 
+            if ((configuration.Intersections[0].SignalGroups[2].Signals[0].CurrentLight == configuration.Intersections[0].SignalGroups[1].Signals[0].CurrentLight) && (configuration.Intersections[0].SignalGroups[2].Signals[0].CurrentLight == LightColor.Yellow))
+                return true;
+            return false;
+
             
         }
     }
-
  }
 
 
