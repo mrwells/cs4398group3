@@ -158,7 +158,7 @@ namespace TrafficControlSystem.Tests
             sensor.activate();
             Assert.IsTrue(sensor.getSensorState());
         }
-        
+
         [TestMethod]
         public void TestGreenDuration()
         {
@@ -185,10 +185,20 @@ namespace TrafficControlSystem.Tests
 
             time = configuration.Intersections[0].TimingGroups[2].Timings[2].Duration;
             Assert.AreEqual(3, time);
+        }
+        [TestMethod]
+        public void TestCollision()
+        {
+            var configuration = Configuration.Load("universityblvd_sunriserd.txt");
 
+            //Checking collision between "universityblvd_east_west_turnlanes" and "sunriserd_north_south"
+            
+            Assert.AreEqual(configuration.Intersections[0].SignalGroups[1].Signals[0].CurrentLight, configuration.Intersections[0].SignalGroups[2].Signals[0].CurrentLight);
+            
         }
     }
-}
+
+ }
 
 
 
