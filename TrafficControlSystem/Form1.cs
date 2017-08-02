@@ -130,22 +130,22 @@ namespace TrafficControlSystem
         {
             picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.walking_man;
             Refresh();
-            System.Threading.Thread.Sleep(4000);
+            System.Threading.Thread.Sleep(5000);
 
             int i = 10;
             label1.Text = i.ToString();
             label1.Visible = true;
            
-            while (i > -1)
+            while (i > 0)
             {
                 picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.upraised_hand;
                 Refresh();
                 System.Threading.Thread.Sleep(500);
-                picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.blank_crosswalk;
+                picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.blank_cw;
                 Refresh();
                 System.Threading.Thread.Sleep(500);
-                label1.Text = i.ToString();
                 --i;
+                label1.Text = i.ToString();
             }
 
             picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.upraised_hand;
@@ -155,7 +155,7 @@ namespace TrafficControlSystem
 
         private void picbox_crosswalk_1l_Click(object sender, EventArgs e)
         {
-           
+          
         }
 
         private void picbox_crosswalk_2b_Click(object sender, EventArgs e)
@@ -165,22 +165,23 @@ namespace TrafficControlSystem
 
         private void picbox_crosswalk_2t_Click(object sender, EventArgs e)
         {
-            
+          
+
         }
 
         private void picbox_crosswalk_3l_Click(object sender, EventArgs e)
         {
-            
+          
         }
 
         private void picbox_crosswalk_3r_Click(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void picbox_crosswalk_4t_Click(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void picbox_crosswalk_4b_Click(object sender, EventArgs e)
@@ -190,12 +191,12 @@ namespace TrafficControlSystem
 
         private void btn_em_r_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btn_em_l_Click(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

@@ -123,6 +123,7 @@
     <None Include="Resources\upraised_hand.jpg" />
     <None Include="Resources\walking_man.jpeg" />
     <None Include="Resources\blank_crosswalk.jpg" />
+    <None Include="Resources\blank_cw.jpg" />
     <Content Include="universityblvd_sunriserd.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

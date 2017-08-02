@@ -166,7 +166,7 @@
   <data name="walking_man" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\walking_man.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blank_crosswalk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blank_crosswalk.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blank_cw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blank_cw.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
