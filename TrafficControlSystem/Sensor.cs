@@ -4,10 +4,26 @@ namespace TrafficControlSystem
 {
     public class Sensor
     {
-        public void Activate()
+
+        private Boolean activated;
+
+        public Sensor()
         {
-            // TODO - implement Sensor.Activate
-            throw new NotImplementedException();
+            activated = false;
+        }
+
+        public Boolean getSensorState()
+        {
+            return activated;
+        }
+        public void activate()
+        {
+            activated = true;
+        }
+
+        public void deactivate()
+        {
+            activated = false;
         }
     }
 }

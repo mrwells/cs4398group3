@@ -92,7 +92,7 @@ namespace TrafficControlSystem
         /// </summary>
         /// <param name="signalGroups">The signals to act on</param>
         /// <param name="newLightColor">The color to change to</param>
-        private void SetSignalGroupsColor(List<SignalGroup> signalGroups, LightColor newLightColor)
+        public void SetSignalGroupsColor(List<SignalGroup> signalGroups, LightColor newLightColor)
         {
             signalGroups.ForEach(signalGroup =>
             {
@@ -106,7 +106,7 @@ namespace TrafficControlSystem
         /// </summary>
         /// <param name="signalGroups">The signals to act on</param>
         /// <param name="newLightColor">The color to change to</param>
-        private void SetSignalGroupColor(SignalGroup signalGroup, LightColor newLightColor)
+        public void SetSignalGroupColor(SignalGroup signalGroup, LightColor newLightColor)
         {
             signalGroup.Signals.ForEach(signal =>
             {
@@ -117,7 +117,7 @@ namespace TrafficControlSystem
         /// <summary>
         /// Reset all lights to red
         /// </summary>
-        private void SetAllToRed()
+        public void SetAllToRed()
         {
             SetSignalGroupsColor(intersection.SignalGroups, LightColor.Red);
         }
