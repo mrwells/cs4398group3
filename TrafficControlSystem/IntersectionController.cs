@@ -1,21 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 using TrafficControlSystem.Models;
 
 namespace TrafficControlSystem
 {
+    public delegate void UIEvent(Intersection intersection);
+
+    public class UISyncObject
+    {
+        public event UIEvent OnTimeToUpdate;
+
+        public void TimeToUpdate(Intersection intersection)
+        {
+            if (OnTimeToUpdate != null)
+                OnTimeToUpdate(intersection);
+        }
+    }
+
     public class IntersectionController
     {
         private Intersection intersection;
         private DateTime startTime;
+        
+        Thread uiThread;
+        UISyncObject syncObject;
 
         public IntersectionController(Intersection intersection)
         {
-            this.intersection = intersection;
+            this.intersection = intersection;            
         }
 
         /// <summary>
@@ -26,6 +42,18 @@ namespace TrafficControlSystem
         {
             startTime = DateTime.Now;
             Console.WriteLine($"Running simulation for {intersection.Description}");
+
+            syncObject = new UISyncObject();
+            
+            uiThread = new Thread(new ParameterizedThreadStart((s) =>
+            {
+                Form1 mygui = new Form1((UISyncObject)s);
+                Application.Run(mygui);
+            }));
+
+            uiThread.Start(syncObject);
+
+            System.Threading.Thread.Sleep(500);
 
             int currentTimingGroupIndex = 0;
 
@@ -70,6 +98,7 @@ namespace TrafficControlSystem
             {
                 SetSignalGroupColor(signalGroup, newLightColor);
             });
+            syncObject.TimeToUpdate(intersection);
         }
 
         /// <summary>
