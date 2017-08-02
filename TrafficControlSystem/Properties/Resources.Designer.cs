@@ -63,9 +63,9 @@ namespace TrafficControlSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _172398101 {
+        internal static System.Drawing.Bitmap blank_crosswalk {
             get {
-                object obj = ResourceManager.GetObject("172398101", resourceCulture);
+                object obj = ResourceManager.GetObject("blank_crosswalk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,39 @@ namespace TrafficControlSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap HTnZ8juC {
+        internal static System.Drawing.Bitmap green_arrow {
             get {
-                object obj = ResourceManager.GetObject("HTnZ8juC", resourceCulture);
+                object obj = ResourceManager.GetObject("green_arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap green_arrow_alt {
+            get {
+                object obj = ResourceManager.GetObject("green_arrow_alt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap green_circle {
+            get {
+                object obj = ResourceManager.GetObject("green_circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap green_circle_alt {
+            get {
+                object obj = ResourceManager.GetObject("green_circle_alt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -90,13 +120,112 @@ namespace TrafficControlSystem.Properties {
             }
         }
         
-              
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap red_arrow {
+            get {
+                object obj = ResourceManager.GetObject("red_arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap red_arrow_alt {
+            get {
+                object obj = ResourceManager.GetObject("red_arrow_alt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap red_circle {
+            get {
+                object obj = ResourceManager.GetObject("red_circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap red_circle_alt {
+            get {
+                object obj = ResourceManager.GetObject("red_circle_alt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap ShowImage {
             get {
                 object obj = ResourceManager.GetObject("ShowImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap upraised_hand {
+            get {
+                object obj = ResourceManager.GetObject("upraised_hand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap walking_man {
+            get {
+                object obj = ResourceManager.GetObject("walking_man", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yellow_arrow {
+            get {
+                object obj = ResourceManager.GetObject("yellow_arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yellow_arrow_alt {
+            get {
+                object obj = ResourceManager.GetObject("yellow_arrow_alt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yellow_circle {
+            get {
+                object obj = ResourceManager.GetObject("yellow_circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yellow_circle_alt {
+            get {
+                object obj = ResourceManager.GetObject("yellow_circle_alt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

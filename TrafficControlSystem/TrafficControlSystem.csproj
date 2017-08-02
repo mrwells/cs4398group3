@@ -102,6 +102,27 @@
     <None Include="Resources\HTnZ8juC.jpeg" />
     <None Include="Resources\ShowImage.jpg" />
     <None Include="Resources\172398101.jpg" />
+    <None Include="Resources\left_green.png" />
+    <None Include="Resources\left_red.jpg" />
+    <None Include="Resources\left_yellow.jpg" />
+    <None Include="Resources\left_green_alt.png" />
+    <None Include="Resources\left_yellow_alt.jpg" />
+    <None Include="Resources\left_red_alt.jpg" />
+    <None Include="Resources\green_circle.png" />
+    <None Include="Resources\red_circle.png" />
+    <None Include="Resources\yellow_circle.png" />
+    <None Include="Resources\green_arrow.png" />
+    <None Include="Resources\red_arrow.png" />
+    <None Include="Resources\yellow_arrow.png" />
+    <None Include="Resources\green_arrow_alt.png" />
+    <None Include="Resources\red_arrow_alt.png" />
+    <None Include="Resources\yellow_arrow_alt.png" />
+    <None Include="Resources\green_circle_alt.png" />
+    <None Include="Resources\red_circle_alt.png" />
+    <None Include="Resources\yellow_circle_alt.png" />
+    <None Include="Resources\upraised_hand.jpg" />
+    <None Include="Resources\walking_man.jpeg" />
+    <None Include="Resources\blank_crosswalk.jpg" />
     <Content Include="universityblvd_sunriserd.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -112,6 +133,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>

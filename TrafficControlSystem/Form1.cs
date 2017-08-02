@@ -32,52 +32,7 @@ namespace TrafficControlSystem
 
         private void btn_preempt2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btn_walk1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_walk2_Click(object sender, EventArgs e)
-        {
-        
-        }
-
-        private void btn_walk3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_walk4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_walk5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_walk6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_walk7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_walk8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+           
         }
 
         private void SyncObject_TimeToUpdate(Intersection intersection)
@@ -91,54 +46,30 @@ namespace TrafficControlSystem
             {
                 var newLightColor = signalGroup.Signals.First().CurrentLight;
 
-                if (signalGroup.Id == "universityblvd_east" || signalGroup.Id == "universityblvd_east")
+                if (signalGroup.Id.Contains("universityblvd"))
                 {
                     if (newLightColor == LightColor.Green)
                     {
-                        label21.Visible = true;
-                        label18.Visible = true;
-                        label27.Visible = true;
-                        label30.Visible = true;
-                        label17.Visible = false;
-                        label20.Visible = false;
-                        label26.Visible = false;
-                        label29.Visible = false;
-                        label16.Visible = false;
-                        label19.Visible = false;
-                        label25.Visible = false;
-                        label28.Visible = false;
+                        this.picbox_left_bot.Image = TrafficControlSystem.Properties.Resources.green_circle;
+                        this.picbox_right_bot.Image = TrafficControlSystem.Properties.Resources.green_circle;
+                        this.picbox_left_top.Image = TrafficControlSystem.Properties.Resources.green_circle;
+                        this.picbox_right_top.Image = TrafficControlSystem.Properties.Resources.green_circle;
                         Refresh();
                     }
                     if (newLightColor == LightColor.Yellow)
                     {
-                        label21.Visible = false;
-                        label18.Visible = false;
-                        label27.Visible = false;
-                        label30.Visible = false;
-                        label17.Visible = true;
-                        label20.Visible = true;
-                        label26.Visible = true;
-                        label29.Visible = true;
-                        label16.Visible = false;
-                        label19.Visible = false;
-                        label25.Visible = false;
-                        label28.Visible = false;
+                        this.picbox_left_bot.Image = TrafficControlSystem.Properties.Resources.yellow_circle;
+                        this.picbox_right_bot.Image = TrafficControlSystem.Properties.Resources.yellow_circle;
+                        this.picbox_left_top.Image = TrafficControlSystem.Properties.Resources.yellow_circle;
+                        this.picbox_right_top.Image = TrafficControlSystem.Properties.Resources.yellow_circle;
                         Refresh();
                     }
                     if (newLightColor == LightColor.Red)
                     {
-                        label21.Visible = false;
-                        label18.Visible = false;
-                        label27.Visible = false;
-                        label30.Visible = false;
-                        label17.Visible = false;
-                        label20.Visible = false;
-                        label26.Visible = false;
-                        label29.Visible = false;
-                        label16.Visible = true;
-                        label19.Visible = true;
-                        label25.Visible = true;
-                        label28.Visible = true;
+                        this.picbox_left_bot.Image = TrafficControlSystem.Properties.Resources.red_circle;
+                        this.picbox_right_bot.Image = TrafficControlSystem.Properties.Resources.red_circle;
+                        this.picbox_left_top.Image = TrafficControlSystem.Properties.Resources.red_circle;
+                        this.picbox_right_top.Image = TrafficControlSystem.Properties.Resources.red_circle;
                         Refresh();
                     }
                 }
@@ -147,32 +78,20 @@ namespace TrafficControlSystem
                 {
                     if (newLightColor == LightColor.GreenArrow)
                     {
-                        picbox_rarrow_bot.Visible = false;
-                        picbox_yarrow_bot.Visible = false;
-                        picbox_garrow_bot.Visible = true;
-                        picbox_rarrow_top.Visible = false;
-                        picbox_yarrow_top.Visible = false;
-                        picbox_garrow_top.Visible = true;
+                        this.picbox_turn_top.Image = TrafficControlSystem.Properties.Resources.green_arrow_alt;
+                        this.picbox_turn_bot.Image = TrafficControlSystem.Properties.Resources.green_arrow;
                         Refresh();
                     }
                     if (newLightColor == LightColor.YellowArrow)
                     {
-                        picbox_rarrow_bot.Visible = false;
-                        picbox_yarrow_bot.Visible = true;
-                        picbox_garrow_bot.Visible = false;
-                        picbox_rarrow_top.Visible = false;
-                        picbox_yarrow_top.Visible = true;
-                        picbox_garrow_top.Visible = false;
+                        this.picbox_turn_top.Image = TrafficControlSystem.Properties.Resources.yellow_arrow_alt;
+                        this.picbox_turn_bot.Image = TrafficControlSystem.Properties.Resources.yellow_arrow;
                         Refresh();
                     }
                     if (newLightColor == LightColor.RedArrow)
                     {
-                        picbox_rarrow_bot.Visible = true;
-                        picbox_yarrow_bot.Visible = false;
-                        picbox_garrow_bot.Visible = false;
-                        picbox_rarrow_top.Visible = true;
-                        picbox_yarrow_top.Visible = false;
-                        picbox_garrow_top.Visible = false;
+                        this.picbox_turn_top.Image = TrafficControlSystem.Properties.Resources.red_arrow_alt;
+                        this.picbox_turn_bot.Image = TrafficControlSystem.Properties.Resources.red_arrow;
                         Refresh();
                     }
                 }
@@ -181,106 +100,102 @@ namespace TrafficControlSystem
                 {
                     if (newLightColor == LightColor.Green)
                     {
-                        label3.Visible = true;
-                        label4.Visible = true;
-                        label7.Visible = true;
-                        label31.Visible = true;
-                        label2.Visible = false;
-                        label5.Visible = false;
-                        label8.Visible = false;
-                        label32.Visible = false;
-                        label1.Visible = false;
-                        label6.Visible = false;
-                        label9.Visible = false;
-                        label33.Visible = false;
+                        this.picbox_bot_right.Image = TrafficControlSystem.Properties.Resources.green_circle_alt;
+                        this.picbox_top_right.Image = TrafficControlSystem.Properties.Resources.green_circle_alt;
+                        this.picbox_bot_left.Image = TrafficControlSystem.Properties.Resources.green_circle_alt;
+                        this.picbox_top_left.Image = TrafficControlSystem.Properties.Resources.green_circle_alt;
                         Refresh();
                     }
                     if (newLightColor == LightColor.Yellow)
                     {
-                        label3.Visible = false;
-                        label4.Visible = false;
-                        label7.Visible = false;
-                        label31.Visible = false;
-                        label2.Visible = true;
-                        label5.Visible = true;
-                        label8.Visible = true;
-                        label32.Visible = true;
-                        label1.Visible = false;
-                        label6.Visible = false;
-                        label9.Visible = false;
-                        label33.Visible = false;
+                        this.picbox_bot_right.Image = TrafficControlSystem.Properties.Resources.yellow_circle_alt;
+                        this.picbox_top_right.Image = TrafficControlSystem.Properties.Resources.yellow_circle_alt;
+                        this.picbox_bot_left.Image = TrafficControlSystem.Properties.Resources.yellow_circle_alt;
+                        this.picbox_top_left.Image = TrafficControlSystem.Properties.Resources.yellow_circle_alt;
                         Refresh();
                     }
                     if (newLightColor == LightColor.Red)
                     {
-                        label3.Visible = false;
-                        label4.Visible = false;
-                        label7.Visible = false;
-                        label31.Visible = false;
-                        label2.Visible = false;
-                        label5.Visible = false;
-                        label8.Visible = false;
-                        label32.Visible = false;
-                        label1.Visible = true;
-                        label6.Visible = true;
-                        label9.Visible = true;
-                        label33.Visible = true;
-                        Refresh();
-                    }
-                }
-
-                if (signalGroup.Id.Contains("sunrise"))
-                {
-                    if (newLightColor == LightColor.Green)
-                    {
-                        label3.Visible = true;
-                        label4.Visible = true;
-                        label7.Visible = true;
-                        label31.Visible = true;
-                        label2.Visible = false;
-                        label5.Visible = false;
-                        label8.Visible = false;
-                        label32.Visible = false;
-                        label1.Visible = false;
-                        label6.Visible = false;
-                        label9.Visible = false;
-                        label33.Visible = false;
-                        Refresh();
-                    }
-                    if (newLightColor == LightColor.Yellow)
-                    {
-                        label3.Visible = false;
-                        label4.Visible = false;
-                        label7.Visible = false;
-                        label31.Visible = false;
-                        label2.Visible = true;
-                        label5.Visible = true;
-                        label8.Visible = true;
-                        label32.Visible = true;
-                        label1.Visible = false;
-                        label6.Visible = false;
-                        label9.Visible = false;
-                        label33.Visible = false;
-                        Refresh();
-                    }
-                    if (newLightColor == LightColor.Red)
-                    {
-                        label3.Visible = false;
-                        label4.Visible = false;
-                        label7.Visible = false;
-                        label31.Visible = false;
-                        label2.Visible = false;
-                        label5.Visible = false;
-                        label8.Visible = false;
-                        label32.Visible = false;
-                        label1.Visible = true;
-                        label6.Visible = true;
-                        label9.Visible = true;
-                        label33.Visible = true;
+                        this.picbox_bot_right.Image = TrafficControlSystem.Properties.Resources.red_circle_alt;
+                        this.picbox_top_right.Image = TrafficControlSystem.Properties.Resources.red_circle_alt;
+                        this.picbox_bot_left.Image = TrafficControlSystem.Properties.Resources.red_circle_alt;
+                        this.picbox_top_left.Image = TrafficControlSystem.Properties.Resources.red_circle_alt;
                         Refresh();
                     }
                 }
             }
+        }
+
+        private void picbox_crosswalk_1r_Click(object sender, EventArgs e)
+        {
+            picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.walking_man;
+            Refresh();
+            System.Threading.Thread.Sleep(4000);
+
+            int i = 10;
+            label1.Text = i.ToString();
+            label1.Visible = true;
+           
+            while (i > -1)
+            {
+                picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.upraised_hand;
+                Refresh();
+                System.Threading.Thread.Sleep(500);
+                picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.blank_crosswalk;
+                Refresh();
+                System.Threading.Thread.Sleep(500);
+                label1.Text = i.ToString();
+                --i;
+            }
+
+            picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.upraised_hand;
+            label1.Visible = false;
+            Refresh();
+        }
+
+        private void picbox_crosswalk_1l_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void picbox_crosswalk_2b_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void picbox_crosswalk_2t_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void picbox_crosswalk_3l_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void picbox_crosswalk_3r_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void picbox_crosswalk_4t_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void picbox_crosswalk_4b_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_em_r_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_em_l_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
