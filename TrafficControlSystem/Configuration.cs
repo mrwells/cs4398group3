@@ -8,6 +8,15 @@ using TrafficControlSystem.Models;
 
 namespace TrafficControlSystem
 {
+    /// <summary>
+    /// Configuration Class
+    /// </summary>
+    /// <remarks>
+    /// Configuration Class has 3 attributes:
+    /// (List[Roadway]) Roadways - List of Roadways
+    /// (List[Intersection] Intersections - List of Intersections
+    /// (String) FileName - Name of Configuration File
+    /// </remarks>
     public class Configuration
     {
         [JsonProperty("roadways")]
@@ -18,6 +27,13 @@ namespace TrafficControlSystem
 
         public string FileName { get; set; }
 
+        /// <summary>
+        /// Constructor for Configuration
+        /// </summary>
+        /// <remarks>
+        /// Creates a List of Roadways and Intersections 
+        /// on instansiation.
+        /// </remarks>
         public Configuration()
         {
             Roadways = new List<Roadway>();
@@ -28,7 +44,7 @@ namespace TrafficControlSystem
         /// Load configuration from file
         /// </summary>
         /// <param name="configurationFileName">Filename of configuration to load</param>
-        /// <returns></returns>
+        /// <returns>configuration</returns>
         public static Configuration Load(string configurationFileName)
         {
             var rawConfiguration = System.IO.File.ReadAllText(configurationFileName);
@@ -62,7 +78,7 @@ namespace TrafficControlSystem
         /// <summary>
         /// Output basic configuration information for display
         /// </summary>
-        /// <returns></returns>
+        /// <returns>output</returns>
         public override string ToString()
         {
             var output = new StringBuilder();

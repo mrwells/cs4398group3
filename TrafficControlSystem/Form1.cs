@@ -21,8 +21,13 @@ namespace TrafficControlSystem
         {
             this.syncObject = syncObject;
             this.syncObject.OnTimeToUpdate += SyncObject_TimeToUpdate;
-            
+            this.FormClosing += Form1_FormClosing;
             InitializeComponent();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.syncObject.OnTimeToUpdate -= SyncObject_TimeToUpdate;
         }
         
         private void btn_preempt1_Click(object sender, EventArgs e)

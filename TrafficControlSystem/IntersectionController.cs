@@ -20,7 +20,14 @@ namespace TrafficControlSystem
                 OnTimeToUpdate(intersection);
         }
     }
-
+	
+    /// <summary>
+    /// IntersectionController Class
+    /// </summary>
+    /// <remarks>
+    /// IntersectionController Class has 2 attributes:
+    /// (Intersection) intersection - An Intersection
+    /// (DateTime) startTime - Start Time of Simulation</remarks>
     public class IntersectionController
     {
         private Intersection intersection;
@@ -29,6 +36,13 @@ namespace TrafficControlSystem
         Thread uiThread;
         UISyncObject syncObject;
 
+        /// <summary>
+        /// Constructor for IntersectionController
+        /// </summary>
+        /// <remarks>
+        /// Creates a new Intersection using the passed parameter.
+        /// </remarks>
+        /// <param name="intersection">The Intersection to use for the simulator.</param>
         public IntersectionController(Intersection intersection)
         {
             this.intersection = intersection;
@@ -36,7 +50,8 @@ namespace TrafficControlSystem
         }
 
         /// <summary>
-        /// Entry point for the simulation.  Executes the intersection configuration provided in the constructor
+        /// Entry point for the simulation.  
+        /// Executes the intersection configuration provided in the constructor.
         /// </summary>
         /// <param name="duration">Length of time to run simulation</param>
         public void Run(TimeSpan duration)
@@ -104,7 +119,7 @@ namespace TrafficControlSystem
         /// <summary>
         /// Change the current light color for a group of signals
         /// </summary>
-        /// <param name="signalGroups">The signals to act on</param>
+        /// <param name="signalGroup">The signals to act on</param>
         /// <param name="newLightColor">The color to change to</param>
         public void SetSignalGroupColor(SignalGroup signalGroup, LightColor newLightColor)
         {

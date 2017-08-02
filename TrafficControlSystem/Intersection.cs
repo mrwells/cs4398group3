@@ -5,11 +5,19 @@ using Newtonsoft.Json;
 
 namespace TrafficControlSystem.Models
 {
+    /// <summary>
+    /// Intersection Class
+    /// </summary>
+    /// <remarks>
+    /// Intersection Class has 4 attributes: 
+    /// (String) Id
+    /// (String) Description
+    /// (List[SignalGroup]) SignalGroups - List of SignalGroups
+    /// (List[TimingGroups]) TimingGroups - List of TimingGroups
+    /// </remarks>
     public class Intersection
     {
         [JsonProperty("id")]
-        ///<param name="Id">
-        ///</param>
         public string Id { get; set; }
 
         [JsonProperty("description")]
@@ -20,7 +28,13 @@ namespace TrafficControlSystem.Models
 
         [JsonProperty("timinggroups")]
         public List<TimingGroup> TimingGroups { get; set; }
-        
+
+        /// <summary>
+        /// Constructor for Intersection
+        /// </summary>
+        /// <remarks>
+        /// Creates SignalGroups and TimingGroups lists on instansiation
+        /// </remarks>
         public Intersection()
         {
             SignalGroups = new List<SignalGroup>();
