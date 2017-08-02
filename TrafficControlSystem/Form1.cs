@@ -17,6 +17,8 @@ namespace TrafficControlSystem
 
         private delegate void UpdateForm(Intersection intersection);
 
+        private Intersection _intersection;
+
         public Form1(UISyncObject syncObject)
         {
             this.syncObject = syncObject;
@@ -43,6 +45,7 @@ namespace TrafficControlSystem
         private void SyncObject_TimeToUpdate(Intersection intersection)
         {
             this.Invoke(new UpdateForm(Update), intersection);
+            _intersection = intersection;
         }
 
          private void Update(Intersection intersection)
@@ -131,13 +134,16 @@ namespace TrafficControlSystem
             }
         }
 
+        //South right
         private void picbox_crosswalk_1r_Click(object sender, EventArgs e)
         {
+            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[0].Roadway);
+            /*
             picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.walking_man;
             Refresh();
             System.Threading.Thread.Sleep(5000);
 
-            int i = 10;
+            int i = 25;
             label1.Text = i.ToString();
             label1.Visible = true;
            
@@ -156,42 +162,55 @@ namespace TrafficControlSystem
             picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.upraised_hand;
             label1.Visible = false;
             Refresh();
+    */
+
+
+
+
         }
 
+        //South left
         private void picbox_crosswalk_1l_Click(object sender, EventArgs e)
         {
-          
+            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[0].Roadway);
         }
 
+        //west bottom
         private void picbox_crosswalk_2b_Click(object sender, EventArgs e)
         {
-           
+            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[3].Roadway);
         }
 
+        //west top
         private void picbox_crosswalk_2t_Click(object sender, EventArgs e)
         {
-          
+            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[3].Roadway);
 
         }
 
+        //North left
         private void picbox_crosswalk_3l_Click(object sender, EventArgs e)
         {
-          
+            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[0].Roadway);
         }
 
+        //North right
         private void picbox_crosswalk_3r_Click(object sender, EventArgs e)
         {
-           
+            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[0].Roadway);
         }
 
+
+        //East Top
         private void picbox_crosswalk_4t_Click(object sender, EventArgs e)
         {
-            
+            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[3].Roadway);
         }
 
+        //East Bottom
         private void picbox_crosswalk_4b_Click(object sender, EventArgs e)
         {
-            
+            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[3].Roadway);
         }
 
         private void btn_em_r_Click(object sender, EventArgs e)

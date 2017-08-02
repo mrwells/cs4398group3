@@ -9,15 +9,25 @@ using TrafficControlSystem.Models;
 namespace TrafficControlSystem
 {
     public delegate void UIEvent(Intersection intersection);
+    public delegate void CrosswalkEvent(Roadway roadway);
 
     public class UISyncObject
     {
         public event UIEvent OnTimeToUpdate;
+        public event CrosswalkEvent CrosswalkPressed;
+        
 
         public void TimeToUpdate(Intersection intersection)
         {
             if (OnTimeToUpdate != null)
                 OnTimeToUpdate(intersection);
+        }
+
+        public void OnCrosswalkPressed(Roadway roadway)
+        {
+            if (CrosswalkPressed != null)
+                CrosswalkPressed(roadway);
+
         }
     }
 	
@@ -46,7 +56,14 @@ namespace TrafficControlSystem
         public IntersectionController(Intersection intersection)
         {
             this.intersection = intersection;
-            syncObject = new UISyncObject();            
+            syncObject = new UISyncObject();
+
+            syncObject.CrosswalkPressed += SyncObject_CrosswalkPressed;
+        }
+
+        private void SyncObject_CrosswalkPressed(Roadway roadway)
+        {
+            
         }
 
         /// <summary>
