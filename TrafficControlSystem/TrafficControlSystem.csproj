@@ -168,4 +168,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>ExampleConfigurations\universityblvd_sunriserd.txt</StartArguments>
+  </PropertyGroup>
 </Project>
