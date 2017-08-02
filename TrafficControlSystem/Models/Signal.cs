@@ -5,6 +5,16 @@ using TrafficControlSystem.Models;
 
 namespace TrafficControlSystem.Models
 {
+    /// <summary>
+    /// Signal Class
+    /// </summary>
+    /// <remarks>
+    /// Signal Class has 5 attributes:
+    /// (String) Id - Signal ID
+    /// (String) LaneId - Lane ID
+    /// (Lane) Lane - A Lane
+    /// (List[LightColor]) Lights - List of LightColors
+    /// (LightColor) CurrentLight - The Current Light</remarks>
     public class Signal
     {
         [JsonProperty("id")]
@@ -20,6 +30,12 @@ namespace TrafficControlSystem.Models
 
         public LightColor CurrentLight { get; set; }
 
+        /// <summary>
+        /// Constructor for Signal
+        /// </summary>
+        /// <remarks>
+        /// Creates a List of Lights and sets light color to Red.
+        /// </remarks>
         public Signal()
         {
             Lights = new List<LightColor>();
