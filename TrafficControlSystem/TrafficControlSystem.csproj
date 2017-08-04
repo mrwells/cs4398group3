@@ -69,6 +69,12 @@
     <Compile Include="Buzzer.cs" />
     <Compile Include="ConfigurationModel.cs" />
     <Compile Include="ControllerState.cs" />
+    <Compile Include="CrossWalk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CrossWalk.Designer.cs">
+      <DependentUpon>CrossWalk.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmergencyState.cs" />
     <Compile Include="ErrorState.cs" />
     <Compile Include="Event.cs" />
@@ -105,6 +111,7 @@
     <Compile Include="TrafficLightController.cs" />
     <Compile Include="TrafficLightDisplay.cs" />
     <Compile Include="TrafficLightObserver.cs" />
+    <Compile Include="UISyncObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -146,6 +153,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CrossWalk.resx">
+      <DependentUpon>CrossWalk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,7 +178,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartArguments>ExampleConfigurations\universityblvd_sunriserd.txt</StartArguments>
   </PropertyGroup>
 </Project>

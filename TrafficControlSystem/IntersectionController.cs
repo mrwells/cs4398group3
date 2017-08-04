@@ -7,30 +7,7 @@ using System.Windows.Forms;
 using TrafficControlSystem.Models;
 
 namespace TrafficControlSystem
-{
-    public delegate void UIEvent(Intersection intersection);
-    public delegate void CrosswalkEvent(Roadway roadway);
-
-    public class UISyncObject
-    {
-        public event UIEvent OnTimeToUpdate;
-        public event CrosswalkEvent CrosswalkPressed;
-        
-
-        public void TimeToUpdate(Intersection intersection)
-        {
-            if (OnTimeToUpdate != null)
-                OnTimeToUpdate(intersection);
-        }
-
-        public void OnCrosswalkPressed(Roadway roadway)
-        {
-            if (CrosswalkPressed != null)
-                CrosswalkPressed(roadway);
-
-        }
-    }
-	
+{	
     /// <summary>
     /// IntersectionController Class
     /// </summary>
@@ -109,14 +86,55 @@ namespace TrafficControlSystem
             while (currentTimingIndex <= timingGroup.Timings.Count)
             {
                 var timing = timingGroup.Timings.Single(t => t.Order == currentTimingIndex);
+
                 SetSignalGroupsColor(timingGroup.SignalGroups, timing.Light);
                 intersection.OutputCurrentState();
-                System.Threading.Thread.Sleep(timing.Duration * 1000);
+
+                int timeRemaining = timing.Duration;
+
+                while (timeRemaining >= 0)
+                {
+                    //update state and UI every second
+
+                    intersection.SignalGroups.ForEach(signalGroup =>
+                    {
+                        if (timingGroup.SignalGroups.Select(s => s.Roadway).ToList().Contains(signalGroup.Roadway))
+                        {
+                            ToggleCrossWalks(signalGroup, false, timeRemaining);
+                        }
+                        else if (timing.Light == LightColor.GreenArrow || timing.Light == LightColor.YellowArrow || timing.Light == LightColor.RedArrow)
+                        {
+                            ToggleCrossWalks(signalGroup, false, timeRemaining);
+                        }
+                        else
+                        {
+                            ToggleCrossWalks(signalGroup, true, timeRemaining);
+                        }
+                    });
+
+                    syncObject.OnTimeToUpdate(intersection);
+
+                    Thread.Sleep(1000);
+                    timeRemaining--;
+                }
+
                 currentTimingIndex++;
             }
             
             //ensure all are set to red before proceeding
             //SetAllToRed();
+        }
+
+        public void ToggleCrossWalks(SignalGroup signalGroup, bool okToCross, int duration)
+        {
+            //bool okToCross = newLightColor == LightColor.Red;
+            
+            signalGroup.Roadway.CrosswalkOkToWalk = okToCross;
+
+            if (okToCross)
+                signalGroup.Roadway.CrossWalkRemainingDuration = duration;
+            else
+                signalGroup.Roadway.CrossWalkRemainingDuration = 0;
         }
 
         /// <summary>
@@ -130,7 +148,6 @@ namespace TrafficControlSystem
             {
                 SetSignalGroupColor(signalGroup, newLightColor);
             });
-            syncObject.TimeToUpdate(intersection);
         }
 
         /// <summary>
