@@ -8,16 +8,16 @@ using TrafficControlSystem.Models;
 
 namespace TrafficControlSystem
 {
-    public delegate void UIEvent(Intersection intersection);
+    public delegate void UIEvent(Intersection intersection, int countdown);
 
     public class UISyncObject
     {
         public event UIEvent OnTimeToUpdate;
 
-        public void TimeToUpdate(Intersection intersection)
+        public void TimeToUpdate(Intersection intersection, int countdown)
         {
             if (OnTimeToUpdate != null)
-                OnTimeToUpdate(intersection);
+                OnTimeToUpdate(intersection, countdown);
         }
     }
 	
@@ -32,9 +32,18 @@ namespace TrafficControlSystem
     {
         private Intersection intersection;
         private DateTime startTime;
+        private int countdownindex;
         
         Thread uiThread;
         UISyncObject syncObject;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public int countdown
+        {
+            get { return countdownindex; }
+        }
 
         /// <summary>
         /// Constructor for IntersectionController
@@ -59,7 +68,6 @@ namespace TrafficControlSystem
             startTime = DateTime.Now;
             Console.WriteLine($"Running simulation for {intersection.Description}");
 
-            
             uiThread = new Thread(new ParameterizedThreadStart((s) =>
             {
                 Form1 mygui = new Form1((UISyncObject)s);
@@ -88,14 +96,25 @@ namespace TrafficControlSystem
         private void HandleTimingGroup(TimingGroup timingGroup)
         {
             int currentTimingIndex = timingGroup.Timings.Min(t => t.Order);
-
+                       
             while (currentTimingIndex <= timingGroup.Timings.Count)
             {
                 var timing = timingGroup.Timings.Single(t => t.Order == currentTimingIndex);
-                SetSignalGroupsColor(timingGroup.SignalGroups, timing.Light);
+                countdownindex = timing.Duration;
+                syncObject.TimeToUpdate(intersection, countdownindex);
+                SetSignalGroupsColor(timingGroup.SignalGroups, timing.Light, countdownindex);
                 intersection.OutputCurrentState();
-                System.Threading.Thread.Sleep(timing.Duration * 1000);
+                int temp = timing.Duration;
+                while (countdownindex > 0)
+                {
+                    System.Threading.Thread.Sleep(1000);
+                    countdownindex--;
+                    syncObject.TimeToUpdate(intersection, countdownindex);
+
+                }
+                //System.Threading.Thread.Sleep(timing.Duration * 1000);
                 currentTimingIndex++;
+                                
             }
             
             //ensure all are set to red before proceeding
@@ -107,13 +126,13 @@ namespace TrafficControlSystem
         /// </summary>
         /// <param name="signalGroups">The signals to act on</param>
         /// <param name="newLightColor">The color to change to</param>
-        public void SetSignalGroupsColor(List<SignalGroup> signalGroups, LightColor newLightColor)
+        public void SetSignalGroupsColor(List<SignalGroup> signalGroups, LightColor newLightColor, int count)
         {
             signalGroups.ForEach(signalGroup =>
             {
                 SetSignalGroupColor(signalGroup, newLightColor);
             });
-            syncObject.TimeToUpdate(intersection);
+            syncObject.TimeToUpdate(intersection, count);
         }
 
         /// <summary>
@@ -134,7 +153,7 @@ namespace TrafficControlSystem
         /// </summary>
         public void SetAllToRed()
         {
-            SetSignalGroupsColor(intersection.SignalGroups, LightColor.Red);
+            SetSignalGroupsColor(intersection.SignalGroups, LightColor.Red, 3);
         }
     }
 }

@@ -55,6 +55,7 @@
             this.picbox_crosswalk_4b = new System.Windows.Forms.PictureBox();
             this.picbox_crosswalk_1r = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbl_countdown = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_top_right)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_bot_right)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_top_left)).BeginInit();
@@ -101,7 +102,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(1098, 905);
             this.label1.Name = "label1";
@@ -362,6 +363,16 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // lbl_countdown
+            // 
+            this.lbl_countdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_countdown.Location = new System.Drawing.Point(697, 540);
+            this.lbl_countdown.Name = "lbl_countdown";
+            this.lbl_countdown.Size = new System.Drawing.Size(166, 97);
+            this.lbl_countdown.TabIndex = 127;
+            this.lbl_countdown.Text = "00";
+            this.lbl_countdown.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
@@ -370,6 +381,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1513, 1241);
+            this.Controls.Add(this.lbl_countdown);
             this.Controls.Add(this.btn_em_l);
             this.Controls.Add(this.btn_em_r);
             this.Controls.Add(this.btn_em_top);
@@ -404,6 +416,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Traffic Control System Simulator";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picbox_top_right)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_bot_right)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_top_left)).EndInit();
@@ -454,5 +467,6 @@
         private System.Windows.Forms.Button btn_em_top;
         private System.Windows.Forms.Button btn_em_r;
         private System.Windows.Forms.Button btn_em_l;
+        private System.Windows.Forms.Label lbl_countdown;
     }
 }

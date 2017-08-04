@@ -15,7 +15,7 @@ namespace TrafficControlSystem
     {
         UISyncObject syncObject;
 
-        private delegate void UpdateForm(Intersection intersection);
+        private delegate void UpdateForm(Intersection intersection, int count);
 
         public Form1(UISyncObject syncObject)
         {
@@ -40,12 +40,12 @@ namespace TrafficControlSystem
            
         }
 
-        private void SyncObject_TimeToUpdate(Intersection intersection)
+        private void SyncObject_TimeToUpdate(Intersection intersection, int count)
         {
-            this.Invoke(new UpdateForm(Update), intersection);
+            this.Invoke(new UpdateForm(Update), intersection, count);
         }
 
-         private void Update(Intersection intersection)
+         private void Update(Intersection intersection, int count)
          { 
             foreach (var signalGroup in intersection.SignalGroups)
             {
@@ -129,33 +129,36 @@ namespace TrafficControlSystem
                     }
                 }
             }
+            lbl_countdown.Text = count.ToString();
+            
         }
 
         private void picbox_crosswalk_1r_Click(object sender, EventArgs e)
         {
-            picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.walking_man;
-            Refresh();
-            System.Threading.Thread.Sleep(5000);
+            
+                picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.walking_man;
+                Refresh();
+                System.Threading.Thread.Sleep(5000);
 
-            int i = 10;
-            label1.Text = i.ToString();
-            label1.Visible = true;
-           
-            while (i > 0)
-            {
-                picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.upraised_hand;
-                Refresh();
-                System.Threading.Thread.Sleep(500);
-                picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.blank_cw;
-                Refresh();
-                System.Threading.Thread.Sleep(500);
-                --i;
+                int i = 10;
                 label1.Text = i.ToString();
-            }
+                label1.Visible = true;
 
-            picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.upraised_hand;
-            label1.Visible = false;
-            Refresh();
+                while (i > 0)
+                {
+                    picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.upraised_hand;
+                    Refresh();
+                    System.Threading.Thread.Sleep(500);
+                    picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.blank_cw;
+                    Refresh();
+                    System.Threading.Thread.Sleep(500);
+                    --i;
+                    label1.Text = i.ToString();
+                }
+
+                picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.upraised_hand;
+                label1.Visible = false;
+                Refresh();
         }
 
         private void picbox_crosswalk_1l_Click(object sender, EventArgs e)
@@ -202,6 +205,11 @@ namespace TrafficControlSystem
         private void btn_em_l_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
