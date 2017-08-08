@@ -1,6 +1,6 @@
 ﻿namespace TrafficControlSystem
 {
-    partial class Form1
+    partial class IntersectionView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IntersectionView));
             this.btn_preempt_r = new System.Windows.Forms.Button();
             this.btn_preempt_l = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             // btn_preempt_r
             // 
             this.btn_preempt_r.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_preempt_r.Location = new System.Drawing.Point(1207, 407);
+            this.btn_preempt_r.Location = new System.Drawing.Point(1254, 407);
             this.btn_preempt_r.Name = "btn_preempt_r";
             this.btn_preempt_r.Size = new System.Drawing.Size(202, 40);
             this.btn_preempt_r.TabIndex = 99;
@@ -90,7 +90,7 @@
             // btn_preempt_l
             // 
             this.btn_preempt_l.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_preempt_l.Location = new System.Drawing.Point(153, 649);
+            this.btn_preempt_l.Location = new System.Drawing.Point(65, 672);
             this.btn_preempt_l.Name = "btn_preempt_l";
             this.btn_preempt_l.Size = new System.Drawing.Size(201, 40);
             this.btn_preempt_l.TabIndex = 100;
@@ -103,7 +103,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Font = new System.Drawing.Font("Arial", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(1098, 905);
+            this.label1.Location = new System.Drawing.Point(1098, 954);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 61);
             this.label1.TabIndex = 122;
@@ -114,7 +114,7 @@
             // btn_em_bot
             // 
             this.btn_em_bot.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_em_bot.Location = new System.Drawing.Point(842, 1081);
+            this.btn_em_bot.Location = new System.Drawing.Point(842, 1127);
             this.btn_em_bot.Name = "btn_em_bot";
             this.btn_em_bot.Size = new System.Drawing.Size(147, 40);
             this.btn_em_bot.TabIndex = 123;
@@ -124,9 +124,9 @@
             // btn_em_top
             // 
             this.btn_em_top.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_em_top.Location = new System.Drawing.Point(565, 85);
+            this.btn_em_top.Location = new System.Drawing.Point(536, 85);
             this.btn_em_top.Name = "btn_em_top";
-            this.btn_em_top.Size = new System.Drawing.Size(147, 40);
+            this.btn_em_top.Size = new System.Drawing.Size(136, 40);
             this.btn_em_top.TabIndex = 124;
             this.btn_em_top.Text = "EM Sensor";
             this.btn_em_top.UseVisualStyleBackColor = true;
@@ -134,7 +134,7 @@
             // btn_em_r
             // 
             this.btn_em_r.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_em_r.Location = new System.Drawing.Point(1207, 504);
+            this.btn_em_r.Location = new System.Drawing.Point(1254, 504);
             this.btn_em_r.Name = "btn_em_r";
             this.btn_em_r.Size = new System.Drawing.Size(147, 40);
             this.btn_em_r.TabIndex = 125;
@@ -145,7 +145,7 @@
             // btn_em_l
             // 
             this.btn_em_l.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_em_l.Location = new System.Drawing.Point(206, 737);
+            this.btn_em_l.Location = new System.Drawing.Point(118, 760);
             this.btn_em_l.Name = "btn_em_l";
             this.btn_em_l.Size = new System.Drawing.Size(147, 40);
             this.btn_em_l.TabIndex = 126;
@@ -157,7 +157,7 @@
             // 
             this.picbox_top_right.BackColor = System.Drawing.Color.Black;
             this.picbox_top_right.Image = global::TrafficControlSystem.Properties.Resources.red_circle_alt;
-            this.picbox_top_right.Location = new System.Drawing.Point(1090, 395);
+            this.picbox_top_right.Location = new System.Drawing.Point(1095, 399);
             this.picbox_top_right.Name = "picbox_top_right";
             this.picbox_top_right.Size = new System.Drawing.Size(110, 57);
             this.picbox_top_right.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -168,7 +168,7 @@
             // 
             this.picbox_bot_right.BackColor = System.Drawing.Color.Black;
             this.picbox_bot_right.Image = global::TrafficControlSystem.Properties.Resources.red_circle_alt;
-            this.picbox_bot_right.Location = new System.Drawing.Point(1090, 501);
+            this.picbox_bot_right.Location = new System.Drawing.Point(1095, 505);
             this.picbox_bot_right.Name = "picbox_bot_right";
             this.picbox_bot_right.Size = new System.Drawing.Size(110, 57);
             this.picbox_bot_right.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -179,7 +179,7 @@
             // 
             this.picbox_top_left.BackColor = System.Drawing.Color.Black;
             this.picbox_top_left.Image = global::TrafficControlSystem.Properties.Resources.red_circle_alt;
-            this.picbox_top_left.Location = new System.Drawing.Point(365, 632);
+            this.picbox_top_left.Location = new System.Drawing.Point(315, 660);
             this.picbox_top_left.Name = "picbox_top_left";
             this.picbox_top_left.Size = new System.Drawing.Size(110, 57);
             this.picbox_top_left.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -190,7 +190,7 @@
             // 
             this.picbox_bot_left.BackColor = System.Drawing.Color.Black;
             this.picbox_bot_left.Image = global::TrafficControlSystem.Properties.Resources.red_circle_alt;
-            this.picbox_bot_left.Location = new System.Drawing.Point(365, 737);
+            this.picbox_bot_left.Location = new System.Drawing.Point(315, 765);
             this.picbox_bot_left.Name = "picbox_bot_left";
             this.picbox_bot_left.Size = new System.Drawing.Size(110, 57);
             this.picbox_bot_left.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -201,7 +201,7 @@
             // 
             this.picbox_left_top.BackColor = System.Drawing.Color.Black;
             this.picbox_left_top.Image = global::TrafficControlSystem.Properties.Resources.red_circle;
-            this.picbox_left_top.Location = new System.Drawing.Point(565, 221);
+            this.picbox_left_top.Location = new System.Drawing.Point(530, 207);
             this.picbox_left_top.Name = "picbox_left_top";
             this.picbox_left_top.Size = new System.Drawing.Size(57, 110);
             this.picbox_left_top.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -212,7 +212,7 @@
             // 
             this.picbox_right_top.BackColor = System.Drawing.Color.Black;
             this.picbox_right_top.Image = global::TrafficControlSystem.Properties.Resources.red_circle;
-            this.picbox_right_top.Location = new System.Drawing.Point(671, 221);
+            this.picbox_right_top.Location = new System.Drawing.Point(636, 207);
             this.picbox_right_top.Name = "picbox_right_top";
             this.picbox_right_top.Size = new System.Drawing.Size(57, 110);
             this.picbox_right_top.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -223,7 +223,7 @@
             // 
             this.picbox_left_bot.BackColor = System.Drawing.Color.Black;
             this.picbox_left_bot.Image = global::TrafficControlSystem.Properties.Resources.red_circle;
-            this.picbox_left_bot.Location = new System.Drawing.Point(842, 858);
+            this.picbox_left_bot.Location = new System.Drawing.Point(822, 906);
             this.picbox_left_bot.Name = "picbox_left_bot";
             this.picbox_left_bot.Size = new System.Drawing.Size(57, 110);
             this.picbox_left_bot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -234,7 +234,7 @@
             // 
             this.picbox_right_bot.BackColor = System.Drawing.Color.Black;
             this.picbox_right_bot.Image = global::TrafficControlSystem.Properties.Resources.red_circle;
-            this.picbox_right_bot.Location = new System.Drawing.Point(951, 858);
+            this.picbox_right_bot.Location = new System.Drawing.Point(943, 906);
             this.picbox_right_bot.Name = "picbox_right_bot";
             this.picbox_right_bot.Size = new System.Drawing.Size(57, 110);
             this.picbox_right_bot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -245,7 +245,7 @@
             // 
             this.picbox_turn_top.BackColor = System.Drawing.Color.Black;
             this.picbox_turn_top.Image = global::TrafficControlSystem.Properties.Resources.red_arrow_alt;
-            this.picbox_turn_top.Location = new System.Drawing.Point(759, 221);
+            this.picbox_turn_top.Location = new System.Drawing.Point(737, 207);
             this.picbox_turn_top.Name = "picbox_turn_top";
             this.picbox_turn_top.Size = new System.Drawing.Size(57, 110);
             this.picbox_turn_top.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -256,7 +256,7 @@
             // 
             this.picbox_turn_bot.BackColor = System.Drawing.Color.Black;
             this.picbox_turn_bot.Image = global::TrafficControlSystem.Properties.Resources.red_arrow;
-            this.picbox_turn_bot.Location = new System.Drawing.Point(747, 858);
+            this.picbox_turn_bot.Location = new System.Drawing.Point(721, 906);
             this.picbox_turn_bot.Name = "picbox_turn_bot";
             this.picbox_turn_bot.Size = new System.Drawing.Size(57, 110);
             this.picbox_turn_bot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -266,7 +266,7 @@
             // picbox_crosswalk_3l
             // 
             this.picbox_crosswalk_3l.Image = global::TrafficControlSystem.Properties.Resources.upraised_hand;
-            this.picbox_crosswalk_3l.Location = new System.Drawing.Point(431, 208);
+            this.picbox_crosswalk_3l.Location = new System.Drawing.Point(368, 187);
             this.picbox_crosswalk_3l.Name = "picbox_crosswalk_3l";
             this.picbox_crosswalk_3l.Size = new System.Drawing.Size(86, 73);
             this.picbox_crosswalk_3l.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -277,7 +277,7 @@
             // picbox_crosswalk_2t
             // 
             this.picbox_crosswalk_2t.Image = global::TrafficControlSystem.Properties.Resources.upraised_hand;
-            this.picbox_crosswalk_2t.Location = new System.Drawing.Point(344, 296);
+            this.picbox_crosswalk_2t.Location = new System.Drawing.Point(281, 275);
             this.picbox_crosswalk_2t.Name = "picbox_crosswalk_2t";
             this.picbox_crosswalk_2t.Size = new System.Drawing.Size(86, 73);
             this.picbox_crosswalk_2t.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -288,7 +288,7 @@
             // picbox_crosswalk_3r
             // 
             this.picbox_crosswalk_3r.Image = global::TrafficControlSystem.Properties.Resources.upraised_hand;
-            this.picbox_crosswalk_3r.Location = new System.Drawing.Point(1057, 221);
+            this.picbox_crosswalk_3r.Location = new System.Drawing.Point(1062, 201);
             this.picbox_crosswalk_3r.Name = "picbox_crosswalk_3r";
             this.picbox_crosswalk_3r.Size = new System.Drawing.Size(86, 73);
             this.picbox_crosswalk_3r.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -299,7 +299,7 @@
             // picbox_crosswalk_4t
             // 
             this.picbox_crosswalk_4t.Image = global::TrafficControlSystem.Properties.Resources.upraised_hand;
-            this.picbox_crosswalk_4t.Location = new System.Drawing.Point(1147, 296);
+            this.picbox_crosswalk_4t.Location = new System.Drawing.Point(1152, 276);
             this.picbox_crosswalk_4t.Name = "picbox_crosswalk_4t";
             this.picbox_crosswalk_4t.Size = new System.Drawing.Size(86, 73);
             this.picbox_crosswalk_4t.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -310,7 +310,7 @@
             // picbox_crosswalk_2b
             // 
             this.picbox_crosswalk_2b.Image = global::TrafficControlSystem.Properties.Resources.upraised_hand;
-            this.picbox_crosswalk_2b.Location = new System.Drawing.Point(334, 823);
+            this.picbox_crosswalk_2b.Location = new System.Drawing.Point(270, 875);
             this.picbox_crosswalk_2b.Name = "picbox_crosswalk_2b";
             this.picbox_crosswalk_2b.Size = new System.Drawing.Size(86, 73);
             this.picbox_crosswalk_2b.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -321,7 +321,7 @@
             // picbox_crosswalk_1l
             // 
             this.picbox_crosswalk_1l.Image = global::TrafficControlSystem.Properties.Resources.upraised_hand;
-            this.picbox_crosswalk_1l.Location = new System.Drawing.Point(431, 917);
+            this.picbox_crosswalk_1l.Location = new System.Drawing.Point(367, 969);
             this.picbox_crosswalk_1l.Name = "picbox_crosswalk_1l";
             this.picbox_crosswalk_1l.Size = new System.Drawing.Size(86, 73);
             this.picbox_crosswalk_1l.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -332,7 +332,7 @@
             // picbox_crosswalk_4b
             // 
             this.picbox_crosswalk_4b.Image = global::TrafficControlSystem.Properties.Resources.upraised_hand;
-            this.picbox_crosswalk_4b.Location = new System.Drawing.Point(1147, 823);
+            this.picbox_crosswalk_4b.Location = new System.Drawing.Point(1147, 872);
             this.picbox_crosswalk_4b.Name = "picbox_crosswalk_4b";
             this.picbox_crosswalk_4b.Size = new System.Drawing.Size(86, 73);
             this.picbox_crosswalk_4b.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -343,7 +343,7 @@
             // picbox_crosswalk_1r
             // 
             this.picbox_crosswalk_1r.Image = global::TrafficControlSystem.Properties.Resources.upraised_hand;
-            this.picbox_crosswalk_1r.Location = new System.Drawing.Point(1057, 898);
+            this.picbox_crosswalk_1r.Location = new System.Drawing.Point(1057, 947);
             this.picbox_crosswalk_1r.Name = "picbox_crosswalk_1r";
             this.picbox_crosswalk_1r.Size = new System.Drawing.Size(86, 73);
             this.picbox_crosswalk_1r.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -353,8 +353,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::TrafficControlSystem.Properties.Resources.intersection_only_one_turn_3;
-            this.pictureBox1.Image = global::TrafficControlSystem.Properties.Resources.intersection_only_one_turn_3;
+            this.pictureBox1.BackgroundImage = global::TrafficControlSystem.Properties.Resources.intersection;
+            this.pictureBox1.Image = global::TrafficControlSystem.Properties.Resources.intersection;
             this.pictureBox1.Location = new System.Drawing.Point(31, 11);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1454, 1213);
@@ -362,14 +362,14 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // IntersectionView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1513, 1241);
+            this.ClientSize = new System.Drawing.Size(1521, 1259);
             this.Controls.Add(this.btn_em_l);
             this.Controls.Add(this.btn_em_r);
             this.Controls.Add(this.btn_em_top);
@@ -401,7 +401,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "IntersectionView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Traffic Control System Simulator";
             ((System.ComponentModel.ISupportInitialize)(this.picbox_top_right)).EndInit();
@@ -439,16 +439,16 @@
         private System.Windows.Forms.PictureBox picbox_crosswalk_3l;
         private System.Windows.Forms.Button btn_preempt_r;
         private System.Windows.Forms.Button btn_preempt_l;
-        public System.Windows.Forms.PictureBox picbox_turn_bot;
-        public System.Windows.Forms.PictureBox picbox_turn_top;
-        public System.Windows.Forms.PictureBox picbox_right_bot;
-        public System.Windows.Forms.PictureBox picbox_left_bot;
-        public System.Windows.Forms.PictureBox picbox_left_top;
-        public System.Windows.Forms.PictureBox picbox_right_top;
-        public System.Windows.Forms.PictureBox picbox_bot_left;
-        public System.Windows.Forms.PictureBox picbox_top_left;
-        public System.Windows.Forms.PictureBox picbox_top_right;
-        public System.Windows.Forms.PictureBox picbox_bot_right;
+        private System.Windows.Forms.PictureBox picbox_turn_bot;
+        private System.Windows.Forms.PictureBox picbox_turn_top;
+        private System.Windows.Forms.PictureBox picbox_right_bot;
+        private System.Windows.Forms.PictureBox picbox_left_bot;
+        private System.Windows.Forms.PictureBox picbox_left_top;
+        private System.Windows.Forms.PictureBox picbox_right_top;
+        private System.Windows.Forms.PictureBox picbox_bot_left;
+        private System.Windows.Forms.PictureBox picbox_top_left;
+        private System.Windows.Forms.PictureBox picbox_top_right;
+        private System.Windows.Forms.PictureBox picbox_bot_right;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_em_bot;
         private System.Windows.Forms.Button btn_em_top;

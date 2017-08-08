@@ -62,7 +62,7 @@ namespace TrafficControlSystem
             
             uiThread = new Thread(new ParameterizedThreadStart((s) =>
             {
-                Form1 mygui = new Form1((UISyncObject)s);
+                IntersectionView mygui = new IntersectionView((UISyncObject)s);
                 Application.Run(mygui);
             }));
 

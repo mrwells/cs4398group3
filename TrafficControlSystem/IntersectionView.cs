@@ -11,13 +11,13 @@ using TrafficControlSystem.Models;
 
 namespace TrafficControlSystem
 {
-    public partial class Form1 : Form
+    public partial class IntersectionView : Form
     {
         UISyncObject syncObject;
 
         private delegate void UpdateForm(Intersection intersection);
 
-        public Form1(UISyncObject syncObject)
+        public IntersectionView(UISyncObject syncObject)
         {
             this.syncObject = syncObject;
             this.syncObject.OnTimeToUpdate += SyncObject_TimeToUpdate;

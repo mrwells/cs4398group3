@@ -63,27 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractLaneModel.cs" />
-    <Compile Include="AbstractTrafficLightController.cs" />
-    <Compile Include="Button.cs" />
-    <Compile Include="Buzzer.cs" />
-    <Compile Include="ConfigurationModel.cs" />
-    <Compile Include="ControllerState.cs" />
-    <Compile Include="EmergencyState.cs" />
-    <Compile Include="ErrorState.cs" />
-    <Compile Include="Event.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="IntersectionView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="IntersectionView.Designer.cs">
+      <DependentUpon>IntersectionView.cs</DependentUpon>
     </Compile>
-    <Compile Include="LaneModel.cs" />
-    <Compile Include="LaneState.cs" />
-    <Compile Include="LightGroup.cs" />
-    <Compile Include="MaintenanceState.cs" />
-    <Compile Include="ModelEvent.cs" />
-    <Compile Include="ModelListener.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="Intersection.cs" />
     <Compile Include="Models\Lane.cs" />
@@ -100,11 +85,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Sensor.cs" />
     <Compile Include="IntersectionController.cs" />
-    <Compile Include="TrafficLightController.cs" />
-    <Compile Include="TrafficLightDisplay.cs" />
-    <Compile Include="TrafficLightObserver.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -115,16 +96,7 @@
     <Content Include="ExampleConfigurations\universityblvd_sunriserd.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\intersection_only_one_turn_3.png" />
-    <None Include="Resources\HTnZ8juC.jpeg" />
-    <None Include="Resources\ShowImage.jpg" />
-    <None Include="Resources\172398101.jpg" />
-    <None Include="Resources\left_green.png" />
-    <None Include="Resources\left_red.jpg" />
-    <None Include="Resources\left_yellow.jpg" />
-    <None Include="Resources\left_green_alt.png" />
-    <None Include="Resources\left_yellow_alt.jpg" />
-    <None Include="Resources\left_red_alt.jpg" />
+    <None Include="Resources\intersection.png" />
     <None Include="Resources\green_circle.png" />
     <None Include="Resources\red_circle.png" />
     <None Include="Resources\yellow_circle.png" />
@@ -139,15 +111,11 @@
     <None Include="Resources\yellow_circle_alt.png" />
     <None Include="Resources\upraised_hand.jpg" />
     <None Include="Resources\walking_man.jpeg" />
-    <None Include="Resources\blank_crosswalk.jpg" />
     <None Include="Resources\blank_cw.jpg" />
-    <Content Include="universityblvd_sunriserd.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="IntersectionView.resx">
+      <DependentUpon>IntersectionView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -168,7 +136,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartArguments>ExampleConfigurations\universityblvd_sunriserd.txt</StartArguments>
   </PropertyGroup>
 </Project>

@@ -113,9 +113,9 @@ namespace TrafficControlSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap intersection_only_one_turn_3 {
+        internal static System.Drawing.Bitmap intersection {
             get {
-                object obj = ResourceManager.GetObject("intersection_only_one_turn_3", resourceCulture);
+                object obj = ResourceManager.GetObject("intersection", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,16 +156,6 @@ namespace TrafficControlSystem.Properties {
         internal static System.Drawing.Bitmap red_circle_alt {
             get {
                 object obj = ResourceManager.GetObject("red_circle_alt", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ShowImage {
-            get {
-                object obj = ResourceManager.GetObject("ShowImage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -218,25 +218,25 @@ namespace TrafficControlSystem.Tests
         /// Tests to make sure the button is not active at 
         /// initialization and then is active when pushed.
         /// </summary>
-        [TestMethod]
-        public void TestButton()
-        {
-            Button button = new Button();
-            Assert.IsTrue(!button.getButtonState());
+        //[TestMethod]
+        //public void TestButton()
+        //{
+        //    Button button = new Button();
+        //    Assert.IsTrue(!button.getButtonState());
 
-            button.activate();
-            Assert.IsTrue(button.getButtonState());
-        }
+        //    button.activate();
+        //    Assert.IsTrue(button.getButtonState());
+        //}
         
-        [TestMethod]
-        public void TestSensor()
-        {
-            Sensor sensor = new Sensor();
-            Assert.IsTrue(!sensor.getSensorState());
+        //[TestMethod]
+        //public void TestSensor()
+        //{
+        //    Sensor sensor = new Sensor();
+        //    Assert.IsTrue(!sensor.getSensorState());
 
-            sensor.activate();
-            Assert.IsTrue(sensor.getSensorState());
-        }
+        //    sensor.activate();
+        //    Assert.IsTrue(sensor.getSensorState());
+        //}
 
         [TestMethod]
         public void TestGreenDuration()
