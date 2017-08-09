@@ -23,14 +23,18 @@ namespace TrafficControlSystem
 
         private delegate void UpdateForm(Intersection intersection);
 
-        private Intersection _intersection { get; set; }
-
+<<<<<<< HEAD:TrafficControlSystem/IntersectionView.cs
         /// <summary>
         /// The constructor for the Traffic Control System graphical user interface.
         /// </summary>
         /// <param name="syncObject">This a UISyncObject passed by the intersection controller. This allows the GUI to subscribe to changes 
         /// in the intersection lights.</param>
         public IntersectionView(UISyncObject syncObject)
+=======
+        private Intersection _intersection;
+
+        public Form1(UISyncObject syncObject)
+>>>>>>> cory:TrafficControlSystem/Form1.cs
         {
             this.syncObject = syncObject;
             this.syncObject.TimeToUpdate += SyncObject_TimeToUpdate;
@@ -41,6 +45,19 @@ namespace TrafficControlSystem
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.syncObject.TimeToUpdate -= SyncObject_TimeToUpdate;
+<<<<<<< HEAD:TrafficControlSystem/IntersectionView.cs
+        }
+        
+        private void btn_preempt1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_preempt2_Click(object sender, EventArgs e)
+        {
+           
+=======
+>>>>>>> cory:TrafficControlSystem/Form1.cs
         }
 
         private void SyncObject_TimeToUpdate(Intersection intersection)
