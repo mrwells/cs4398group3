@@ -116,9 +116,11 @@ namespace TrafficControlSystem
         {
             int currentTimingIndex = timingGroup.Timings.Min(t => t.Order);
 
-            int timingGroupTimeRemaining = timingGroup.Timings.Where(tg => tg.Light == LightColor.Green || tg.Light == LightColor.Yellow).Sum(tg => tg.Duration) * 1000;
+            int timingGroupTotalTime = timingGroup.Timings.Where(tg => tg.Light == LightColor.Green).Sum(tg => tg.Duration) * 1000;
+            //int timingGroupTotalTime = timingGroup.Timings.Where(tg => tg.Light == LightColor.Green || tg.Light == LightColor.Yellow).Sum(tg => tg.Duration) * 1000;
+            int timingGroupTimeRemaining = timingGroupTotalTime;
 
-            bool shortTimeRemaining = timingGroupTimeRemaining <= 5000;
+            bool shortTimeRemaining = timingGroupTotalTime <= 5000;
 
             while (currentTimingIndex <= timingGroup.Timings.Count)
             {
@@ -150,6 +152,12 @@ namespace TrafficControlSystem
                             //but the current lights suggest that the crosswalk should be red
                             ToggleCrossWalks(signalGroup, false, shortTimeRemaining, timingGroupTimeRemaining);
                         }
+                        else if (timingGroupTimeRemaining <= 0)
+                        {
+                            //this signalgroup is NOT in the current timingGroup
+                            //and there's not time remaining
+                            ToggleCrossWalks(signalGroup, false, shortTimeRemaining, timingGroupTimeRemaining);
+                        }
                         else
                         {
                             //this signalgroup is NOT in the current timingGroup
@@ -163,7 +171,7 @@ namespace TrafficControlSystem
                     Thread.Sleep(500);
                     timingGroupTimeRemaining -= 500;
                     timeRemaining -= 500;
-                    shortTimeRemaining = timingGroupTimeRemaining <= 5000;                        
+                    shortTimeRemaining = timingGroupTotalTime - 5000 >= timingGroupTimeRemaining;                        
                 }
 
                 currentTimingIndex++;
