@@ -95,7 +95,7 @@ namespace TrafficControlSystem
 
             uiThread.Start(syncObject);
 
-            Thread.Sleep(500);
+            Thread.Sleep(1000);
 
             int currentTimingGroupIndex = 0;
 

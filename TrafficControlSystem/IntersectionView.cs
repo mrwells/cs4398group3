@@ -33,11 +33,11 @@ namespace TrafficControlSystem
         {
             this.syncObject = syncObject;
             this.syncObject.TimeToUpdate += SyncObject_TimeToUpdate;
-            this.FormClosing += Form1_FormClosing;
+            this.FormClosing += IntersectionView_FormClosing;
             InitializeComponent();
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        private void IntersectionView_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.syncObject.TimeToUpdate -= SyncObject_TimeToUpdate;
         }
