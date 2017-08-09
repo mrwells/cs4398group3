@@ -32,6 +32,10 @@ namespace TrafficControlSystem
         /// </summary>
         [JsonProperty("lanes")]
         public List<Lane> Lanes { get; set; }
+        
+        public bool CrosswalkOkToWalk { get; set; }
+
+        public int CrossWalkRemainingDuration { get; set; }
 
         /// <summary>
         /// Constructor for Roadway
@@ -41,6 +45,7 @@ namespace TrafficControlSystem
         public Roadway()
         {
             Lanes = new List<Lane>();
+            CrosswalkOkToWalk = false;
         }
     }
 }
