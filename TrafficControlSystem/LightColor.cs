@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrafficControlSystem.Models
+namespace TrafficControlSystem
 {
     /// <summary>
     /// Creates an enumerator for each Light Color

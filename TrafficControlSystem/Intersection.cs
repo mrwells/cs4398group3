@@ -3,7 +3,10 @@ using System.Collections.Generic;
 
 using Newtonsoft.Json;
 
-namespace TrafficControlSystem.Models
+/// <summary>
+/// This is a Test.
+/// </summary>
+namespace TrafficControlSystem
 {
     /// <summary>
     /// Intersection Class
@@ -72,7 +75,7 @@ namespace TrafficControlSystem.Models
         /// SetConsoleColor changes the color of the output to the screen
         /// based on the parameter passed.
         /// </summary>
-        /// <param name="lightColor"></param>
+        /// <param name="lightColor">A LightColor enum that is used to set the text color in the console.</param>
         public void SetConsoleColor(LightColor lightColor)
         {
             switch (lightColor)

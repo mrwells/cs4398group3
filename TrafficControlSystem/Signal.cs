@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-using TrafficControlSystem.Models;
 
-namespace TrafficControlSystem.Models
+namespace TrafficControlSystem
 {
     /// <summary>
     /// Signal Class

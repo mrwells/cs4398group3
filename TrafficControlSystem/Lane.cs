@@ -1,7 +1,7 @@
 ﻿
 using Newtonsoft.Json;
 
-namespace TrafficControlSystem.Models
+namespace TrafficControlSystem
 {
     /// <summary>
     /// Lane Class

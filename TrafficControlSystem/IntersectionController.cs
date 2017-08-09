@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TrafficControlSystem.Models;
 
 namespace TrafficControlSystem
 {
@@ -29,7 +28,7 @@ namespace TrafficControlSystem
         /// a method that triggers the GUI that the intersection has changed and it is time
         /// for the GUI to update.
         /// </summary>
-        /// <param name="intersection"></param>
+        /// <param name="intersection">The Intersection object that is used by the system. </param>
         public void OnTimeToUpdate(Intersection intersection)
         {
             if (TimeToUpdate != null)

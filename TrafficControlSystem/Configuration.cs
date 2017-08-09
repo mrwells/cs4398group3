@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 
 using Newtonsoft.Json;
-using TrafficControlSystem.Models;
 
 namespace TrafficControlSystem
 {
@@ -88,18 +87,17 @@ namespace TrafficControlSystem
         /// <summary>
         /// Output basic configuration information for display
         /// </summary>
-        /// <returns>returns a string in the form of the example below:
+        /// <para></para>
         /// 
-        /// Traffic Control System
-        /// 
-        /// Configured from: ExampleConfigurations\example_intersection.txt
-        /// 
-        /// Roadways: 
-        ///        Truman Ln
-        ///        Bogart Rd
-        ///        
-        /// Intersections:
-        ///         Truman Ln / Bogart Rd
+        /// <returns>
+        /// returns a string in the form of the example below:<br /><br />
+        /// Traffic Control System<br /><br />
+        /// Configured from: ExampleConfigurations\example_intersection.txt<br /><br />
+        /// Roadways:<br />
+        ///         Truman Ln<br />   
+        ///         Bogart Rd<br /><br />
+        /// Intersections:<br />
+        ///         Truman Ln / Bogart<br />
         /// </returns>
         public override string ToString()
         {
