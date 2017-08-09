@@ -12,24 +12,48 @@ namespace TrafficControlSystem
 {
     public partial class CrossWalk : UserControl
     {
+        private bool shortTimeImageToggle = false;
+
         public CrossWalk()
         {
             InitializeComponent();
         }
 
-        public void SetWalk()
+        public void Update(bool shouldWalk, bool shortTimeRemaining, int timeRemaining)
         {
-            this.BackgroundImage = TrafficControlSystem.Properties.Resources.walking_man;
-        }
+            if (shouldWalk)
+            {
+                if (shortTimeRemaining)
+                {
+                    if (shortTimeImageToggle)
+                    {
+                        if (BackgroundImage != Properties.Resources.upraised_hand)
+                            BackgroundImage = Properties.Resources.upraised_hand;
+                    }
+                    else
+                    {
+                        if (BackgroundImage != Properties.Resources.blank_cw)
+                            BackgroundImage = Properties.Resources.blank_cw;
+                    }
 
-        public void SetDontWalk()
-        {
-            this.BackgroundImage = TrafficControlSystem.Properties.Resources.upraised_hand;
-        }
-
-        public void SetDisplay(string displayText)
-        {
-            this.TimeLabel.Text = displayText;
+                    shortTimeImageToggle = !shortTimeImageToggle;
+                    TimeLabel.Visible = true;
+                }
+                else
+                {
+                    if (BackgroundImage != Properties.Resources.walking_man)
+                        BackgroundImage = Properties.Resources.walking_man;
+                    TimeLabel.Visible = false;
+                }
+                TimeLabel.Text = (timeRemaining / 1000).ToString();
+            }
+            else
+            {
+                if (BackgroundImage != Properties.Resources.upraised_hand)
+                    BackgroundImage = Properties.Resources.upraised_hand;
+                TimeLabel.Text = "";
+                TimeLabel.Visible = false;
+            }            
         }
     }
 }

@@ -35,6 +35,8 @@ namespace TrafficControlSystem
         
         public bool CrosswalkOkToWalk { get; set; }
 
+        public bool SignalShortRemainingTime { get; set; }
+
         public int CrossWalkRemainingDuration { get; set; }
 
         /// <summary>
@@ -46,6 +48,7 @@ namespace TrafficControlSystem
         {
             Lanes = new List<Lane>();
             CrosswalkOkToWalk = false;
+            SignalShortRemainingTime = false;
         }
     }
 }

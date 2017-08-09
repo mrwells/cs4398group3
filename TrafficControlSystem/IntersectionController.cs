@@ -95,7 +95,7 @@ namespace TrafficControlSystem
 
             uiThread.Start(syncObject);
 
-            System.Threading.Thread.Sleep(500);
+            Thread.Sleep(500);
 
             int currentTimingGroupIndex = 0;
 
@@ -116,39 +116,54 @@ namespace TrafficControlSystem
         {
             int currentTimingIndex = timingGroup.Timings.Min(t => t.Order);
 
+            int timingGroupTimeRemaining = timingGroup.Timings.Where(tg => tg.Light == LightColor.Green || tg.Light == LightColor.Yellow).Sum(tg => tg.Duration) * 1000;
+
+            bool shortTimeRemaining = timingGroupTimeRemaining <= 5000;
+
             while (currentTimingIndex <= timingGroup.Timings.Count)
             {
                 var timing = timingGroup.Timings.Single(t => t.Order == currentTimingIndex);
 
+                var timeRemaining = timing.Duration * 1000;
+
                 SetSignalGroupsColor(timingGroup.SignalGroups, timing.Light);
                 intersection.OutputCurrentState();
-
-                int timeRemaining = timing.Duration;
-
+                
                 while (timeRemaining >= 0)
                 {
-                    //update state and UI every second
+                    //update state and UI every 500ms
 
                     intersection.SignalGroups.ForEach(signalGroup =>
                     {
                         if (timingGroup.SignalGroups.Select(s => s.Roadway).ToList().Contains(signalGroup.Roadway))
                         {
-                            ToggleCrossWalks(signalGroup, false, timeRemaining);
+                            //this signalGroup IS in the current timingGroup
+                            //it's crosswalks should be red
+                            ToggleCrossWalks(signalGroup, false, shortTimeRemaining, timingGroupTimeRemaining);
                         }
-                        else if (timing.Light == LightColor.GreenArrow || timing.Light == LightColor.YellowArrow || timing.Light == LightColor.RedArrow)
+                        else if (timing.Light == LightColor.GreenArrow || 
+                                 timing.Light == LightColor.YellowArrow || 
+                                 timing.Light == LightColor.RedArrow ||
+                                 timing.Light == LightColor.Red)
                         {
-                            ToggleCrossWalks(signalGroup, false, timeRemaining);
+                            //this signalgroup is NOT in the current timingGroup
+                            //but the current lights suggest that the crosswalk should be red
+                            ToggleCrossWalks(signalGroup, false, shortTimeRemaining, timingGroupTimeRemaining);
                         }
                         else
                         {
-                            ToggleCrossWalks(signalGroup, true, timeRemaining);
+                            //this signalgroup is NOT in the current timingGroup
+                            //and the light is green or yellow so set crosswalk to green
+                            ToggleCrossWalks(signalGroup, true, shortTimeRemaining, timingGroupTimeRemaining);
                         }
                     });
 
                     syncObject.OnTimeToUpdate(intersection);
 
-                    Thread.Sleep(1000);
-                    timeRemaining--;
+                    Thread.Sleep(500);
+                    timingGroupTimeRemaining -= 500;
+                    timeRemaining -= 500;
+                    shortTimeRemaining = timingGroupTimeRemaining <= 5000;                        
                 }
 
                 currentTimingIndex++;
@@ -158,11 +173,10 @@ namespace TrafficControlSystem
             //SetAllToRed();
         }
 
-        public void ToggleCrossWalks(SignalGroup signalGroup, bool okToCross, int duration)
+        public void ToggleCrossWalks(SignalGroup signalGroup, bool okToCross, bool shortTimeRemaining, int duration)
         {
-            //bool okToCross = newLightColor == LightColor.Red;
-            
             signalGroup.Roadway.CrosswalkOkToWalk = okToCross;
+            signalGroup.Roadway.SignalShortRemainingTime = shortTimeRemaining;
 
             if (okToCross)
                 signalGroup.Roadway.CrossWalkRemainingDuration = duration;

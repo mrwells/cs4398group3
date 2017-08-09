@@ -41,7 +41,6 @@
             this.TimeLabel.Size = new System.Drawing.Size(27, 45);
             this.TimeLabel.TabIndex = 123;
             this.TimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.TimeLabel.Visible = false;
             // 
             // CrossWalk
             // 
@@ -50,6 +49,7 @@
             this.BackgroundImage = global::TrafficControlSystem.Properties.Resources.upraised_hand;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.TimeLabel);
+            this.DoubleBuffered = true;
             this.Name = "CrossWalk";
             this.Size = new System.Drawing.Size(64, 54);
             this.ResumeLayout(false);

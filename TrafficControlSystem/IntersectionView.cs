@@ -78,28 +78,15 @@ namespace TrafficControlSystem
                         this.picbox_right_top.Image = TrafficControlSystem.Properties.Resources.red_circle;
                     }
 
-                    if (signalGroup.Roadway.CrosswalkOkToWalk)
-                    {
-                        crosswalk_universityblvd1.SetWalk();
-                        crosswalk_universityblvd2.SetWalk();
-                        crosswalk_universityblvd3.SetWalk();
-                        crosswalk_universityblvd4.SetWalk();
-                        crosswalk_universityblvd1.SetDisplay(signalGroup.Roadway.CrossWalkRemainingDuration.ToString());
-                        crosswalk_universityblvd2.SetDisplay(signalGroup.Roadway.CrossWalkRemainingDuration.ToString());
-                        crosswalk_universityblvd3.SetDisplay(signalGroup.Roadway.CrossWalkRemainingDuration.ToString());
-                        crosswalk_universityblvd4.SetDisplay(signalGroup.Roadway.CrossWalkRemainingDuration.ToString());
-                    }
-                    else
-                    {
-                        crosswalk_universityblvd1.SetDontWalk();
-                        crosswalk_universityblvd2.SetDontWalk();
-                        crosswalk_universityblvd3.SetDontWalk();
-                        crosswalk_universityblvd4.SetDontWalk();
-                        crosswalk_universityblvd1.SetDisplay("");
-                        crosswalk_universityblvd2.SetDisplay("");
-                        crosswalk_universityblvd3.SetDisplay("");
-                        crosswalk_universityblvd4.SetDisplay("");
-                    }
+                    this.picbox_left_bot.Invalidate();
+                    this.picbox_right_bot.Invalidate();
+                    this.picbox_left_top.Invalidate();
+                    this.picbox_right_top.Invalidate();
+
+                    crosswalk_universityblvd1.Update(signalGroup.Roadway.CrosswalkOkToWalk, signalGroup.Roadway.SignalShortRemainingTime, signalGroup.Roadway.CrossWalkRemainingDuration);
+                    crosswalk_universityblvd2.Update(signalGroup.Roadway.CrosswalkOkToWalk, signalGroup.Roadway.SignalShortRemainingTime, signalGroup.Roadway.CrossWalkRemainingDuration);
+                    crosswalk_universityblvd3.Update(signalGroup.Roadway.CrosswalkOkToWalk, signalGroup.Roadway.SignalShortRemainingTime, signalGroup.Roadway.CrossWalkRemainingDuration);
+                    crosswalk_universityblvd4.Update(signalGroup.Roadway.CrosswalkOkToWalk, signalGroup.Roadway.SignalShortRemainingTime, signalGroup.Roadway.CrossWalkRemainingDuration);
                 }
 
                 if (signalGroup.Id == "universityblvd_turnlanes")
@@ -119,6 +106,9 @@ namespace TrafficControlSystem
                         this.picbox_turn_top.Image = TrafficControlSystem.Properties.Resources.red_arrow_alt;
                         this.picbox_turn_bot.Image = TrafficControlSystem.Properties.Resources.red_arrow;
                     }
+
+                    this.picbox_turn_top.Invalidate();
+                    this.picbox_turn_bot.Invalidate();
                 }
                 
                 if (signalGroup.Id.Contains("sunrise"))
@@ -145,60 +135,20 @@ namespace TrafficControlSystem
                         this.picbox_top_left.Image = TrafficControlSystem.Properties.Resources.red_circle_alt;
                     }
 
-                    if (signalGroup.Roadway.CrosswalkOkToWalk)
-                    {
-                        crosswalk_sunriserd1.SetWalk();
-                        crosswalk_sunriserd2.SetWalk();
-                        crosswalk_sunriserd3.SetWalk();
-                        crosswalk_sunriserd4.SetWalk();
-                        crosswalk_sunriserd1.SetDisplay(signalGroup.Roadway.CrossWalkRemainingDuration.ToString());
-                        crosswalk_sunriserd2.SetDisplay(signalGroup.Roadway.CrossWalkRemainingDuration.ToString());
-                        crosswalk_sunriserd3.SetDisplay(signalGroup.Roadway.CrossWalkRemainingDuration.ToString());
-                        crosswalk_sunriserd4.SetDisplay(signalGroup.Roadway.CrossWalkRemainingDuration.ToString());
-                    }
-                    else
-                    {
-                        crosswalk_sunriserd1.SetDontWalk();
-                        crosswalk_sunriserd2.SetDontWalk();
-                        crosswalk_sunriserd3.SetDontWalk();
-                        crosswalk_sunriserd4.SetDontWalk();
-                        crosswalk_sunriserd1.SetDisplay("");
-                        crosswalk_sunriserd2.SetDisplay("");
-                        crosswalk_sunriserd3.SetDisplay("");
-                        crosswalk_sunriserd4.SetDisplay("");
-                    }
+                    this.picbox_bot_right.Invalidate();
+                    this.picbox_top_right.Invalidate();
+                    this.picbox_bot_left.Invalidate();
+                    this.picbox_top_left.Invalidate();
+
+                    crosswalk_sunriserd1.Update(signalGroup.Roadway.CrosswalkOkToWalk, signalGroup.Roadway.SignalShortRemainingTime, signalGroup.Roadway.CrossWalkRemainingDuration);
+                    crosswalk_sunriserd2.Update(signalGroup.Roadway.CrosswalkOkToWalk, signalGroup.Roadway.SignalShortRemainingTime, signalGroup.Roadway.CrossWalkRemainingDuration);
+                    crosswalk_sunriserd3.Update(signalGroup.Roadway.CrosswalkOkToWalk, signalGroup.Roadway.SignalShortRemainingTime, signalGroup.Roadway.CrossWalkRemainingDuration);
+                    crosswalk_sunriserd4.Update(signalGroup.Roadway.CrosswalkOkToWalk, signalGroup.Roadway.SignalShortRemainingTime, signalGroup.Roadway.CrossWalkRemainingDuration);
                 }
             }
 
-            Refresh();
+            //Refresh();
         }
-
-        //private void Crosswalk()
-        //{
-        //   picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.walking_man;
-        //   Refresh();
-        //   System.Threading.Thread.Sleep(5000);
-
-        //   int i = 25;
-        //   label1.Text = i.ToString();
-        //   label1.Visible = true;
-
-        //   while (i > 0)
-        //   {
-        //       picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.upraised_hand;
-        //       Refresh();
-        //       System.Threading.Thread.Sleep(500);
-        //       picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.blank_cw;
-        //       Refresh();
-        //       System.Threading.Thread.Sleep(500);
-        //       --i;
-        //       label1.Text = i.ToString();
-        //   }
-
-        //   picbox_crosswalk_1r.Image = TrafficControlSystem.Properties.Resources.upraised_hand;
-        //   label1.Visible = false;
-        //   Refresh();
-        //}
         
         private void btn_preempt1_Click(object sender, EventArgs e)
         {
@@ -215,7 +165,7 @@ namespace TrafficControlSystem
             syncObject.OnCrosswalkPressed(_intersection.SignalGroups[0].Roadway);
         }
         
-        private void sunriserd_Click(object sender, EventArgs e)
+        private void sunriserd_crosswalk_Click(object sender, EventArgs e)
         {
             syncObject.OnCrosswalkPressed(_intersection.SignalGroups[3].Roadway);
         }

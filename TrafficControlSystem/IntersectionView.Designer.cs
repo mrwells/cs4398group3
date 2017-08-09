@@ -303,7 +303,7 @@
             this.crosswalk_sunriserd2.Name = "crosswalk_sunriserd2";
             this.crosswalk_sunriserd2.Size = new System.Drawing.Size(64, 54);
             this.crosswalk_sunriserd2.TabIndex = 131;
-            this.crosswalk_sunriserd2.Click += new System.EventHandler(this.sunriserd_Click);
+            this.crosswalk_sunriserd2.Click += new System.EventHandler(this.sunriserd_crosswalk_Click);
             // 
             // crosswalk_sunriserd3
             // 
@@ -313,7 +313,7 @@
             this.crosswalk_sunriserd3.Name = "crosswalk_sunriserd3";
             this.crosswalk_sunriserd3.Size = new System.Drawing.Size(64, 54);
             this.crosswalk_sunriserd3.TabIndex = 132;
-            this.crosswalk_sunriserd3.Click += new System.EventHandler(this.sunriserd_Click);
+            this.crosswalk_sunriserd3.Click += new System.EventHandler(this.sunriserd_crosswalk_Click);
             // 
             // crosswalk_sunriserd1
             // 
@@ -323,7 +323,7 @@
             this.crosswalk_sunriserd1.Name = "crosswalk_sunriserd1";
             this.crosswalk_sunriserd1.Size = new System.Drawing.Size(64, 54);
             this.crosswalk_sunriserd1.TabIndex = 133;
-            this.crosswalk_sunriserd1.Click += new System.EventHandler(this.sunriserd_Click);
+            this.crosswalk_sunriserd1.Click += new System.EventHandler(this.sunriserd_crosswalk_Click);
             // 
             // crosswalk_sunriserd4
             // 
@@ -333,7 +333,7 @@
             this.crosswalk_sunriserd4.Name = "crosswalk_sunriserd4";
             this.crosswalk_sunriserd4.Size = new System.Drawing.Size(64, 54);
             this.crosswalk_sunriserd4.TabIndex = 134;
-            this.crosswalk_sunriserd4.Click += new System.EventHandler(this.sunriserd_Click);
+            this.crosswalk_sunriserd4.Click += new System.EventHandler(this.sunriserd_crosswalk_Click);
             // 
             // IntersectionView
             // 
@@ -368,6 +368,7 @@
             this.Controls.Add(this.btn_preempt_l);
             this.Controls.Add(this.btn_preempt_r);
             this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
