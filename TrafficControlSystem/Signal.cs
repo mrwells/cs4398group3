@@ -17,17 +17,32 @@ namespace TrafficControlSystem.Models
     /// (LightColor) CurrentLight - The Current Light</remarks>
     public class Signal
     {
+        /// <summary>
+        /// A string property that contains the signal ID.
+        /// </summary>
         [JsonProperty("id")]
         public string Id { get; set; }
 
+        /// <summary>
+        /// A string property that contains the signal lane ID.
+        /// </summary>
         [JsonProperty("laneid")]
         public string LaneId { get; set; }
-        
+
+        /// <summary>
+        /// A Lane property that contains the signal lane.
+        /// </summary>
         public Lane Lane { get; set; }
 
+        /// <summary>
+        /// A LightColor property that contains a list of light colors for the signal.
+        /// </summary>
         [JsonProperty("lights")]
         public List<LightColor> Lights { get; set; }
 
+        /// <summary>
+        /// A LightColor property that contains the current light color of the signal.
+        /// </summary>
         public LightColor CurrentLight { get; set; }
 
         /// <summary>

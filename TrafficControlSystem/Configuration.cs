@@ -19,12 +19,22 @@ namespace TrafficControlSystem
     /// </remarks>
     public class Configuration
     {
+        /// <summary>
+        /// A read only Roadway property that contains the list of roadways for the loaded configuration.
+        /// </summary>
         [JsonProperty("roadways")]
         public List<Roadway> Roadways { get; private set; }
-        
+
+        /// <summary>
+        /// A read only Intersection property that contains the list of intersections for the loaded configuration.
+        /// For the current implementation, this will be only one intersection.
+        /// </summary>
         [JsonProperty("intersections")]
         public List<Intersection> Intersections { get; private set; }
 
+        /// <summary>
+        /// A string property that contains the path and file to load the intersection configuration from.
+        /// </summary>
         public string FileName { get; set; }
 
         /// <summary>
@@ -78,7 +88,19 @@ namespace TrafficControlSystem
         /// <summary>
         /// Output basic configuration information for display
         /// </summary>
-        /// <returns>output</returns>
+        /// <returns>returns a string in the form of the example below:
+        /// 
+        /// Traffic Control System
+        /// 
+        /// Configured from: ExampleConfigurations\example_intersection.txt
+        /// 
+        /// Roadways: 
+        ///        Truman Ln
+        ///        Bogart Rd
+        ///        
+        /// Intersections:
+        ///         Truman Ln / Bogart Rd
+        /// </returns>
         public override string ToString()
         {
             var output = new StringBuilder();

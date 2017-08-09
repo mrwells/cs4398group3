@@ -12,24 +12,33 @@ using TrafficControlSystem.Models;
 namespace TrafficControlSystem
 {
 
-
+    /// <summary>
+    /// This is the Graphical User Interface for the Traffic Control System. This gives the user a
+    /// bird's eye view of the intersection. It also allows the user to interact with the intersection
+    /// by activating the road (preempt) and emergency sensors and pressing the crosswalk buttons.
+    /// </summary>
     public partial class IntersectionView : Form
     {
-        UISyncObject syncObject;
+        private UISyncObject syncObject;
 
         private delegate void UpdateForm(Intersection intersection);
 
+        /// <summary>
+        /// The constructor for the Traffic Control System graphical user interface.
+        /// </summary>
+        /// <param name="syncObject">This a UISyncObject passed by the intersection controller. This allows the GUI to subscribe to changes 
+        /// in the intersection lights.</param>
         public IntersectionView(UISyncObject syncObject)
         {
             this.syncObject = syncObject;
-            this.syncObject.OnTimeToUpdate += SyncObject_TimeToUpdate;
+            this.syncObject.TimeToUpdate += SyncObject_TimeToUpdate;
             this.FormClosing += Form1_FormClosing;
             InitializeComponent();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.syncObject.OnTimeToUpdate -= SyncObject_TimeToUpdate;
+            this.syncObject.TimeToUpdate -= SyncObject_TimeToUpdate;
         }
         
         private void btn_preempt1_Click(object sender, EventArgs e)
@@ -204,6 +213,11 @@ namespace TrafficControlSystem
         private void btn_em_l_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void IntersectionView_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

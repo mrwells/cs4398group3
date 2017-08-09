@@ -15,12 +15,21 @@ namespace TrafficControlSystem.Models
     /// </remarks>
     public class Roadway
     {
+        /// <summary>
+        /// A string property that contains the roadway ID.
+        /// </summary>
         [JsonProperty("id")]
         public string Id { get; set; }
 
+        /// <summary>
+        /// A string property that contains the roadway name.
+        /// </summary>
         [JsonProperty("name")]
         public string Name { get; set; }
 
+        /// <summary>
+        /// A Lane property that contains a list of the lanes for the roadway.
+        /// </summary>
         [JsonProperty("lanes")]
         public List<Lane> Lanes { get; set; }
 

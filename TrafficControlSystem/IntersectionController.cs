@@ -8,16 +8,32 @@ using TrafficControlSystem.Models;
 
 namespace TrafficControlSystem
 {
+    /// <summary>
+    /// A delegate definition used to pass the current intersection to the GUI
+    /// </summary>
+    /// <param name="intersection">This is an Intersection object that is the current state of the intersection in the system.</param>
     public delegate void UIEvent(Intersection intersection);
 
+    /// <summary>
+    /// An object of this time is passed to the GUI to allow it to subscribe to changes in the intersection
+    /// and make those changes when an update event happens in the intersection.
+    /// </summary>
     public class UISyncObject
     {
-        public event UIEvent OnTimeToUpdate;
+        /// <summary>
+        /// A delegate UIEvent object used to pass the current intersection to the GUI.
+        /// </summary>
+        public event UIEvent TimeToUpdate;
 
-        public void TimeToUpdate(Intersection intersection)
+        /// <summary>
+        /// a method that triggers the GUI that the intersection has changed and it is time
+        /// for the GUI to update.
+        /// </summary>
+        /// <param name="intersection"></param>
+        public void OnTimeToUpdate(Intersection intersection)
         {
-            if (OnTimeToUpdate != null)
-                OnTimeToUpdate(intersection);
+            if (TimeToUpdate != null)
+                TimeToUpdate(intersection);
         }
     }
 	
@@ -42,7 +58,7 @@ namespace TrafficControlSystem
         /// <remarks>
         /// Creates a new Intersection using the passed parameter.
         /// </remarks>
-        /// <param name="intersection">The Intersection to use for the simulator.</param>
+        /// <param name="intersection">The Intersection object to use for the system.</param>
         public IntersectionController(Intersection intersection)
         {
             this.intersection = intersection;
@@ -113,7 +129,7 @@ namespace TrafficControlSystem
             {
                 SetSignalGroupColor(signalGroup, newLightColor);
             });
-            syncObject.TimeToUpdate(intersection);
+            syncObject.OnTimeToUpdate(intersection);
         }
 
         /// <summary>

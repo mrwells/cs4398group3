@@ -14,12 +14,15 @@ namespace TrafficControlSystem.Models
     /// </remarks>
     public class Lane
     {
+        /// <summary>
+        /// A string property that contains the lane ID.
+        /// </summary>
         [JsonProperty("id")]
         public string Id { get; set; }
 
-        [JsonProperty("description")]
-        public string Description { get; set; }
-
+        /// <summary>
+        /// A string property that contains the lane direction.
+        /// </summary>
         [JsonProperty("direction")]
         public string Direction { get; set; }
     }

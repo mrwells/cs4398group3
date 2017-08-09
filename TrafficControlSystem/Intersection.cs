@@ -17,15 +17,21 @@ namespace TrafficControlSystem.Models
     /// </remarks>
     public class Intersection
     {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
+        /// <summary>
+        /// A string property that contains the description of the intersection.
+        /// </summary>
         [JsonProperty("description")]
         public string Description { get; set; }
 
+        /// <summary>
+        /// A SignalGroup property that contains a list of the signal groups of the intersection.
+        /// </summary>
         [JsonProperty("signalgroups")]
         public List<SignalGroup> SignalGroups { get; set; }
 
+        /// <summary>
+        /// A TimingGroup property that contains a list of the timing groups of the intersection.
+        /// </summary>
         [JsonProperty("timinggroups")]
         public List<TimingGroup> TimingGroups { get; set; }
 

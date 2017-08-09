@@ -407,6 +407,7 @@
             this.Name = "IntersectionView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Traffic Control System Simulator";
+            this.Load += new System.EventHandler(this.IntersectionView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picbox_top_right)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_bot_right)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_top_left)).EndInit();

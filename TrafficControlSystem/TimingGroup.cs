@@ -16,14 +16,26 @@ namespace TrafficControlSystem.Models
     /// (</remarks>
     public class TimingGroup
     {
+        /// <summary>
+        /// A string property that contains the timing group id.
+        /// </summary>
         [JsonProperty("id")]
         public string Id { get; set; }
 
+        /// <summary>
+        /// A string property that contains a list of the signal group ids in the timing group.
+        /// </summary>
         [JsonProperty("signalgroupids")]
         public List<string> SignalGroupIds { get; set; }
-        
+
+        /// <summary>
+        /// A SignalGroup property that contains a list of the signal groups in the timing group.
+        /// </summary>
         public List<SignalGroup> SignalGroups { get; set; }
 
+        /// <summary>
+        /// A Timing property that contains a list of the timings in the timing group.
+        /// </summary>
         [JsonProperty("signaltiming")]
         public List<Timing> Timings { get; set; }
 
