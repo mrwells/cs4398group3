@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TrafficControlSystem.Configuration" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAQAAAAAEAAAAAAAAAAAAAAAAAAAAAAJAAAA=</HashCode>
+      <FileName>Configuration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafficControlSystem.CrossWalk" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAIDAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CrossWalk.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafficControlSystem.Intersection" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAgAAAAAAAAAAAAAAAACEAAAAEAAAAAAAA=</HashCode>
+      <FileName>Intersection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafficControlSystem.IntersectionController" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAIAAAAAAAAACIAAgAAAAAEAAQgAAAAAAAAAAIAM=</HashCode>
+      <FileName>IntersectionController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafficControlSystem.IntersectionView" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgReKAAIAHBAAQA2AICiAIKCAAAFIAFAAACIAABQIYA=</HashCode>
+      <FileName>IntersectionView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafficControlSystem.Lane" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Lane.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafficControlSystem.Program" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafficControlSystem.Roadway" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAQCAAAAAAAAAAAAQAAAAAAAAAAAAAAAIACAA=</HashCode>
+      <FileName>Roadway.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafficControlSystem.Signal" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAABAAAAAAAAAAAgAgAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Signal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafficControlSystem.SignalGroup" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAABAAAABAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>SignalGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafficControlSystem.TimingGroup" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgAAAAAABACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TimingGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafficControlSystem.UISyncObject" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAACAAAAAEEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UISyncObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafficControlSystem.Properties.Resources" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAkgAAAFSAAAAAAAAAABEAAAAcAIQAAAEQAAAAAICKA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="TrafficControlSystem.Timing" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAACAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Timing.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="TrafficControlSystem.LightColor" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgACAAABAAAAAAAAAAQAAAAAADAAAAA=</HashCode>
+      <FileName>LightColor.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="TrafficControlSystem.UIEvent" Collapsed="true">
+    <Position X="2.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>UISyncObject.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="TrafficControlSystem.CrosswalkEvent" Collapsed="true">
+    <Position X="0.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UISyncObject.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
