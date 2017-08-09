@@ -125,7 +125,7 @@
 						{
 							"order": "1",
 							"light": "GreenArrow", 
-							"duration" : "30"
+							"duration" : "10"
 						},
 						{
 							"order": "2",

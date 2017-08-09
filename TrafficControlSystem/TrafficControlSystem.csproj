@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,6 +36,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\TrafficControlSystem.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,12 +47,17 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Supercat+Logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,36 +66,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractLaneModel.cs" />
-    <Compile Include="AbstractTrafficLightController.cs" />
-    <Compile Include="Button.cs" />
-    <Compile Include="Buzzer.cs" />
-    <Compile Include="ConfigurationModel.cs" />
-    <Compile Include="ControllerState.cs" />
-    <Compile Include="EmergencyState.cs" />
-    <Compile Include="ErrorState.cs" />
-    <Compile Include="Event.cs" />
-    <Compile Include="LaneModel.cs" />
-    <Compile Include="LaneState.cs" />
-    <Compile Include="MaintenanceState.cs" />
-    <Compile Include="ModelEvent.cs" />
-    <Compile Include="ModelListener.cs" />
+    <Compile Include="IntersectionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrossWalk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CrossWalk.Designer.cs">
+      <DependentUpon>CrossWalk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntersectionView.Designer.cs">
+      <DependentUpon>IntersectionView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Configuration.cs" />
-    <Compile Include="Models\Intersection.cs" />
-    <Compile Include="Models\Lane.cs" />
-    <Compile Include="Models\LightColor.cs" />
-    <Compile Include="Models\Roadway.cs" />
-    <Compile Include="Models\Signal.cs" />
-    <Compile Include="Models\SignalGroup.cs" />
-    <Compile Include="Models\Timing.cs" />
-    <Compile Include="Models\TimingGroup.cs" />
+    <Compile Include="Intersection.cs" />
+    <Compile Include="Lane.cs" />
+    <Compile Include="LightColor.cs" />
+    <Compile Include="Roadway.cs" />
+    <Compile Include="Signal.cs" />
+    <Compile Include="SignalGroup.cs" />
+    <Compile Include="Timing.cs" />
+    <Compile Include="TimingGroup.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sensor.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="IntersectionController.cs" />
-    <Compile Include="TrafficLightController.cs" />
-    <Compile Include="TrafficLightDisplay.cs" />
-    <Compile Include="TrafficLightObserver.cs" />
+    <Compile Include="UISyncObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -85,7 +106,52 @@
     <Content Include="ExampleConfigurations\universityblvd_sunriserd.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Supercat+Logo.ico" />
+    <None Include="Resources\intersection.png" />
+    <None Include="Resources\green_circle.png" />
+    <None Include="Resources\red_circle.png" />
+    <None Include="Resources\yellow_circle.png" />
+    <None Include="Resources\green_arrow.png" />
+    <None Include="Resources\red_arrow.png" />
+    <None Include="Resources\yellow_arrow.png" />
+    <None Include="Resources\green_arrow_alt.png" />
+    <None Include="Resources\red_arrow_alt.png" />
+    <None Include="Resources\yellow_arrow_alt.png" />
+    <None Include="Resources\green_circle_alt.png" />
+    <None Include="Resources\red_circle_alt.png" />
+    <None Include="Resources\yellow_circle_alt.png" />
+    <None Include="Resources\upraised_hand.jpg" />
+    <None Include="Resources\walking_man.jpeg" />
+    <None Include="Resources\blank_cw.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="IntersectionView.resx">
+      <DependentUpon>IntersectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrossWalk.resx">
+      <DependentUpon>CrossWalk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>ExampleConfigurations\universityblvd_sunriserd.txt</StartArguments>
+  </PropertyGroup>
 </Project>

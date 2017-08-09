@@ -3,22 +3,47 @@ using System.Collections.Generic;
 
 using Newtonsoft.Json;
 
-namespace TrafficControlSystem.Models
+/// <summary>
+/// This is a Test.
+/// </summary>
+namespace TrafficControlSystem
 {
+    /// <summary>
+    /// Intersection Class
+    /// </summary>
+    /// <remarks>
+    /// Intersection Class has 4 attributes: 
+    /// (String) Id
+    /// (String) Description
+    /// (List[SignalGroup]) SignalGroups - List of SignalGroups
+    /// (List[TimingGroups]) TimingGroups - List of TimingGroups
+    /// </remarks>
     public class Intersection
     {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
+        /// <summary>
+        /// A string property that contains the description of the intersection.
+        /// </summary>
         [JsonProperty("description")]
         public string Description { get; set; }
 
+        /// <summary>
+        /// A SignalGroup property that contains a list of the signal groups of the intersection.
+        /// </summary>
         [JsonProperty("signalgroups")]
         public List<SignalGroup> SignalGroups { get; set; }
 
+        /// <summary>
+        /// A TimingGroup property that contains a list of the timing groups of the intersection.
+        /// </summary>
         [JsonProperty("timinggroups")]
         public List<TimingGroup> TimingGroups { get; set; }
 
+        /// <summary>
+        /// Constructor for Intersection
+        /// </summary>
+        /// <remarks>
+        /// Creates SignalGroups and TimingGroups lists on instansiation
+        /// </remarks>
         public Intersection()
         {
             SignalGroups = new List<SignalGroup>();
@@ -26,7 +51,7 @@ namespace TrafficControlSystem.Models
         }
 
         /// <summary>
-        /// Display current state on console
+        /// Display current state of console.
         /// </summary>
         public void OutputCurrentState()
         {
@@ -46,7 +71,11 @@ namespace TrafficControlSystem.Models
                 Console.WriteLine();
             }
         }
-
+        /// <summary>
+        /// SetConsoleColor changes the color of the output to the screen
+        /// based on the parameter passed.
+        /// </summary>
+        /// <param name="lightColor">A LightColor enum that is used to set the text color in the console.</param>
         public void SetConsoleColor(LightColor lightColor)
         {
             switch (lightColor)
