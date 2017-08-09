@@ -1,33 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="TrafficControlSystem.AbstractLaneModel" Collapsed="true">
-    <Position X="9.5" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQABBAACAEAAAAAAAEAAAAAQIAAAACAQAAEgAAIAAA=</HashCode>
-      <FileName>AbstractLaneModel.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="TrafficControlSystem.AbstractTrafficLightController" Collapsed="true">
-    <Position X="3.25" Y="7.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>AbstractTrafficLightController.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="TrafficControlSystem.Button" Collapsed="true">
-    <Position X="13" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAAAARAAAAAAAAAAAAABAAAAAAAA=</HashCode>
-      <FileName>Button.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="TrafficControlSystem.Buzzer" Collapsed="true">
-    <Position X="5.5" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAABAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Buzzer.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="TrafficControlSystem.Configuration" Collapsed="true">
     <Position X="14.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
@@ -35,79 +7,16 @@
       <FileName>Configuration.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TrafficControlSystem.ConfigurationModel" Collapsed="true">
-    <Position X="8.25" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAIBAAAAAABAAAQAAAAAAAACACBAAAAAAAAAAAEQAAA=</HashCode>
-      <FileName>ConfigurationModel.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="TrafficControlSystem.ControllerState" Collapsed="true">
-    <Position X="5.75" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ControllerState.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="TrafficControlSystem.EmergencyState" Collapsed="true">
-    <Position X="3.5" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>EmergencyState.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="TrafficControlSystem.ErrorState" Collapsed="true">
-    <Position X="8" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ErrorState.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="TrafficControlSystem.Event" Collapsed="true">
-    <Position X="16.5" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAYAACABAAAAAAAAAA=</HashCode>
-      <FileName>Event.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="TrafficControlSystem.IntersectionController">
-    <Position X="18.25" Y="3.75" Width="1.5" />
+    <Position X="18.25" Y="3.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAIAAIAAAAAAAAAAAAAgAAAAAEAAQAAAAAAAAAAAAAM=</HashCode>
+      <HashCode>AAIAAIAAAAAAAAACIAAgAAAAAEAAQAAAAAAAAAAAAAM=</HashCode>
       <FileName>IntersectionController.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="intersection" />
       <Field Name="startTime" />
     </ShowAsAssociation>
-  </Class>
-  <Class Name="TrafficControlSystem.LaneModel" Collapsed="true">
-    <Position X="10.5" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>LaneModel.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="TrafficControlSystem.LaneState" Collapsed="true">
-    <Position X="10.5" Y="7.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>LaneState.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="TrafficControlSystem.MaintenanceState" Collapsed="true">
-    <Position X="5.75" Y="2.75" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MaintenanceState.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="TrafficControlSystem.ModelEvent">
-    <Position X="16.5" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ModelEvent.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="TrafficControlSystem.Program">
     <Position X="10.75" Y="2.25" Width="1.5" />
@@ -116,16 +25,6 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TrafficControlSystem.Sensor">
-    <Position X="16.5" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
-      <FileName>Sensor.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="activated" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="TrafficControlSystem.TrafficLightController" Collapsed="true">
     <Position X="3.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
@@ -133,67 +32,53 @@
       <FileName>TrafficLightController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TrafficControlSystem.TrafficLightDisplay" Collapsed="true">
-    <Position X="3.25" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>TrafficLightDisplay.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="TrafficControlSystem.TrafficLightObserver" Collapsed="true">
-    <Position X="4.5" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>TrafficLightObserver.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="TrafficControlSystem.Models.Intersection">
     <Position X="22.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAiAAAAAAAgAAAAAAAAAAAAAAAACEAAAAEAAAAAAAA=</HashCode>
-      <FileName>Models\Intersection.cs</FileName>
+      <FileName>Intersection.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TrafficControlSystem.Models.Lane">
     <Position X="14.75" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Models\Lane.cs</FileName>
+      <FileName>Lane.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TrafficControlSystem.Models.Roadway">
     <Position X="14.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAIAAAA=</HashCode>
-      <FileName>Models\Roadway.cs</FileName>
+      <FileName>Roadway.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TrafficControlSystem.Models.Signal">
-    <Position X="20.25" Y="3.25" Width="1.5" />
+    <Position X="16.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAABAAAAAAAAAAAgAgAAAAAAAAAQAAAAAAAAA=</HashCode>
-      <FileName>Models\Signal.cs</FileName>
+      <FileName>Signal.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TrafficControlSystem.Models.SignalGroup" Collapsed="true">
-    <Position X="14.75" Y="5.75" Width="1.5" />
+  <Class Name="TrafficControlSystem.Models.SignalGroup">
+    <Position X="13" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAABAAAABAAAAAAAAIAAAAAAAAAAA=</HashCode>
-      <FileName>Models\SignalGroup.cs</FileName>
+      <FileName>SignalGroup.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TrafficControlSystem.Models.TimingGroup" Collapsed="true">
+  <Class Name="TrafficControlSystem.Models.TimingGroup">
     <Position X="13" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAgAAAAAABACAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Models\TimingGroup.cs</FileName>
+      <FileName>TimingGroup.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Struct Name="TrafficControlSystem.Models.Timing" Collapsed="true">
-    <Position X="13" Y="5.75" Width="1.5" />
+  <Struct Name="TrafficControlSystem.Models.Timing">
+    <Position X="10.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAAAACAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Models\Timing.cs</FileName>
+      <FileName>Timing.cs</FileName>
     </TypeIdentifier>
   </Struct>
   <Struct Name="System.DateTime" Collapsed="true">
@@ -206,11 +91,11 @@
     <TypeIdentifier />
     <Lollipop Position="0.1" />
   </Struct>
-  <Enum Name="TrafficControlSystem.Models.LightColor" Collapsed="true">
-    <Position X="13" Y="7" Width="1.5" />
+  <Enum Name="TrafficControlSystem.Models.LightColor">
+    <Position X="10.75" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgACAAABAAAAAAAAAAQAAAAAADAAAAA=</HashCode>
-      <FileName>Models\LightColor.cs</FileName>
+      <FileName>LightColor.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

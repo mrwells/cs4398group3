@@ -11,6 +11,8 @@ using TrafficControlSystem.Models;
 
 namespace TrafficControlSystem
 {
+
+
     public partial class IntersectionView : Form
     {
         UISyncObject syncObject;
