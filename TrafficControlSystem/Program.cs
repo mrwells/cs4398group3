@@ -22,6 +22,7 @@ namespace TrafficControlSystem
                 return;
             }
 
+            Console.WriteLine(args[0].Length);
             var configurationFile = args[0];
             var configuration = Configuration.Load(configurationFile);
              
