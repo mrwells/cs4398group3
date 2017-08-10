@@ -296,6 +296,10 @@ namespace TrafficControlSystem.Tests
             if ((configuration.Intersections[0].SignalGroups[2].Signals[0].CurrentLight == configuration.Intersections[0].SignalGroups[1].Signals[0].CurrentLight) 
                 && (configuration.Intersections[0].SignalGroups[2].Signals[0].CurrentLight == LightColor.Yellow))
                 return true;
+            //checking for concurrent green lights on "sunriserd_north_south" and "CrossWays returns ok to walk == true" 
+            if ((configuration.Intersections[0].SignalGroups[2].Signals[0].CurrentLight == configuration.Intersections[0].SignalGroups[1].Signals[0].CurrentLight)
+                && (configuration.Intersections[0].SignalGroups[2].Roadway.CrosswalkOkToWalk))
+                return true;
 
             return false;
                  
