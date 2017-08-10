@@ -147,6 +147,13 @@ namespace TrafficControlSystem
             //SetAllToRed();
         }
 
+        /// <summary>
+        /// A function that toggles the crosswalk for a signal group.
+        /// </summary>
+        /// <param name="signalGroup">A signalGroup object that specifies the signal group to toggle the crosswalk lights.</param>
+        /// <param name="okToCross">A boolean that specifies if it is ok to cross.</param>
+        /// <param name="shortTimeRemaining">A boolean that specifies if a short time remains.</param>
+        /// <param name="duration">An integer with the duration of the cross walk toggle in seconds.</param>
         public void ToggleCrossWalks(SignalGroup signalGroup, bool okToCross, bool shortTimeRemaining, int duration)
         {
             signalGroup.Roadway.CrosswalkOkToWalk = okToCross;

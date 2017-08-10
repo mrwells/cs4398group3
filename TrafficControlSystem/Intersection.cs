@@ -3,9 +3,6 @@ using System.Collections.Generic;
 
 using Newtonsoft.Json;
 
-/// <summary>
-/// This is a Test.
-/// </summary>
 namespace TrafficControlSystem
 {
     /// <summary>

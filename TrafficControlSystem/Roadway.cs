@@ -32,11 +32,20 @@ namespace TrafficControlSystem
         /// </summary>
         [JsonProperty("lanes")]
         public List<Lane> Lanes { get; set; }
-        
+
+        /// <summary>
+        ///  A boolean property that specifies if the crosswalk is OK to use for the roadway.
+        /// </summary>
         public bool CrosswalkOkToWalk { get; set; }
 
+        /// <summary>
+        ///  A boolean property that specifies if the short remaining time is used for the roadway.
+        /// </summary>
         public bool SignalShortRemainingTime { get; set; }
 
+        /// <summary>
+        /// A integer property that specifies the remaining crosswalk duration.
+        /// </summary>
         public int CrossWalkRemainingDuration { get; set; }
 
         /// <summary>
