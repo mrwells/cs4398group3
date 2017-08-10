@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TrafficControlSystem
-{ 
+{
     /// <summary>
     /// IntersectionController Class
     /// </summary>
@@ -18,9 +18,13 @@ namespace TrafficControlSystem
     {
         private Intersection intersection;
         private DateTime startTime;
+
+        public bool[] crosswalkButtonPressed = new bool[] {false, false } ;
         
         Thread uiThread;
         UISyncObject syncObject;
+
+      
 
         /// <summary>
         /// Constructor for IntersectionController
@@ -34,12 +38,12 @@ namespace TrafficControlSystem
             this.intersection = intersection;
             syncObject = new UISyncObject();
 
-            syncObject.CrosswalkPressed += SyncObject_CrosswalkPressed;
+            syncObject.CrosswalkPressed_EastWest += SyncObject_CrosswalkPressed;
         }
 
         private void SyncObject_CrosswalkPressed(Roadway roadway)
         {
-            
+           
         }
 
         /// <summary>
@@ -109,8 +113,8 @@ namespace TrafficControlSystem
                             //it's crosswalks should be red
                             ToggleCrossWalks(signalGroup, false, shortTimeRemaining, timingGroupTimeRemaining);
                         }
-                        else if (timing.Light == LightColor.GreenArrow || 
-                                 timing.Light == LightColor.YellowArrow || 
+                        else if (timing.Light == LightColor.GreenArrow ||
+                                 timing.Light == LightColor.YellowArrow ||
                                  timing.Light == LightColor.RedArrow ||
                                  timing.Light == LightColor.Red)
                         {
@@ -123,11 +127,21 @@ namespace TrafficControlSystem
                             //this signalgroup is NOT in the current timingGroup
                             //and there's not time remaining
                             ToggleCrossWalks(signalGroup, false, shortTimeRemaining, timingGroupTimeRemaining);
+
+                            //reset so we dont constantly have a walk
+                            if (signalGroup == intersection.SignalGroups[3] || signalGroup == intersection.SignalGroups[4])
+                                syncObject.crosswalkPressed[1] = false;
+                            else if(signalGroup == intersection.SignalGroups[1] || signalGroup == intersection.SignalGroups[2])
+                                syncObject.crosswalkPressed[0] = false;
                         }
-                        else
+                        else if (signalGroup == intersection.SignalGroups[3] && syncObject.crosswalkPressed[0] == true)
                         {
-                            //this signalgroup is NOT in the current timingGroup
-                            //and the light is green or yellow so set crosswalk to green
+                            //The crosswalk button has been pushed, show the walk
+                            ToggleCrossWalks(signalGroup, true, shortTimeRemaining, timingGroupTimeRemaining);
+                        }
+                        else if (signalGroup == intersection.SignalGroups[0] && syncObject.crosswalkPressed[1] == true)
+                        {
+                            //The crosswalk button has been pushed, show the walk
                             ToggleCrossWalks(signalGroup, true, shortTimeRemaining, timingGroupTimeRemaining);
                         }
                     });
@@ -156,6 +170,7 @@ namespace TrafficControlSystem
                 signalGroup.Roadway.CrossWalkRemainingDuration = duration;
             else
                 signalGroup.Roadway.CrossWalkRemainingDuration = 0;
+      
         }
 
         /// <summary>

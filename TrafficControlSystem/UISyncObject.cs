@@ -7,7 +7,9 @@ namespace TrafficControlSystem
     /// </summary>
     /// <param name="intersection">This is an Intersection object that is the current state of the intersection in the system.</param>
     public delegate void UIEvent(Intersection intersection);
-    public delegate void CrosswalkEvent(Roadway roadway);
+    public delegate void CrosswalkEvent_EastWest(Roadway roadway);
+    public delegate void CrosswalkEvent_NorthSouth(Roadway roadway);
+
 
     /// <summary>
     /// An object of this time is passed to the GUI to allow it to subscribe to changes in the intersection
@@ -21,8 +23,10 @@ namespace TrafficControlSystem
         public event UIEvent TimeToUpdate;
 
 
-        public event CrosswalkEvent CrosswalkPressed;
+        public event CrosswalkEvent_EastWest CrosswalkPressed_EastWest;
+        public event CrosswalkEvent_NorthSouth CrosswalkPressed_NorthSouth;
 
+        public bool[] crosswalkPressed = new bool[] { false, false };
 
         /// <summary>
         /// a method that triggers the GUI that the intersection has changed and it is time
@@ -35,10 +39,14 @@ namespace TrafficControlSystem
                 TimeToUpdate(intersection);
         }
 
-        public void OnCrosswalkPressed(Roadway roadway)
+        public void OnCrosswalkPressed_EastWest()
         {
-            if (CrosswalkPressed != null)
-                CrosswalkPressed(roadway);
+            crosswalkPressed[1] = true;
+        }
+
+        public void OnCrosswalkPressed_NorthSouth()
+        {
+            crosswalkPressed[0] = true;
         }
     }
 }

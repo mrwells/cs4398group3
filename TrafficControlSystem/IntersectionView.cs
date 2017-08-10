@@ -160,14 +160,17 @@ namespace TrafficControlSystem
 
         }
         
+        
         private void universityblvd_crosswalk_Click(object sender, EventArgs e)
         {
-            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[0].Roadway);
+            syncObject.OnCrosswalkPressed_NorthSouth();
+            syncObject.crosswalkPressed[1] = true;
         }
         
         private void sunriserd_crosswalk_Click(object sender, EventArgs e)
         {
-            syncObject.OnCrosswalkPressed(_intersection.SignalGroups[3].Roadway);
+            syncObject.OnCrosswalkPressed_EastWest();
+            syncObject.crosswalkPressed[0] = true;
         }
         
         private void btn_em_r_Click(object sender, EventArgs e)
@@ -184,5 +187,61 @@ namespace TrafficControlSystem
         {
 
         }
+
+
+
+        /*
+        //Cross University
+        private void crosswalk_universityblvd4_Click(object sender, EventArgs e)
+        {
+            syncObject.crosswalkPressed[1] = true;
+
+        }
+
+        private void crosswalk_universityblvd3_Click(object sender, EventArgs e)
+        {
+            syncObject.crosswalkPressed[1] = true;
+        }
+
+        private void crosswalk_universityblvd2_Click(object sender, EventArgs e)
+        {
+            syncObject.crosswalkPressed[1] = true;
+        }
+
+        private void crosswalk_universityblvd1_Click(object sender, EventArgs e)
+        {
+            syncObject.crosswalkPressed[1] = true;
+        }
+
+
+
+        //Cross Sunrise
+        private void crosswalk_sunriserd2_Click(object sender, EventArgs e)
+        {
+            syncObject.crosswalkPressed[0] = true;
+        }
+
+        private void crosswalk_sunriserd1_Click(object sender, EventArgs e)
+        {
+            syncObject.crosswalkPressed[0] = true;
+        }
+
+        private void crosswalk_sunriserd3_Click(object sender, EventArgs e)
+        {
+            syncObject.crosswalkPressed[0] = true;
+        }
+
+        private void crosswalk_sunriserd4_Click(object sender, EventArgs e)
+        {
+            syncObject.crosswalkPressed[0] = true;
+        }
+        */
+
+        private void btn_em_top_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
