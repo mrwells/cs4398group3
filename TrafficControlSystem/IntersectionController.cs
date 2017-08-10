@@ -130,9 +130,9 @@ namespace TrafficControlSystem
 
                             //reset so we dont constantly have a walk
                             if (signalGroup == intersection.SignalGroups[3] || signalGroup == intersection.SignalGroups[4])
-                                syncObject.crosswalkPressed[1] = false;
-                            else if(signalGroup == intersection.SignalGroups[1] || signalGroup == intersection.SignalGroups[2])
                                 syncObject.crosswalkPressed[0] = false;
+                            else if(signalGroup == intersection.SignalGroups[1] || signalGroup == intersection.SignalGroups[2])
+                                syncObject.crosswalkPressed[1] = false;
                         }
                         else if (signalGroup == intersection.SignalGroups[3] && syncObject.crosswalkPressed[0] == true)
                         {

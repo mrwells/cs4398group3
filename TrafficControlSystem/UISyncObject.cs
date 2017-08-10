@@ -41,12 +41,12 @@ namespace TrafficControlSystem
 
         public void OnCrosswalkPressed_EastWest()
         {
-            crosswalkPressed[1] = true;
+            crosswalkPressed[0] = true;
         }
 
         public void OnCrosswalkPressed_NorthSouth()
         {
-            crosswalkPressed[0] = true;
+            crosswalkPressed[1] = true;
         }
     }
 }
