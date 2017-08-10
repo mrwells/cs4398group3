@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace TrafficControlSystem
 {
+    /// <summary>
+    /// Program Class
+    /// </summary>
+    /// <remarks>
+    /// Controls startup of program and runs traffic control simulation.
+    /// </remarks>
     class Program
     {
         static void Main(string[] args)

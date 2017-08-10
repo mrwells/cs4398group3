@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="b182a663-caf8-4329-ba79-4c7e119c0e19" Title="Namespaces" Url="html/d75eb659-6335-53f6-af7a-81814a21ab7f.htm">
+    <HelpTOCNode Id="a54dd366-b345-4892-bd57-cae64673fd64" Title="TrafficControlSystem" Url="html/44bdb999-fbe8-dfa4-ea45-f4e8d550df08.htm">
+      <HelpTOCNode Id="6be53dbb-4c08-4ac2-a4e4-6d7c565e0835" Title="Configuration Class" Url="html/7b966865-ca3b-1fcc-ce77-dfe5978c5781.htm">
+        <HelpTOCNode Title="Configuration Constructor " Url="html/0e650e74-bcbe-9ca5-7e94-93b8c99ba49d.htm" />
+        <HelpTOCNode Id="8cbcba0f-2781-487c-8634-4004fdb01f9a" Title="Configuration Properties" Url="html/a1b4b8ab-bdc7-04c9-02ad-7e5635f45518.htm">
+          <HelpTOCNode Title="FileName Property " Url="html/ccba385e-29cd-ebb0-1027-157d7f807260.htm" />
+          <HelpTOCNode Title="Intersections Property " Url="html/0f1e16d9-fec0-a50a-9c0a-2a536d9ce851.htm" />
+          <HelpTOCNode Title="Roadways Property " Url="html/55af559b-75d5-4fd1-157a-823191ef3693.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="9b8690ee-2b41-4e2b-b488-79a7cf6fbb8c" Title="Configuration Methods" Url="html/02eeeb5c-7351-b03c-4b31-7b8747702a5f.htm">
+          <HelpTOCNode Title="Load Method " Url="html/5cd0143b-5031-c582-b9c1-236fc95e6ff2.htm" />
+          <HelpTOCNode Title="ToString Method " Url="html/8752a0d7-fe7e-7f33-cc32-15a09c9ede47.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="377f8ecd-3395-491c-94df-76a88767a093" Title="CrossWalk Class" Url="html/dfca0f99-4827-ed79-ca5a-a0d71232ed73.htm">
+        <HelpTOCNode Title="CrossWalk Constructor " Url="html/93bb764c-ff59-1299-d226-2768ade959db.htm" />
+        <HelpTOCNode Title="CrossWalk Properties" Url="html/4c414da0-71bd-09ae-b4e9-2af7a5e3e589.htm" />
+        <HelpTOCNode Id="aa906d23-9e9a-4db3-8d18-fe2ef0a18f0b" Title="CrossWalk Methods" Url="html/8d7e8162-c223-be38-a954-fd1329fda327.htm">
+          <HelpTOCNode Id="b02ad060-15d7-468f-8049-4ad658e6a7bb" Title="Dispose Method " Url="html/029875f0-6697-b338-2875-3d6753fce400.htm">
+            <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/be897bf8-92b4-c72a-5a99-a2b21be29d3f.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="4c0218a8-629d-433b-a69b-66fa849054ab" Title="Update Method " Url="html/84af173a-5de0-227d-5dae-f4392c13b584.htm">
+            <HelpTOCNode Title="Update Method (Boolean, Boolean, Int32)" Url="html/d884f572-3622-8695-5ed2-d7e57595bad8.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Title="CrossWalk Events" Url="html/a93b555a-85a7-cb5a-cba4-d2c248e02fe4.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="CrosswalkEvent Delegate" Url="html/640f2e84-e38b-babb-c6c8-8ce14522a7ce.htm" />
+      <HelpTOCNode Id="71bbb060-782f-4efb-bb54-cc31ac09e980" Title="Intersection Class" Url="html/946329db-41fd-4c00-d764-bb44aea05082.htm">
+        <HelpTOCNode Title="Intersection Constructor " Url="html/92f34e29-be9a-7abf-a274-387d15de3297.htm" />
+        <HelpTOCNode Id="6369a3fc-812f-43bb-b5bc-6a8f5364114e" Title="Intersection Properties" Url="html/b8078eec-fc64-47b2-df6b-f4bad272ef52.htm">
+          <HelpTOCNode Title="Description Property " Url="html/8f034742-9e1b-58bc-946d-1273e3e137bd.htm" />
+          <HelpTOCNode Title="SignalGroups Property " Url="html/c062cfd5-6e08-4e96-2f85-f121206c5b0c.htm" />
+          <HelpTOCNode Title="TimingGroups Property " Url="html/0d0550ac-6089-412f-5dae-cc9c440c584a.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="b6b8e7cf-0472-478e-88ee-56b61c9886c3" Title="Intersection Methods" Url="html/14c7c6ef-38c1-9f10-3d4a-7ab85d1310a7.htm">
+          <HelpTOCNode Title="OutputCurrentState Method " Url="html/8225a039-ab61-d13f-2f91-5c5400b0e27a.htm" />
+          <HelpTOCNode Title="SetConsoleColor Method " Url="html/98210b96-1be8-688f-3377-58a81c61443e.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="eb0157de-d742-4cfb-aa12-7fdf908205ea" Title="IntersectionController Class" Url="html/0e334adb-a653-398d-a6e1-9359394b01b3.htm">
+        <HelpTOCNode Title="IntersectionController Constructor " Url="html/e81edeae-8074-5c19-42ec-1914261ca1a2.htm" />
+        <HelpTOCNode Id="b5da19f7-474e-4949-87b3-317985a4a41d" Title="IntersectionController Methods" Url="html/1d3adc35-eabd-f936-ecda-44a6b1c0039d.htm">
+          <HelpTOCNode Title="Run Method " Url="html/face53f1-79c8-0009-a541-d47908eb480d.htm" />
+          <HelpTOCNode Title="SetAllToRed Method " Url="html/cacc27b5-0f81-8a54-26e0-6477a840763f.htm" />
+          <HelpTOCNode Title="SetSignalGroupColor Method " Url="html/1c713698-fa8b-f308-03c2-394e6b3b48cf.htm" />
+          <HelpTOCNode Title="SetSignalGroupsColor Method " Url="html/fe411178-835a-7a9a-138b-2d2080cc7f91.htm" />
+          <HelpTOCNode Title="ToggleCrossWalks Method " Url="html/f10fb0d8-9e3f-96da-29db-f8081ba22a20.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="48f7051b-37fb-4076-9bd0-89868012f0cb" Title="IntersectionView Class" Url="html/15544437-6de1-85be-1fe7-547e1f55e8aa.htm">
+        <HelpTOCNode Title="IntersectionView Constructor " Url="html/f132dca7-a07d-ad4d-125e-6c86703f7e7f.htm" />
+        <HelpTOCNode Title="IntersectionView Properties" Url="html/58c88461-235a-25ad-790f-be3c11488e7e.htm" />
+        <HelpTOCNode Id="a423fa42-3939-4b13-9656-26e0ca204cd1" Title="IntersectionView Methods" Url="html/5ed77c8a-5581-7bdf-c8dc-9e699724ed33.htm">
+          <HelpTOCNode Id="2ecfe493-da8d-41a3-877e-22768172d67e" Title="Dispose Method " Url="html/c3b3a351-2ae6-fab5-f67c-2bad48bdaff6.htm">
+            <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/0dee3a23-1103-6136-c1ad-5ecb1b833d8a.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Title="IntersectionView Events" Url="html/bb86c2ff-79e2-f518-0ed5-e878244e316d.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="fa931058-f25c-4369-a5f1-445670aa7d44" Title="Lane Class" Url="html/ce2f1c64-838d-98da-f166-49bc4a15c301.htm">
+        <HelpTOCNode Title="Lane Constructor " Url="html/a675ba3b-4fc7-84c7-3fe4-444481b39167.htm" />
+        <HelpTOCNode Id="20f8965d-2283-40bc-bd38-40a492e103ca" Title="Lane Properties" Url="html/d79cbbcc-654a-44b1-89bd-5365a93f0b0a.htm">
+          <HelpTOCNode Title="Direction Property " Url="html/1a7aa705-8357-ad89-db07-5a3fd3efa76c.htm" />
+          <HelpTOCNode Title="Id Property " Url="html/fc206d10-45f0-3775-b2a7-9bc51c1883fd.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Lane Methods" Url="html/e9a4986c-311b-d088-6d94-d70f50a9f582.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="LightColor Enumeration" Url="html/f9393ae0-9978-8e05-8b05-1b850b2dd6a4.htm" />
+      <HelpTOCNode Id="426b664b-a6ac-4171-b341-945fae141600" Title="Roadway Class" Url="html/38a2aff3-39b5-2525-33cb-7e22bb9bdf82.htm">
+        <HelpTOCNode Title="Roadway Constructor " Url="html/01d8bfcf-e3fe-e387-4b7e-d0f451c7ba34.htm" />
+        <HelpTOCNode Id="ec51eb62-34cd-4582-9810-7809d59faf88" Title="Roadway Properties" Url="html/b5395ef8-866e-c253-743a-71a1c557d94e.htm">
+          <HelpTOCNode Title="CrosswalkOkToWalk Property " Url="html/3c3d11ba-2ed3-813e-6a9f-c305f158e5bd.htm" />
+          <HelpTOCNode Title="CrossWalkRemainingDuration Property " Url="html/2f5d89b9-8d07-4a8d-6527-52e5970264f7.htm" />
+          <HelpTOCNode Title="Id Property " Url="html/0c3289bc-e746-7ce0-943d-234978359721.htm" />
+          <HelpTOCNode Title="Lanes Property " Url="html/00797116-4a21-c404-3f4a-73380248aec8.htm" />
+          <HelpTOCNode Title="Name Property " Url="html/418509d0-3d4e-2416-7970-4917e7cd4f4a.htm" />
+          <HelpTOCNode Title="SignalShortRemainingTime Property " Url="html/fec21e1b-d20e-8e33-b6bd-91b44f1b28cf.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Roadway Methods" Url="html/b4b102b6-4533-d8fd-9399-dd736c876c9e.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="1298e25d-6459-4682-a789-265b34fc0cb9" Title="Signal Class" Url="html/ace97056-9e3a-488f-12ee-5f97acad1763.htm">
+        <HelpTOCNode Title="Signal Constructor " Url="html/d63f78db-3df8-34a5-c203-e00b62472773.htm" />
+        <HelpTOCNode Id="b332120b-af05-4575-b6dd-6f17e70de082" Title="Signal Properties" Url="html/9893316d-8545-5541-413c-8bde47b2310f.htm">
+          <HelpTOCNode Title="CurrentLight Property " Url="html/bb0f324d-4b33-38ee-21a4-6de2f4660788.htm" />
+          <HelpTOCNode Title="Id Property " Url="html/5ffc59df-d185-8d6e-841a-3af41b20b97c.htm" />
+          <HelpTOCNode Title="Lane Property " Url="html/e9eccda7-3bf9-c920-05ec-56a8c5e8e469.htm" />
+          <HelpTOCNode Title="LaneId Property " Url="html/f24b07fe-ec76-0d08-07d5-16a8c830d5c1.htm" />
+          <HelpTOCNode Title="Lights Property " Url="html/3755dd5e-f84f-e1d8-a7b0-705adee534d3.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Signal Methods" Url="html/34631f96-85f5-c270-d2eb-97e91104f8cd.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0a9dbc9f-03c5-4937-a557-c4c8635de44c" Title="SignalGroup Class" Url="html/4cfe4562-86d4-2a3f-3bb5-2e621db31db8.htm">
+        <HelpTOCNode Title="SignalGroup Constructor " Url="html/cd319b52-85f1-10c9-7441-f272a6557e59.htm" />
+        <HelpTOCNode Id="19996d55-6f15-447b-b2bf-f3ac98b66d79" Title="SignalGroup Properties" Url="html/a048c2ca-3f21-2da4-e1b7-98906b2cb36f.htm">
+          <HelpTOCNode Title="Id Property " Url="html/81e5a478-bd9b-47ff-ed08-b46ff08ec14c.htm" />
+          <HelpTOCNode Title="Roadway Property " Url="html/e3403689-e53e-b55a-cfc4-75b003bf8c52.htm" />
+          <HelpTOCNode Title="RoadwayId Property " Url="html/2bacd338-668d-3875-92d3-3a7f2f386e03.htm" />
+          <HelpTOCNode Title="Signals Property " Url="html/45e41d6d-a9b8-d26a-1183-ca701b600b50.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="SignalGroup Methods" Url="html/0abfd950-11e7-e7f0-a2cd-7e0777b1cf0b.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="ca2d73fb-ca30-4e73-95d4-6420c76af10f" Title="Timing Structure" Url="html/43505691-d338-6afe-500c-baee08911745.htm">
+        <HelpTOCNode Title="Timing Methods" Url="html/e517ac66-f8b4-3ad9-e417-d674a73fd8f5.htm" />
+        <HelpTOCNode Id="34fef1b2-0d6c-4a81-825b-5f43a3017989" Title="Timing Fields" Url="html/192f35f8-914e-a9b9-3d1d-76290c402a4d.htm">
+          <HelpTOCNode Title="Duration Field" Url="html/43eba2ee-57b4-5bde-32ea-2dff03d1caf2.htm" />
+          <HelpTOCNode Title="Light Field" Url="html/8bd7f221-b59c-783d-56e2-7fdf4b7380a7.htm" />
+          <HelpTOCNode Title="Order Field" Url="html/08e2d147-f8fa-14fa-758b-3419bbbc3745.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="7d3fc682-2aa2-4815-903c-954ba517b0ce" Title="TimingGroup Class" Url="html/31016400-3bda-baf0-8e22-5fd4fd6c27af.htm">
+        <HelpTOCNode Title="TimingGroup Constructor " Url="html/dadb03b1-4908-cf26-fbfe-386d85d50156.htm" />
+        <HelpTOCNode Id="c5bf2c45-6410-4719-af4e-90fc4fc3bbbe" Title="TimingGroup Properties" Url="html/1ec652d8-d638-7406-11ff-c2832ab704b8.htm">
+          <HelpTOCNode Title="Id Property " Url="html/7273ccc5-c1bf-3d47-f45b-779ee9606b93.htm" />
+          <HelpTOCNode Title="SignalGroupIds Property " Url="html/01e9a0c1-6cdc-3022-32cf-821bb7713969.htm" />
+          <HelpTOCNode Title="SignalGroups Property " Url="html/9ff7f36b-0130-644a-f863-bdd19baa63ab.htm" />
+          <HelpTOCNode Title="Timings Property " Url="html/52e9f57c-91cd-4518-8cc0-d535607e1a77.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="TimingGroup Methods" Url="html/af5ae9ef-9b5a-b5bc-655a-ae12df51cbef.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="UIEvent Delegate" Url="html/20eabd3e-3398-3e05-0184-1b4ce3877c45.htm" />
+      <HelpTOCNode Id="7cc52fa6-a5f8-496f-bcdc-67f373cf256d" Title="UISyncObject Class" Url="html/32cb9471-3b02-29b9-0e00-d1190953c30c.htm">
+        <HelpTOCNode Title="UISyncObject Constructor " Url="html/7f099ac7-4465-f18b-224f-1f5df5f03480.htm" />
+        <HelpTOCNode Id="16b48947-1e06-497f-b8f7-18886ab7edcf" Title="UISyncObject Methods" Url="html/09780fe2-6a99-940f-f78c-3e7a4b107793.htm">
+          <HelpTOCNode Title="OnCrosswalkPressed Method " Url="html/fcd80d49-7b01-c54b-197c-7f82e804e693.htm" />
+          <HelpTOCNode Title="OnTimeToUpdate Method " Url="html/737fc541-7198-ed1f-72ae-59b5108c1f97.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="64cc734d-7c56-4f2b-a14f-09276abc7c5d" Title="UISyncObject Events" Url="html/cc3d3aa8-9304-e7be-2759-a5084553bcd8.htm">
+          <HelpTOCNode Title="CrosswalkPressed Event" Url="html/c4cfd7fe-3006-d162-dfb5-3d06336f3391.htm" />
+          <HelpTOCNode Title="TimeToUpdate Event" Url="html/c339c0da-fdd7-e5ac-f5fb-881ccc02018b.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

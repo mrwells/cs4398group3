@@ -8,11 +8,11 @@ namespace TrafficControlSystem
     /// Signal Class
     /// </summary>
     /// <remarks>
-    /// Signal Class has 5 attributes:
-    /// (String) Id - Signal ID
-    /// (String) LaneId - Lane ID
-    /// (Lane) Lane - A Lane
-    /// (List[LightColor]) Lights - List of LightColors
+    /// Signal Class has 5 attributes:\n
+    /// (String) Id - Signal ID\n
+    /// (String) LaneId - Lane ID\n
+    /// (Lane) Lane - A Lane\n
+    /// (List[LightColor]) Lights - List of LightColors\n
     /// (LightColor) CurrentLight - The Current Light</remarks>
     public class Signal
     {

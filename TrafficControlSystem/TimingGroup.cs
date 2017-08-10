@@ -8,10 +8,10 @@ namespace TrafficControlSystem
     /// TimingGroup Class
     /// </summary>
     /// <remarks>
-    /// TimingGroup Class has 4 attributes:
-    /// (String) Id - TimingGroup ID
-    /// (List[String]) SignalGroupsIds - List of Strings
-    /// (List[SignalGroup]) SignalGroups - List of SignalGroups 
+    /// TimingGroup Class has 4 attributes:\n
+    /// (String) Id - TimingGroup ID\n
+    /// (List[String]) SignalGroupsIds - List of Strings\n
+    /// (List[SignalGroup]) SignalGroups - List of SignalGroups\n 
     /// (List[Timing]) Timings - List of Timings
     /// (</remarks>
     public class TimingGroup

@@ -3,9 +3,6 @@ using System.Collections.Generic;
 
 using Newtonsoft.Json;
 
-/// <summary>
-/// This is a Test.
-/// </summary>
 namespace TrafficControlSystem
 {
     /// <summary>
@@ -13,10 +10,10 @@ namespace TrafficControlSystem
     /// </summary>
     /// <remarks>
     /// Intersection Class has 4 attributes: 
-    /// (String) Id
-    /// (String) Description
-    /// (List[SignalGroup]) SignalGroups - List of SignalGroups
-    /// (List[TimingGroups]) TimingGroups - List of TimingGroups
+    /// (String) Id\n
+    /// (String) Description\n
+    /// (List[SignalGroup]) SignalGroups - List of SignalGroups\n
+    /// (List[TimingGroups]) TimingGroups - List of TimingGroups\n
     /// </remarks>
     public class Intersection
     {

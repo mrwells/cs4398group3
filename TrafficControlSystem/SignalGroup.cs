@@ -8,10 +8,10 @@ namespace TrafficControlSystem
     /// SignalGroup Class 
     /// </summary>
     /// <remarks>
-    /// SignalGroup Class has 4 attributes:
-    /// (String) Id - SignalGroup ID
-    /// (String) RoadwayId - Roadway ID
-    /// (Roadway) Roadway - A Roadway
+    /// SignalGroup Class has 4 attributes:\n
+    /// (String) Id - SignalGroup ID\n
+    /// (String) RoadwayId - Roadway ID\n
+    /// (Roadway) Roadway - A Roadway\n
     /// (List[Signals]) Signals - List of Signals
     /// </remarks>
     public class SignalGroup

@@ -45,9 +45,12 @@ namespace TrafficControlSystem
     /// IntersectionController Class
     /// </summary>
     /// <remarks>
-    /// IntersectionController Class has 2 attributes:
-    /// (Intersection) intersection - An Intersection
-    /// (DateTime) startTime - Start Time of Simulation</remarks>
+    /// IntersectionController Class has 2 attributes:\n
+    /// (Intersection) intersection - An Intersection\n
+    /// (DateTime) startTime - Start Time of Simulation\n
+    /// (Thread) uiThread - Thread for the GUI\n
+    /// (UISyncObject) syncObject - 
+    /// </remarks>
     public class IntersectionController
     {
         private Intersection intersection;
@@ -60,7 +63,7 @@ namespace TrafficControlSystem
         /// Constructor for IntersectionController
         /// </summary>
         /// <remarks>
-        /// Creates a new Intersection using the passed parameter.
+        /// Creates a new Intersection using the passed Intersection object.
         /// </remarks>
         /// <param name="intersection">The Intersection object to use for the system.</param>
         public IntersectionController(Intersection intersection)
@@ -173,6 +176,14 @@ namespace TrafficControlSystem
             //SetAllToRed();
         }
 
+        /// <summary>
+        /// Sets the remaining crosswalk time equal to duration of the signal unless it's not safe to\n
+        /// cross.  Then it sets the time to 0.
+        /// </summary>
+        /// <param name="signalGroup">Current Signal Group</param>
+        /// <param name="okToCross"> True - able to cross, False - otherwise</param>
+        /// <param name="shortTimeRemaining">Time remaining for the Signal.</param>
+        /// <param name="duration"></param>
         public void ToggleCrossWalks(SignalGroup signalGroup, bool okToCross, bool shortTimeRemaining, int duration)
         {
             signalGroup.Roadway.CrosswalkOkToWalk = okToCross;

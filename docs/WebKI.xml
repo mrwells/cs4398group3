@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="Configuration class">
+    <HelpKINode Title="Configuration Class" Url="html/7b966865-ca3b-1fcc-ce77-dfe5978c5781.htm" />
+    <HelpKINode Title="about Configuration class" Url="html/7b966865-ca3b-1fcc-ce77-dfe5978c5781.htm" />
+    <HelpKINode Title="constructor" Url="html/0e650e74-bcbe-9ca5-7e94-93b8c99ba49d.htm" />
+    <HelpKINode Title="methods" Url="html/02eeeb5c-7351-b03c-4b31-7b8747702a5f.htm" />
+    <HelpKINode Title="properties" Url="html/a1b4b8ab-bdc7-04c9-02ad-7e5635f45518.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Configuration.Configuration constructor" Url="html/0e650e74-bcbe-9ca5-7e94-93b8c99ba49d.htm" />
+  <HelpKINode Title="Configuration.FileName property" Url="html/ccba385e-29cd-ebb0-1027-157d7f807260.htm" />
+  <HelpKINode Title="Configuration.Intersections property" Url="html/0f1e16d9-fec0-a50a-9c0a-2a536d9ce851.htm" />
+  <HelpKINode Title="Configuration.Load method" Url="html/5cd0143b-5031-c582-b9c1-236fc95e6ff2.htm" />
+  <HelpKINode Title="Configuration.Roadways property" Url="html/55af559b-75d5-4fd1-157a-823191ef3693.htm" />
+  <HelpKINode Title="Configuration.ToString method" Url="html/8752a0d7-fe7e-7f33-cc32-15a09c9ede47.htm" />
+  <HelpKINode Title="CrossWalk class">
+    <HelpKINode Title="CrossWalk Class" Url="html/dfca0f99-4827-ed79-ca5a-a0d71232ed73.htm" />
+    <HelpKINode Title="about CrossWalk class" Url="html/dfca0f99-4827-ed79-ca5a-a0d71232ed73.htm" />
+    <HelpKINode Title="constructor" Url="html/93bb764c-ff59-1299-d226-2768ade959db.htm" />
+    <HelpKINode Title="events" Url="html/a93b555a-85a7-cb5a-cba4-d2c248e02fe4.htm" />
+    <HelpKINode Title="methods" Url="html/8d7e8162-c223-be38-a954-fd1329fda327.htm" />
+    <HelpKINode Title="properties" Url="html/4c414da0-71bd-09ae-b4e9-2af7a5e3e589.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CrossWalk.CrossWalk constructor" Url="html/93bb764c-ff59-1299-d226-2768ade959db.htm" />
+  <HelpKINode Title="CrossWalk.Dispose method" Url="html/029875f0-6697-b338-2875-3d6753fce400.htm" />
+  <HelpKINode Title="CrossWalk.Update method" Url="html/84af173a-5de0-227d-5dae-f4392c13b584.htm" />
+  <HelpKINode Title="CrosswalkEvent delegate" Url="html/640f2e84-e38b-babb-c6c8-8ce14522a7ce.htm" />
+  <HelpKINode Title="CrosswalkOkToWalk property" Url="html/3c3d11ba-2ed3-813e-6a9f-c305f158e5bd.htm" />
+  <HelpKINode Title="CrosswalkPressed event" Url="html/c4cfd7fe-3006-d162-dfb5-3d06336f3391.htm" />
+  <HelpKINode Title="CrossWalkRemainingDuration property" Url="html/2f5d89b9-8d07-4a8d-6527-52e5970264f7.htm" />
+  <HelpKINode Title="CurrentLight property" Url="html/bb0f324d-4b33-38ee-21a4-6de2f4660788.htm" />
+  <HelpKINode Title="Description property" Url="html/8f034742-9e1b-58bc-946d-1273e3e137bd.htm" />
+  <HelpKINode Title="Direction property" Url="html/1a7aa705-8357-ad89-db07-5a3fd3efa76c.htm" />
+  <HelpKINode Title="Dispose method">
+    <HelpKINode Title="CrossWalk.Dispose Method " Url="html/029875f0-6697-b338-2875-3d6753fce400.htm" />
+    <HelpKINode Title="IntersectionView.Dispose Method " Url="html/c3b3a351-2ae6-fab5-f67c-2bad48bdaff6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Duration field" Url="html/43eba2ee-57b4-5bde-32ea-2dff03d1caf2.htm" />
+  <HelpKINode Title="FileName property" Url="html/ccba385e-29cd-ebb0-1027-157d7f807260.htm" />
+  <HelpKINode Title="Green enumeration member" Url="html/f9393ae0-9978-8e05-8b05-1b850b2dd6a4.htm" />
+  <HelpKINode Title="GreenArrow enumeration member" Url="html/f9393ae0-9978-8e05-8b05-1b850b2dd6a4.htm" />
+  <HelpKINode Title="Id property">
+    <HelpKINode Title="Lane.Id Property " Url="html/fc206d10-45f0-3775-b2a7-9bc51c1883fd.htm" />
+    <HelpKINode Title="Roadway.Id Property " Url="html/0c3289bc-e746-7ce0-943d-234978359721.htm" />
+    <HelpKINode Title="Signal.Id Property " Url="html/5ffc59df-d185-8d6e-841a-3af41b20b97c.htm" />
+    <HelpKINode Title="SignalGroup.Id Property " Url="html/81e5a478-bd9b-47ff-ed08-b46ff08ec14c.htm" />
+    <HelpKINode Title="TimingGroup.Id Property " Url="html/7273ccc5-c1bf-3d47-f45b-779ee9606b93.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Intersection class">
+    <HelpKINode Title="Intersection Class" Url="html/946329db-41fd-4c00-d764-bb44aea05082.htm" />
+    <HelpKINode Title="about Intersection class" Url="html/946329db-41fd-4c00-d764-bb44aea05082.htm" />
+    <HelpKINode Title="constructor" Url="html/92f34e29-be9a-7abf-a274-387d15de3297.htm" />
+    <HelpKINode Title="methods" Url="html/14c7c6ef-38c1-9f10-3d4a-7ab85d1310a7.htm" />
+    <HelpKINode Title="properties" Url="html/b8078eec-fc64-47b2-df6b-f4bad272ef52.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Intersection.Description property" Url="html/8f034742-9e1b-58bc-946d-1273e3e137bd.htm" />
+  <HelpKINode Title="Intersection.Intersection constructor" Url="html/92f34e29-be9a-7abf-a274-387d15de3297.htm" />
+  <HelpKINode Title="Intersection.OutputCurrentState method" Url="html/8225a039-ab61-d13f-2f91-5c5400b0e27a.htm" />
+  <HelpKINode Title="Intersection.SetConsoleColor method" Url="html/98210b96-1be8-688f-3377-58a81c61443e.htm" />
+  <HelpKINode Title="Intersection.SignalGroups property" Url="html/c062cfd5-6e08-4e96-2f85-f121206c5b0c.htm" />
+  <HelpKINode Title="Intersection.TimingGroups property" Url="html/0d0550ac-6089-412f-5dae-cc9c440c584a.htm" />
+  <HelpKINode Title="IntersectionController class">
+    <HelpKINode Title="IntersectionController Class" Url="html/0e334adb-a653-398d-a6e1-9359394b01b3.htm" />
+    <HelpKINode Title="about IntersectionController class" Url="html/0e334adb-a653-398d-a6e1-9359394b01b3.htm" />
+    <HelpKINode Title="constructor" Url="html/e81edeae-8074-5c19-42ec-1914261ca1a2.htm" />
+    <HelpKINode Title="methods" Url="html/1d3adc35-eabd-f936-ecda-44a6b1c0039d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IntersectionController.IntersectionController constructor" Url="html/e81edeae-8074-5c19-42ec-1914261ca1a2.htm" />
+  <HelpKINode Title="IntersectionController.Run method" Url="html/face53f1-79c8-0009-a541-d47908eb480d.htm" />
+  <HelpKINode Title="IntersectionController.SetAllToRed method" Url="html/cacc27b5-0f81-8a54-26e0-6477a840763f.htm" />
+  <HelpKINode Title="IntersectionController.SetSignalGroupColor method" Url="html/1c713698-fa8b-f308-03c2-394e6b3b48cf.htm" />
+  <HelpKINode Title="IntersectionController.SetSignalGroupsColor method" Url="html/fe411178-835a-7a9a-138b-2d2080cc7f91.htm" />
+  <HelpKINode Title="IntersectionController.ToggleCrossWalks method" Url="html/f10fb0d8-9e3f-96da-29db-f8081ba22a20.htm" />
+  <HelpKINode Title="Intersections property" Url="html/0f1e16d9-fec0-a50a-9c0a-2a536d9ce851.htm" />
+  <HelpKINode Title="IntersectionView class">
+    <HelpKINode Title="IntersectionView Class" Url="html/15544437-6de1-85be-1fe7-547e1f55e8aa.htm" />
+    <HelpKINode Title="about IntersectionView class" Url="html/15544437-6de1-85be-1fe7-547e1f55e8aa.htm" />
+    <HelpKINode Title="constructor" Url="html/f132dca7-a07d-ad4d-125e-6c86703f7e7f.htm" />
+    <HelpKINode Title="events" Url="html/bb86c2ff-79e2-f518-0ed5-e878244e316d.htm" />
+    <HelpKINode Title="methods" Url="html/5ed77c8a-5581-7bdf-c8dc-9e699724ed33.htm" />
+    <HelpKINode Title="properties" Url="html/58c88461-235a-25ad-790f-be3c11488e7e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IntersectionView.Dispose method" Url="html/c3b3a351-2ae6-fab5-f67c-2bad48bdaff6.htm" />
+  <HelpKINode Title="IntersectionView.IntersectionView constructor" Url="html/f132dca7-a07d-ad4d-125e-6c86703f7e7f.htm" />
+  <HelpKINode Title="Lane class">
+    <HelpKINode Title="Lane Class" Url="html/ce2f1c64-838d-98da-f166-49bc4a15c301.htm" />
+    <HelpKINode Title="about Lane class" Url="html/ce2f1c64-838d-98da-f166-49bc4a15c301.htm" />
+    <HelpKINode Title="constructor" Url="html/a675ba3b-4fc7-84c7-3fe4-444481b39167.htm" />
+    <HelpKINode Title="methods" Url="html/e9a4986c-311b-d088-6d94-d70f50a9f582.htm" />
+    <HelpKINode Title="properties" Url="html/d79cbbcc-654a-44b1-89bd-5365a93f0b0a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Lane property" Url="html/e9eccda7-3bf9-c920-05ec-56a8c5e8e469.htm" />
+  <HelpKINode Title="Lane.Direction property" Url="html/1a7aa705-8357-ad89-db07-5a3fd3efa76c.htm" />
+  <HelpKINode Title="Lane.Id property" Url="html/fc206d10-45f0-3775-b2a7-9bc51c1883fd.htm" />
+  <HelpKINode Title="Lane.Lane constructor" Url="html/a675ba3b-4fc7-84c7-3fe4-444481b39167.htm" />
+  <HelpKINode Title="LaneId property" Url="html/f24b07fe-ec76-0d08-07d5-16a8c830d5c1.htm" />
+  <HelpKINode Title="Lanes property" Url="html/00797116-4a21-c404-3f4a-73380248aec8.htm" />
+  <HelpKINode Title="Light field" Url="html/8bd7f221-b59c-783d-56e2-7fdf4b7380a7.htm" />
+  <HelpKINode Title="LightColor enumeration" Url="html/f9393ae0-9978-8e05-8b05-1b850b2dd6a4.htm" />
+  <HelpKINode Title="Lights property" Url="html/3755dd5e-f84f-e1d8-a7b0-705adee534d3.htm" />
+  <HelpKINode Title="Load method" Url="html/5cd0143b-5031-c582-b9c1-236fc95e6ff2.htm" />
+  <HelpKINode Title="Name property" Url="html/418509d0-3d4e-2416-7970-4917e7cd4f4a.htm" />
+  <HelpKINode Title="OnCrosswalkPressed method" Url="html/fcd80d49-7b01-c54b-197c-7f82e804e693.htm" />
+  <HelpKINode Title="OnTimeToUpdate method" Url="html/737fc541-7198-ed1f-72ae-59b5108c1f97.htm" />
+  <HelpKINode Title="Order field" Url="html/08e2d147-f8fa-14fa-758b-3419bbbc3745.htm" />
+  <HelpKINode Title="OutputCurrentState method" Url="html/8225a039-ab61-d13f-2f91-5c5400b0e27a.htm" />
+  <HelpKINode Title="Red enumeration member" Url="html/f9393ae0-9978-8e05-8b05-1b850b2dd6a4.htm" />
+  <HelpKINode Title="RedArrow enumeration member" Url="html/f9393ae0-9978-8e05-8b05-1b850b2dd6a4.htm" />
+  <HelpKINode Title="Roadway class">
+    <HelpKINode Title="Roadway Class" Url="html/38a2aff3-39b5-2525-33cb-7e22bb9bdf82.htm" />
+    <HelpKINode Title="about Roadway class" Url="html/38a2aff3-39b5-2525-33cb-7e22bb9bdf82.htm" />
+    <HelpKINode Title="constructor" Url="html/01d8bfcf-e3fe-e387-4b7e-d0f451c7ba34.htm" />
+    <HelpKINode Title="methods" Url="html/b4b102b6-4533-d8fd-9399-dd736c876c9e.htm" />
+    <HelpKINode Title="properties" Url="html/b5395ef8-866e-c253-743a-71a1c557d94e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Roadway property" Url="html/e3403689-e53e-b55a-cfc4-75b003bf8c52.htm" />
+  <HelpKINode Title="Roadway.CrosswalkOkToWalk property" Url="html/3c3d11ba-2ed3-813e-6a9f-c305f158e5bd.htm" />
+  <HelpKINode Title="Roadway.CrossWalkRemainingDuration property" Url="html/2f5d89b9-8d07-4a8d-6527-52e5970264f7.htm" />
+  <HelpKINode Title="Roadway.Id property" Url="html/0c3289bc-e746-7ce0-943d-234978359721.htm" />
+  <HelpKINode Title="Roadway.Lanes property" Url="html/00797116-4a21-c404-3f4a-73380248aec8.htm" />
+  <HelpKINode Title="Roadway.Name property" Url="html/418509d0-3d4e-2416-7970-4917e7cd4f4a.htm" />
+  <HelpKINode Title="Roadway.Roadway constructor" Url="html/01d8bfcf-e3fe-e387-4b7e-d0f451c7ba34.htm" />
+  <HelpKINode Title="Roadway.SignalShortRemainingTime property" Url="html/fec21e1b-d20e-8e33-b6bd-91b44f1b28cf.htm" />
+  <HelpKINode Title="RoadwayId property" Url="html/2bacd338-668d-3875-92d3-3a7f2f386e03.htm" />
+  <HelpKINode Title="Roadways property" Url="html/55af559b-75d5-4fd1-157a-823191ef3693.htm" />
+  <HelpKINode Title="Run method" Url="html/face53f1-79c8-0009-a541-d47908eb480d.htm" />
+  <HelpKINode Title="SetAllToRed method" Url="html/cacc27b5-0f81-8a54-26e0-6477a840763f.htm" />
+  <HelpKINode Title="SetConsoleColor method" Url="html/98210b96-1be8-688f-3377-58a81c61443e.htm" />
+  <HelpKINode Title="SetSignalGroupColor method" Url="html/1c713698-fa8b-f308-03c2-394e6b3b48cf.htm" />
+  <HelpKINode Title="SetSignalGroupsColor method" Url="html/fe411178-835a-7a9a-138b-2d2080cc7f91.htm" />
+  <HelpKINode Title="Signal class">
+    <HelpKINode Title="Signal Class" Url="html/ace97056-9e3a-488f-12ee-5f97acad1763.htm" />
+    <HelpKINode Title="about Signal class" Url="html/ace97056-9e3a-488f-12ee-5f97acad1763.htm" />
+    <HelpKINode Title="constructor" Url="html/d63f78db-3df8-34a5-c203-e00b62472773.htm" />
+    <HelpKINode Title="methods" Url="html/34631f96-85f5-c270-d2eb-97e91104f8cd.htm" />
+    <HelpKINode Title="properties" Url="html/9893316d-8545-5541-413c-8bde47b2310f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Signal.CurrentLight property" Url="html/bb0f324d-4b33-38ee-21a4-6de2f4660788.htm" />
+  <HelpKINode Title="Signal.Id property" Url="html/5ffc59df-d185-8d6e-841a-3af41b20b97c.htm" />
+  <HelpKINode Title="Signal.Lane property" Url="html/e9eccda7-3bf9-c920-05ec-56a8c5e8e469.htm" />
+  <HelpKINode Title="Signal.LaneId property" Url="html/f24b07fe-ec76-0d08-07d5-16a8c830d5c1.htm" />
+  <HelpKINode Title="Signal.Lights property" Url="html/3755dd5e-f84f-e1d8-a7b0-705adee534d3.htm" />
+  <HelpKINode Title="Signal.Signal constructor" Url="html/d63f78db-3df8-34a5-c203-e00b62472773.htm" />
+  <HelpKINode Title="SignalGroup class">
+    <HelpKINode Title="SignalGroup Class" Url="html/4cfe4562-86d4-2a3f-3bb5-2e621db31db8.htm" />
+    <HelpKINode Title="about SignalGroup class" Url="html/4cfe4562-86d4-2a3f-3bb5-2e621db31db8.htm" />
+    <HelpKINode Title="constructor" Url="html/cd319b52-85f1-10c9-7441-f272a6557e59.htm" />
+    <HelpKINode Title="methods" Url="html/0abfd950-11e7-e7f0-a2cd-7e0777b1cf0b.htm" />
+    <HelpKINode Title="properties" Url="html/a048c2ca-3f21-2da4-e1b7-98906b2cb36f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SignalGroup.Id property" Url="html/81e5a478-bd9b-47ff-ed08-b46ff08ec14c.htm" />
+  <HelpKINode Title="SignalGroup.Roadway property" Url="html/e3403689-e53e-b55a-cfc4-75b003bf8c52.htm" />
+  <HelpKINode Title="SignalGroup.RoadwayId property" Url="html/2bacd338-668d-3875-92d3-3a7f2f386e03.htm" />
+  <HelpKINode Title="SignalGroup.SignalGroup constructor" Url="html/cd319b52-85f1-10c9-7441-f272a6557e59.htm" />
+  <HelpKINode Title="SignalGroup.Signals property" Url="html/45e41d6d-a9b8-d26a-1183-ca701b600b50.htm" />
+  <HelpKINode Title="SignalGroupIds property" Url="html/01e9a0c1-6cdc-3022-32cf-821bb7713969.htm" />
+  <HelpKINode Title="SignalGroups property">
+    <HelpKINode Title="Intersection.SignalGroups Property " Url="html/c062cfd5-6e08-4e96-2f85-f121206c5b0c.htm" />
+    <HelpKINode Title="TimingGroup.SignalGroups Property " Url="html/9ff7f36b-0130-644a-f863-bdd19baa63ab.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Signals property" Url="html/45e41d6d-a9b8-d26a-1183-ca701b600b50.htm" />
+  <HelpKINode Title="SignalShortRemainingTime property" Url="html/fec21e1b-d20e-8e33-b6bd-91b44f1b28cf.htm" />
+  <HelpKINode Title="TimeToUpdate event" Url="html/c339c0da-fdd7-e5ac-f5fb-881ccc02018b.htm" />
+  <HelpKINode Title="Timing structure">
+    <HelpKINode Title="Timing Structure" Url="html/43505691-d338-6afe-500c-baee08911745.htm" />
+    <HelpKINode Title="about Timing structure" Url="html/43505691-d338-6afe-500c-baee08911745.htm" />
+    <HelpKINode Title="fields" Url="html/192f35f8-914e-a9b9-3d1d-76290c402a4d.htm" />
+    <HelpKINode Title="methods" Url="html/e517ac66-f8b4-3ad9-e417-d674a73fd8f5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Timing.Duration field" Url="html/43eba2ee-57b4-5bde-32ea-2dff03d1caf2.htm" />
+  <HelpKINode Title="Timing.Light field" Url="html/8bd7f221-b59c-783d-56e2-7fdf4b7380a7.htm" />
+  <HelpKINode Title="Timing.Order field" Url="html/08e2d147-f8fa-14fa-758b-3419bbbc3745.htm" />
+  <HelpKINode Title="TimingGroup class">
+    <HelpKINode Title="TimingGroup Class" Url="html/31016400-3bda-baf0-8e22-5fd4fd6c27af.htm" />
+    <HelpKINode Title="about TimingGroup class" Url="html/31016400-3bda-baf0-8e22-5fd4fd6c27af.htm" />
+    <HelpKINode Title="constructor" Url="html/dadb03b1-4908-cf26-fbfe-386d85d50156.htm" />
+    <HelpKINode Title="methods" Url="html/af5ae9ef-9b5a-b5bc-655a-ae12df51cbef.htm" />
+    <HelpKINode Title="properties" Url="html/1ec652d8-d638-7406-11ff-c2832ab704b8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TimingGroup.Id property" Url="html/7273ccc5-c1bf-3d47-f45b-779ee9606b93.htm" />
+  <HelpKINode Title="TimingGroup.SignalGroupIds property" Url="html/01e9a0c1-6cdc-3022-32cf-821bb7713969.htm" />
+  <HelpKINode Title="TimingGroup.SignalGroups property" Url="html/9ff7f36b-0130-644a-f863-bdd19baa63ab.htm" />
+  <HelpKINode Title="TimingGroup.TimingGroup constructor" Url="html/dadb03b1-4908-cf26-fbfe-386d85d50156.htm" />
+  <HelpKINode Title="TimingGroup.Timings property" Url="html/52e9f57c-91cd-4518-8cc0-d535607e1a77.htm" />
+  <HelpKINode Title="TimingGroups property" Url="html/0d0550ac-6089-412f-5dae-cc9c440c584a.htm" />
+  <HelpKINode Title="Timings property" Url="html/52e9f57c-91cd-4518-8cc0-d535607e1a77.htm" />
+  <HelpKINode Title="ToggleCrossWalks method" Url="html/f10fb0d8-9e3f-96da-29db-f8081ba22a20.htm" />
+  <HelpKINode Title="ToString method" Url="html/8752a0d7-fe7e-7f33-cc32-15a09c9ede47.htm" />
+  <HelpKINode Title="TrafficControlSystem namespace" Url="html/44bdb999-fbe8-dfa4-ea45-f4e8d550df08.htm" />
+  <HelpKINode Title="TrafficControlSystem.Configuration class" Url="html/7b966865-ca3b-1fcc-ce77-dfe5978c5781.htm" />
+  <HelpKINode Title="TrafficControlSystem.CrossWalk class" Url="html/dfca0f99-4827-ed79-ca5a-a0d71232ed73.htm" />
+  <HelpKINode Title="TrafficControlSystem.CrosswalkEvent delegate" Url="html/640f2e84-e38b-babb-c6c8-8ce14522a7ce.htm" />
+  <HelpKINode Title="TrafficControlSystem.Intersection class" Url="html/946329db-41fd-4c00-d764-bb44aea05082.htm" />
+  <HelpKINode Title="TrafficControlSystem.IntersectionController class" Url="html/0e334adb-a653-398d-a6e1-9359394b01b3.htm" />
+  <HelpKINode Title="TrafficControlSystem.IntersectionView class" Url="html/15544437-6de1-85be-1fe7-547e1f55e8aa.htm" />
+  <HelpKINode Title="TrafficControlSystem.Lane class" Url="html/ce2f1c64-838d-98da-f166-49bc4a15c301.htm" />
+  <HelpKINode Title="TrafficControlSystem.LightColor enumeration" Url="html/f9393ae0-9978-8e05-8b05-1b850b2dd6a4.htm" />
+  <HelpKINode Title="TrafficControlSystem.Roadway class" Url="html/38a2aff3-39b5-2525-33cb-7e22bb9bdf82.htm" />
+  <HelpKINode Title="TrafficControlSystem.Signal class" Url="html/ace97056-9e3a-488f-12ee-5f97acad1763.htm" />
+  <HelpKINode Title="TrafficControlSystem.SignalGroup class" Url="html/4cfe4562-86d4-2a3f-3bb5-2e621db31db8.htm" />
+  <HelpKINode Title="TrafficControlSystem.Timing structure" Url="html/43505691-d338-6afe-500c-baee08911745.htm" />
+  <HelpKINode Title="TrafficControlSystem.TimingGroup class" Url="html/31016400-3bda-baf0-8e22-5fd4fd6c27af.htm" />
+  <HelpKINode Title="TrafficControlSystem.UIEvent delegate" Url="html/20eabd3e-3398-3e05-0184-1b4ce3877c45.htm" />
+  <HelpKINode Title="TrafficControlSystem.UISyncObject class" Url="html/32cb9471-3b02-29b9-0e00-d1190953c30c.htm" />
+  <HelpKINode Title="UIEvent delegate" Url="html/20eabd3e-3398-3e05-0184-1b4ce3877c45.htm" />
+  <HelpKINode Title="UISyncObject class">
+    <HelpKINode Title="UISyncObject Class" Url="html/32cb9471-3b02-29b9-0e00-d1190953c30c.htm" />
+    <HelpKINode Title="about UISyncObject class" Url="html/32cb9471-3b02-29b9-0e00-d1190953c30c.htm" />
+    <HelpKINode Title="constructor" Url="html/7f099ac7-4465-f18b-224f-1f5df5f03480.htm" />
+    <HelpKINode Title="events" Url="html/cc3d3aa8-9304-e7be-2759-a5084553bcd8.htm" />
+    <HelpKINode Title="methods" Url="html/09780fe2-6a99-940f-f78c-3e7a4b107793.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UISyncObject.CrosswalkPressed event" Url="html/c4cfd7fe-3006-d162-dfb5-3d06336f3391.htm" />
+  <HelpKINode Title="UISyncObject.OnCrosswalkPressed method" Url="html/fcd80d49-7b01-c54b-197c-7f82e804e693.htm" />
+  <HelpKINode Title="UISyncObject.OnTimeToUpdate method" Url="html/737fc541-7198-ed1f-72ae-59b5108c1f97.htm" />
+  <HelpKINode Title="UISyncObject.TimeToUpdate event" Url="html/c339c0da-fdd7-e5ac-f5fb-881ccc02018b.htm" />
+  <HelpKINode Title="UISyncObject.UISyncObject constructor" Url="html/7f099ac7-4465-f18b-224f-1f5df5f03480.htm" />
+  <HelpKINode Title="Update method" Url="html/84af173a-5de0-227d-5dae-f4392c13b584.htm" />
+  <HelpKINode Title="Yellow enumeration member" Url="html/f9393ae0-9978-8e05-8b05-1b850b2dd6a4.htm" />
+  <HelpKINode Title="YellowArrow enumeration member" Url="html/f9393ae0-9978-8e05-8b05-1b850b2dd6a4.htm" />
+</HelpKI>

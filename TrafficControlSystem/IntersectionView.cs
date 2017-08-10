@@ -42,6 +42,10 @@ namespace TrafficControlSystem
             this.syncObject.TimeToUpdate -= SyncObject_TimeToUpdate;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="intersection"></param>
         private void SyncObject_TimeToUpdate(Intersection intersection)
         {
             this.Invoke(new UpdateForm(Update), intersection);

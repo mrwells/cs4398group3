@@ -7,10 +7,10 @@ namespace TrafficControlSystem
     /// Lane Class
     /// </summary>
     /// <remarks>
-    /// Lane Class has 3 attributes:
-    /// (String) Id
-    /// (String) Description
-    /// (String) Direction
+    /// Lane Class has 3 attributes:\n
+    /// (String) Id\n
+    /// (String) Description\n
+    /// (String) Direction\n
     /// </remarks>
     public class Lane
     {

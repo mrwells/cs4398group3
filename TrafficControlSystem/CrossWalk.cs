@@ -10,15 +10,27 @@ using System.Windows.Forms;
 
 namespace TrafficControlSystem
 {
+    /// <summary>
+    /// Crosswalk/UserControl Class
+    /// </summary>
     public partial class CrossWalk : UserControl
     {
         private bool shortTimeImageToggle = false;
 
+        /// <summary>
+        /// Crosswalk Constructor
+        /// </summary>
         public CrossWalk()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Updates GUI based on current crosswalk state.
+        /// </summary>
+        /// <param name="shouldWalk"></param>
+        /// <param name="shortTimeRemaining"></param>
+        /// <param name="timeRemaining"></param>
         public void Update(bool shouldWalk, bool shortTimeRemaining, int timeRemaining)
         {
             if (shouldWalk)

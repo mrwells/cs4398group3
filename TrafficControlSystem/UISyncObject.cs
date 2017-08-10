@@ -7,6 +7,11 @@ namespace TrafficControlSystem
     /// </summary>
     /// <param name="intersection">This is an Intersection object that is the current state of the intersection in the system.</param>
     public delegate void UIEvent(Intersection intersection);
+
+    /// <summary>
+    /// A delegate definition used to pass the current roadway to the GUI
+    /// </summary>
+    /// <param name="roadway"></param>
     public delegate void CrosswalkEvent(Roadway roadway);
 
     /// <summary>
@@ -20,7 +25,9 @@ namespace TrafficControlSystem
         /// </summary>
         public event UIEvent TimeToUpdate;
 
-
+        /// <summary>
+        /// A delegate CrosswalkEvent object used to pass clicking of crosswalk button.
+        /// </summary>
         public event CrosswalkEvent CrosswalkPressed;
 
 
@@ -35,6 +42,11 @@ namespace TrafficControlSystem
                 TimeToUpdate(intersection);
         }
 
+        /// <summary>
+        /// Sets CrosswalkPressed to true if it hasn't been.\n
+        /// Based on the Roadway Object.
+        /// </summary>
+        /// <param name="roadway"></param>
         public void OnCrosswalkPressed(Roadway roadway)
         {
             if (CrosswalkPressed != null)

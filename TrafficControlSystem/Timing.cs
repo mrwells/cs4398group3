@@ -7,9 +7,9 @@ namespace TrafficControlSystem
     /// Timing Structure
     /// </summary>
     /// <remarks>
-    /// Timing Structure has 3 attributes:
-    /// (LightColor) Light
-    /// (int) Order
+    /// Timing Structure has 3 attributes:\n
+    /// (LightColor) Light\n
+    /// (int) Order\n
     /// (int) Duration
     /// </remarks>
     public struct Timing
