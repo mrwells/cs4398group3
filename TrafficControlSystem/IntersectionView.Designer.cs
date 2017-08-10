@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IntersectionView));
-            this.btn_preempt_r = new System.Windows.Forms.Button();
-            this.btn_preempt_l = new System.Windows.Forms.Button();
             this.btn_em_bot = new System.Windows.Forms.Button();
             this.btn_em_top = new System.Windows.Forms.Button();
             this.btn_em_r = new System.Windows.Forms.Button();
@@ -66,30 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picbox_turn_bot)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_preempt_r
-            // 
-            this.btn_preempt_r.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_preempt_r.Location = new System.Drawing.Point(846, 272);
-            this.btn_preempt_r.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_preempt_r.Name = "btn_preempt_r";
-            this.btn_preempt_r.Size = new System.Drawing.Size(102, 20);
-            this.btn_preempt_r.TabIndex = 99;
-            this.btn_preempt_r.Text = "Preempt Sensor";
-            this.btn_preempt_r.UseVisualStyleBackColor = true;
-            this.btn_preempt_r.Click += new System.EventHandler(this.btn_preempt1_Click);
-            // 
-            // btn_preempt_l
-            // 
-            this.btn_preempt_l.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_preempt_l.Location = new System.Drawing.Point(30, 448);
-            this.btn_preempt_l.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_preempt_l.Name = "btn_preempt_l";
-            this.btn_preempt_l.Size = new System.Drawing.Size(100, 20);
-            this.btn_preempt_l.TabIndex = 100;
-            this.btn_preempt_l.Text = "Preempt Sensor";
-            this.btn_preempt_l.UseVisualStyleBackColor = true;
-            this.btn_preempt_l.Click += new System.EventHandler(this.btn_preempt2_Click);
             // 
             // btn_em_bot
             // 
@@ -356,7 +330,6 @@
             this.crosswalk_sunriserd4.Name = "crosswalk_sunriserd4";
             this.crosswalk_sunriserd4.Size = new System.Drawing.Size(42, 36);
             this.crosswalk_sunriserd4.TabIndex = 134;
-            
             this.crosswalk_sunriserd4.Click += new System.EventHandler(this.sunriserd_crosswalk_Click);
             // 
             // IntersectionView
@@ -389,8 +362,6 @@
             this.Controls.Add(this.picbox_right_bot);
             this.Controls.Add(this.picbox_turn_top);
             this.Controls.Add(this.picbox_turn_bot);
-            this.Controls.Add(this.btn_preempt_l);
-            this.Controls.Add(this.btn_preempt_r);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
@@ -420,8 +391,6 @@
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_preempt_r;
-        private System.Windows.Forms.Button btn_preempt_l;
         private System.Windows.Forms.PictureBox picbox_turn_bot;
         private System.Windows.Forms.PictureBox picbox_turn_top;
         private System.Windows.Forms.PictureBox picbox_right_bot;
