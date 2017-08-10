@@ -107,7 +107,85 @@ namespace TrafficControlSystem
 
                     intersection.SignalGroups.ForEach(signalGroup =>
                     {
-                        if (timingGroup.SignalGroups.Select(s => s.Roadway).ToList().Contains(signalGroup.Roadway))
+                        if (timingGroup.SignalGroups.ToList().Contains(intersection.SignalGroups[3]) && syncObject.EMTripped[1])
+                        {
+                            if (timing.Light == LightColor.Green)
+                            {
+                                //set light to longest normal green
+                                timingGroupTimeRemaining = timing.Duration * 1000;
+                                //set correct timing location so we dont jump around
+                                currentTimingIndex = 0; 
+                            }
+                            else
+                            {
+                                timing.Light = LightColor.Green;
+                                SetSignalGroupsColor(timingGroup.SignalGroups, LightColor.Green);
+                            }
+
+                            //reset bool so we do not have a permanent green
+                            syncObject.EMTripped[1] = false;
+                        }
+                        else if (timingGroup.SignalGroups.ToList().Contains(intersection.SignalGroups[1]) && syncObject.EMTripped[0])
+                        {
+                            if (timing.Light == LightColor.Green)
+                            {
+                                //set light to longest normal green
+                                timingGroupTimeRemaining = timing.Duration * 1000;
+                                //set correct timing location so we dont jump around
+                                currentTimingIndex = 0;
+                            }
+                            else
+                            {
+                                timing.Light = LightColor.Green;
+                                SetSignalGroupsColor(timingGroup.SignalGroups, LightColor.Green);
+                            }
+                            //reset bool so we do not have a permanent green
+                            syncObject.EMTripped[0] = false;
+                        }
+                        /*
+                        else if (timing.Light == LightColor.Red && (syncObject.EMTripped[0] || syncObject.EMTripped[1]))
+                        {
+                            //need to force to a specific timing group
+                            
+                        }
+                        */
+                        else if (!timingGroup.SignalGroups.ToList().Contains(intersection.SignalGroups[1]) && syncObject.EMTripped[0])
+                        {
+                            //can only skip green, not yellow
+                            if (timing.Light == LightColor.Green)
+                            {
+                                timeRemaining = 0;
+                                //currentTimingIndex++;
+                                timing.Light = LightColor.Yellow;
+                                SetSignalGroupsColor(timingGroup.SignalGroups, timing.Light);
+                            }
+                            else if (timing.Light == LightColor.GreenArrow)
+                            {
+                                timeRemaining = 0;
+                                //currentTimingIndex++;
+                                timing.Light = LightColor.YellowArrow;
+                                SetSignalGroupsColor(timingGroup.SignalGroups, timing.Light);
+                            }
+                        }
+                        else if (!timingGroup.SignalGroups.ToList().Contains(intersection.SignalGroups[3]) && syncObject.EMTripped[1])
+                        {
+                            //can only skip green, not yellow
+                            if (timing.Light == LightColor.Green)
+                            {
+                                timeRemaining = 0;
+                                //currentTimingIndex++;
+                                timing.Light = LightColor.Yellow;
+                                SetSignalGroupsColor(timingGroup.SignalGroups, timing.Light);
+                            }
+                            else if (timing.Light == LightColor.GreenArrow)
+                            {
+                                timeRemaining = 0;
+                                //currentTimingIndex++;
+                                timing.Light = LightColor.YellowArrow;
+                                SetSignalGroupsColor(timingGroup.SignalGroups, timing.Light);
+                            }
+                        }
+                        else if (timingGroup.SignalGroups.Select(s => s.Roadway).ToList().Contains(signalGroup.Roadway))
                         {
                             //this signalGroup IS in the current timingGroup
                             //it's crosswalks should be red
@@ -131,7 +209,7 @@ namespace TrafficControlSystem
                             //reset so we dont constantly have a walk
                             if (signalGroup == intersection.SignalGroups[3] || signalGroup == intersection.SignalGroups[4])
                                 syncObject.crosswalkPressed[0] = false;
-                            else if(signalGroup == intersection.SignalGroups[1] || signalGroup == intersection.SignalGroups[2])
+                            else if (signalGroup == intersection.SignalGroups[1] || signalGroup == intersection.SignalGroups[2])
                                 syncObject.crosswalkPressed[1] = false;
                         }
                         else if (signalGroup == intersection.SignalGroups[3] && syncObject.crosswalkPressed[0] == true)
@@ -139,7 +217,7 @@ namespace TrafficControlSystem
                             //The crosswalk button has been pushed, show the walk
                             ToggleCrossWalks(signalGroup, true, shortTimeRemaining, timingGroupTimeRemaining);
                         }
-                        else if (signalGroup == intersection.SignalGroups[0] && syncObject.crosswalkPressed[1] == true)
+                        else if (signalGroup == intersection.SignalGroups[1] && syncObject.crosswalkPressed[1] == true)
                         {
                             //The crosswalk button has been pushed, show the walk
                             ToggleCrossWalks(signalGroup, true, shortTimeRemaining, timingGroupTimeRemaining);

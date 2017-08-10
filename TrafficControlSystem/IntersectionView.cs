@@ -170,15 +170,25 @@ namespace TrafficControlSystem
         {
             syncObject.OnCrosswalkPressed_EastWest();
         }
-        
+
+        private void btn_em_top_Click(object sender, EventArgs e)
+        {
+            syncObject.OnEMTripped(0);
+        }
+
         private void btn_em_r_Click(object sender, EventArgs e)
         {
-            
+            syncObject.OnEMTripped(1);
+        }
+
+        private void btn_em_bot_Click(object sender, EventArgs e)
+        {
+            syncObject.OnEMTripped(0);
         }
 
         private void btn_em_l_Click(object sender, EventArgs e)
         {
-           
+            syncObject.OnEMTripped(1);
         }
 
         private void IntersectionView_Load(object sender, EventArgs e)
@@ -186,10 +196,7 @@ namespace TrafficControlSystem
 
         }
         
-        private void btn_em_top_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
        
     }

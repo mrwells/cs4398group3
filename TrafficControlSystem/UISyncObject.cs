@@ -26,7 +26,10 @@ namespace TrafficControlSystem
         public event CrosswalkEvent_EastWest CrosswalkPressed_EastWest;
         public event CrosswalkEvent_NorthSouth CrosswalkPressed_NorthSouth;
 
+        //cross sunrise, cross university
         public bool[] crosswalkPressed = new bool[] { false, false };
+        //north/south, east/west
+        public bool[] EMTripped = new bool[] { false, false };
 
         /// <summary>
         /// a method that triggers the GUI that the intersection has changed and it is time
@@ -47,6 +50,11 @@ namespace TrafficControlSystem
         public void OnCrosswalkPressed_NorthSouth()
         {
             crosswalkPressed[1] = true;
+        }
+
+        public void OnEMTripped(int index)
+        {
+            EMTripped[index] = true;
         }
     }
 }
