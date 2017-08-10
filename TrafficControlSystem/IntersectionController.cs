@@ -71,6 +71,14 @@ namespace TrafficControlSystem
 
             while (DateTime.Now < startTime.Add(duration))
             {
+                if (syncObject.EMTripped[0])
+                {
+                    currentTimingGroupIndex = 1;
+                }
+                else if (syncObject.EMTripped[1])
+                {
+                    currentTimingGroupIndex = 2;
+                }
                 HandleTimingGroup(intersection.TimingGroups[currentTimingGroupIndex]);
 
                 if (++currentTimingGroupIndex == intersection.TimingGroups.Count)
@@ -114,7 +122,7 @@ namespace TrafficControlSystem
                                 //set light to longest normal green
                                 timingGroupTimeRemaining = timing.Duration * 1000;
                                 //set correct timing location so we dont jump around
-                                currentTimingIndex = 0; 
+                                currentTimingIndex = 0;
                             }
                             else
                             {
@@ -141,48 +149,43 @@ namespace TrafficControlSystem
                             }
                             //reset bool so we do not have a permanent green
                             syncObject.EMTripped[0] = false;
-                        }
-                        /*
-                        else if (timing.Light == LightColor.Red && (syncObject.EMTripped[0] || syncObject.EMTripped[1]))
-                        {
-                            //need to force to a specific timing group
-                            
-                        }
-                        */
+                        }                        
                         else if (!timingGroup.SignalGroups.ToList().Contains(intersection.SignalGroups[1]) && syncObject.EMTripped[0])
                         {
-                            //can only skip green, not yellow
                             if (timing.Light == LightColor.Green)
                             {
                                 timeRemaining = 0;
-                                //currentTimingIndex++;
+                                timingGroupTimeRemaining = 0;
                                 timing.Light = LightColor.Yellow;
-                                SetSignalGroupsColor(timingGroup.SignalGroups, timing.Light);
+                                SetSignalGroupsColor(timingGroup.SignalGroups, LightColor.Yellow);
+                                intersection.OutputCurrentState();
                             }
                             else if (timing.Light == LightColor.GreenArrow)
                             {
                                 timeRemaining = 0;
-                                //currentTimingIndex++;
+                                timingGroupTimeRemaining = 0;
                                 timing.Light = LightColor.YellowArrow;
-                                SetSignalGroupsColor(timingGroup.SignalGroups, timing.Light);
+                                SetSignalGroupsColor(timingGroup.SignalGroups, LightColor.YellowArrow);
+                                intersection.OutputCurrentState();
                             }
                         }
                         else if (!timingGroup.SignalGroups.ToList().Contains(intersection.SignalGroups[3]) && syncObject.EMTripped[1])
                         {
-                            //can only skip green, not yellow
                             if (timing.Light == LightColor.Green)
                             {
                                 timeRemaining = 0;
-                                //currentTimingIndex++;
+                                timingGroupTimeRemaining = 0;
                                 timing.Light = LightColor.Yellow;
-                                SetSignalGroupsColor(timingGroup.SignalGroups, timing.Light);
+                                SetSignalGroupsColor(timingGroup.SignalGroups, LightColor.Yellow);
+                                intersection.OutputCurrentState();
                             }
                             else if (timing.Light == LightColor.GreenArrow)
                             {
                                 timeRemaining = 0;
-                                //currentTimingIndex++;
+                                timingGroupTimeRemaining = 0;
                                 timing.Light = LightColor.YellowArrow;
-                                SetSignalGroupsColor(timingGroup.SignalGroups, timing.Light);
+                                SetSignalGroupsColor(timingGroup.SignalGroups, LightColor.YellowArrow);
+                                intersection.OutputCurrentState();
                             }
                         }
                         else if (timingGroup.SignalGroups.Select(s => s.Roadway).ToList().Contains(signalGroup.Roadway))
